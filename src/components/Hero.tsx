@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -29,18 +28,18 @@ const Hero = () => {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 
-            className="text-[60px] md:text-[120px] lg:text-[180px] leading-none opacity-0 animate-fade-in overflow-hidden"
-            style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
-          >
-            <span className="text-black inline-block">Adi</span>
-            <span className="text-white inline-block">tya</span>
-          </h1>
-          <div className="w-full h-px bg-black my-4 md:my-6 opacity-0 animate-fade-in animate-delay-100"></div>
-          <p className="mt-2 text-lg md:text-2xl opacity-0 animate-fade-in animate-delay-200 font-roboto">
-            Software Engineer
-          </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-start">
+            <h1 
+              className="text-[40px] sm:text-[60px] md:text-[120px] lg:text-[180px] leading-[0.9] opacity-0 animate-fade-in"
+              style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
+            >
+              <div className="flex flex-wrap items-center gap-x-0">
+                <span className="text-black">Adi</span>
+                <span className="text-white">tya</span>
+              </div>
+            </h1>
+          </div>
         </div>
       </div>
     </section>
