@@ -29,21 +29,21 @@ const Contact = () => {
             <div className="space-y-8 max-w-md">
               <a href="https://x.com/0xAditya_pratap" className="block group">
                 <div className="flex justify-between items-center py-4 border-b border-black">
-                  <span className="text-2xl font-lora">X (Twitter)</span>
+                  <span className="text-2xl font-roboto">X (Twitter)</span>
                   <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                 </div>
               </a>
               
               <a href="https://www.linkedin.com/in/aditya-pratap-singh-952a8820a" className="block group">
                 <div className="flex justify-between items-center py-4 border-b border-black">
-                  <span className="text-2xl font-lora">LinkedIn</span>
+                  <span className="text-2xl font-roboto">LinkedIn</span>
                   <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                 </div>
               </a>
               
               <a href="https://github.com/Aditya-PS-05" className="block group">
                 <div className="flex justify-between items-center py-4 border-b border-black">
-                  <span className="text-2xl font-lora">GitHub</span>
+                  <span className="text-2xl font-roboto">GitHub</span>
                   <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                 </div>
               </a>

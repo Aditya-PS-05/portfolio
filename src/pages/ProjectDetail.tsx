@@ -143,7 +143,7 @@ const ProjectDetail = () => {
           <Separator className="h-0.5 bg-black mb-12" />
 
           <div className="mb-16">
-            <Link to="/#projects" className="inline-flex items-center text-black hover:underline mb-6">
+            <Link to="/" className="inline-flex items-center text-black hover:underline mb-6">
               <ArrowLeft size={20} className="mr-2" />
               Back to work
             </Link>
