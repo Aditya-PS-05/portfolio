@@ -38,7 +38,7 @@ const Hero = () => {
             <span className="text-white inline-block">tya</span>
           </h1>
           <div className="w-full h-px bg-black my-4 md:my-6 opacity-0 animate-fade-in animate-delay-100"></div>
-          <p className="mt-2 text-lg md:text-2xl opacity-0 animate-fade-in animate-delay-200 font-lora">
+          <p className="mt-2 text-lg md:text-2xl opacity-0 animate-fade-in animate-delay-200 font-roboto">
             Software Engineer
           </p>
         </div>
