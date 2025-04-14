@@ -1,3 +1,5 @@
+import { Link2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   return (
@@ -11,7 +13,15 @@ const Experience = () => {
               <div className="absolute w-3 h-3 bg-black rounded-full -left-[7px] top-1"></div>
               <p className="text-sm mb-1 font-roboto">Mar 2025 - Present</p>
               <h3 className="text-2xl font-semibold mb-2">Full-Stack Developer Intern</h3>
-              <p className="text-xl mb-2">Experiana Trails</p>
+              <a 
+                href="https://www.experianatrails.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xl mb-4 hover:text-blue-600 transition-colors group"
+              >
+                <span>Experiana Trails</span>
+                <Link2 size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
               <p className="text-gray-700 font-roboto">
                 Developing and maintaining full-stack components using React.js, Node.js and REST APIs. 
                 Improving front-end performance and responsiveness through optimization techniques.
@@ -24,7 +34,15 @@ const Experience = () => {
               <div className="absolute w-3 h-3 bg-black rounded-full -left-[7px] top-1"></div>
               <p className="text-sm mb-1 font-roboto">Feb 2025 - Apr 2025</p>
               <h3 className="text-2xl font-semibold mb-2">Software Developer Intern</h3>
-              <p className="text-xl mb-2 font-roboto">Journim</p>
+              <a 
+                href="https://www.journim.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xl mb-4 hover:text-blue-600 transition-colors group"
+              >
+                <span>Journim</span>
+                <Link2 size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
               <p className="text-gray-700 font-roboto">
                 Designed and built core microservices for Journim's MVP using Golang and Serverless Stack for AWS.
                 Improved backend scalability through efficient API routing and code refactors.

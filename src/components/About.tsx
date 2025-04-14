@@ -17,7 +17,7 @@ const About = () => {
               My experience spans backend development with Golang, serverless architecture on AWS, and crafting intuitive UIs with React and TailwindCSS. From building quiz platforms like NeetChamp to real-time chat apps and online code compilers, I thrive on turning ideas into functional, production-ready applications.
             </p>
             <div className="flex flex-wrap gap-3 mt-8">
-              <a href="mailto:adipras1407@gmail.com" className="btn-primary font-sans">Get in touch</a>
+              <a href="mailto:adipras1407@gmail.com" className="btn-primary font-sans" target="_blank" >Get in touch</a>
               <a href="https://www.linkedin.com/in/aditya-pratap-singh-952a8820a/" target="_blank" className="text-black hover:underline px-4 py-2 font-sans">LinkedIn</a>
               <a href="https://github.com/Aditya-PS-05" target="_blank" className="text-black hover:underline px-4 py-2 font-sans">GitHub</a>
             </div>
