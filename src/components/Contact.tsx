@@ -1,6 +1,4 @@
 
-import { Separator } from "@/components/ui/separator";
-
 const Contact = () => {
   return (
     <section id="contact" className="py-24 md:py-32 bg-[#f4ffc2]">
@@ -9,11 +7,11 @@ const Contact = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="font-display text-5xl md:text-7xl font-bold mb-4">
+            <h2 className="font-display text-5xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}>
               Drop me a<br />message
             </h2>
             
-            <p className="text-lg font-lora mb-12">
+            <p className="text-lg font-roboto mb-12">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             

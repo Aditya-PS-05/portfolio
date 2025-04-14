@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Syne:wght@400;500;600;700;800&display=swap');
+/* Add Roboto font import at the top with your other imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Syne:wght@400;500;600;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Archivo+Black&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@400;500;600;700;800&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -97,7 +101,7 @@
   }
   
   p, .description-text {
-    @apply font-lora;
+    @apply font-serif;
   }
 }
 
@@ -170,4 +174,36 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
+}
+
+/* Your existing CSS rules... */
+
+/* Add this to your font utility classes section */
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Keep your other font utility classes */
+.font-display {
+  font-family: 'DM Serif Display', serif;
+}
+
+.font-sans {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-body {
+  font-family: 'Newsreader', serif;
+}
+
+.font-black-display {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-alt {
+  font-family: 'Space Grotesk', sans-serif;
 }

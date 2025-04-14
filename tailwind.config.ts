@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -65,11 +64,13 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ["Inter", "sans-serif"],
-				serif: ["DM Serif Display", "serif"],
-				display: ["Archivo Black", "sans-serif"],
-				lora: ["Lora", "serif"],
-				syne: ["Syne", "sans-serif"],
+				sans: ['Plus Jakarta Sans', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        display: ['DM Serif Display', 'serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        syne: ['Syne', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

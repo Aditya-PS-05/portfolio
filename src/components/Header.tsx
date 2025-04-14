@@ -51,18 +51,19 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 py-6 transition-all duration-300">
       <div className="container-custom flex justify-between items-center">
-        <a href="#" className="font-display text-2xl md:text-3xl font-bold">
-          Aditya.
+        <a href="#" className="text-2xl md:text-3xl font-bold font-roboto" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}>
+          A.
         </a>
         <NavigationMenu>
           <NavigationMenuList className="hidden md:flex space-x-8">
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className={cn(
-                  "font-medium text-lg font-bold transition-colors hover:text-black/70",
+                  "font-medium text-lg transition-colors hover:text-black/70",
                   isOverDarkSection ? "text-white hover:text-white/70" : "text-black"
                 )}
                 href="#about"
+                style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
               >
                 About
               </NavigationMenuLink>
@@ -70,10 +71,11 @@ const Header = () => {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className={cn(
-                  "font-medium text-lg font-bold transition-colors hover:text-black/70",
+                  "font-medium text-lg transition-colors hover:text-black/70",
                   isOverDarkSection ? "text-white hover:text-white/70" : "text-black"
                 )}
                 href="#experience"
+                style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
               >
                 Experience
               </NavigationMenuLink>
@@ -81,10 +83,11 @@ const Header = () => {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className={cn(
-                  "font-medium text-lg font-bold transition-colors hover:text-black/70",
+                  "font-medium text-lg transition-colors hover:text-black/70",
                   isOverDarkSection ? "text-white hover:text-white/70" : "text-black"
                 )}
                 href="#projects"
+                style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
               >
                 Work
               </NavigationMenuLink>
@@ -92,10 +95,11 @@ const Header = () => {
             <NavigationMenuItem>
               <NavigationMenuLink 
                 className={cn(
-                  "font-medium text-lg font-bold transition-colors hover:text-black/70",
+                  "font-medium text-lg transition-colors hover:text-black/70",
                   isOverDarkSection ? "text-white hover:text-white/70" : "text-black"
                 )}
                 href="#contact"
+                style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
               >
                 Contact
               </NavigationMenuLink>

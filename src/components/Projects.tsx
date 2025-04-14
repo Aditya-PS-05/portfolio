@@ -31,7 +31,7 @@ const Projects = () => {
     <section id="projects" className="py-24 md:py-32">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
-          <h2 className="heading-2 mb-4 md:mb-0 font-display text-5xl md:text-6xl">My Work</h2>
+          <h2 className="heading-2 mb-4 md:mb-0 font-display text-5xl" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}>My Work</h2>
         </div>
         
         {/* Featured project - larger display */}
@@ -49,8 +49,8 @@ const Projects = () => {
 
             <div className="mt-8" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>
               <span className="text-sm text-gray-500">{featuredProject.category}</span>
-              <h3 className="text-3xl md:text-4xl font-serif mt-1">{featuredProject.title}</h3>
-              <p className="mt-4 text-lg opacity-80">{featuredProject.description}</p>
+              <h3 className="text-3xl md:text-4xl mt-1 font-roboto">{featuredProject.title}</h3>
+              <p className="mt-4 text-lg opacity-80 font-roboto">{featuredProject.description}</p>
               
             </div>
           </Link>
@@ -71,8 +71,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <span className="text-sm text-gray-500">{project.category}</span>
-                  <h3 className="text-xl md:text-2xl font-serif mt-1" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>{project.title}</h3>
+                  <span className="text-sm text-gray-500 font-roboto">{project.category}</span>
+                  <h3 className="text-xl md:text-2xl font-roboto mt-1" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>{project.title}</h3>
                   
                 </div>
               </Link>

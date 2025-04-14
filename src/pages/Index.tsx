@@ -56,6 +56,9 @@ const Index = () => {
         <Separator className="h-1 bg-black" />
       </div>
       <Contact />
+      <div className="container-custom py-12">
+        <Separator className="h-1 bg-black" />
+      </div>
       <Footer />
     </div>
   );

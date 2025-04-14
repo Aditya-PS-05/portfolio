@@ -1,16 +1,13 @@
-
-import { Twitter, Linkedin, Github, X } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
     <footer className="py-12">
-      <div className="container-custom flex space-x-8 font-bold text-lg">
-        <a href="#" className="text-black">GitHub</a>
-        <a href="#" className="text-black">LinkedIn</a>
-        <a href="#" className="text-black">Twitter</a>
-        <a href="#" className="text-black">Built by Aditya</a>
+      <div className="container-custom flex space-x-8 font-sans text-base">
+        <a href="#" className="text-black hover:text-gray-700 transition-colors font-roboto font-semibold">GitHub</a>
+        <a href="#" className="text-black hover:text-gray-700 transition-colors font-roboto font-semibold">LinkedIn</a>
+        <a href="#" className="text-black hover:text-gray-700 transition-colors font-roboto font-semibold">Twitter</a>
+        <a href="#" className="text-black hover:text-gray-700 transition-colors font-roboto font-semibold">Built by Aditya</a>
       </div>
     </footer>
   );
