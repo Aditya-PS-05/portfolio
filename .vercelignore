@@ -1,7 +1,9 @@
 # Dependencies
 node_modules
 vendor
-.bundle
+
+# Keep Gemfile for Vercel
+# Gemfile.lock
 
 # Build artifacts
 _site
@@ -12,8 +14,6 @@ _site
 .gitignore
 .gitmodules
 README.md
-Gemfile
-Gemfile.lock
 
 # OS files
 .DS_Store
