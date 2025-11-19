@@ -1,7 +1,7 @@
 {
   "buildCommand": "bundle exec jekyll build",
   "outputDirectory": "_site",
-  "installCommand": "bundle install",
+  "installCommand": "bundle config set --local deployment 'true' && bundle install",
   "framework": null,
   "devCommand": "bundle exec jekyll serve --livereload",
   "env": {
