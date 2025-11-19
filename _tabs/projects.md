@@ -34,6 +34,15 @@ A US-based client project enabling users to buy mortgages. Complete with Figma d
 
 ## Rust Applications
 
+### **POW (Proof of Work)** • [GitHub](https://github.com/Aditya-PS-05/POW) • [Live Demo](https://www.notion.so/POW-2861e9d33abd80588760fac2a22af86b?pvs=21)
+A comprehensive proof of work system built for tracking and showcasing professional achievements. Features task management, progress tracking, and visual portfolio presentation with integrated screenshots and documentation.
+
+**Tech Stack:** Rust, WebAssembly, Next.js, TypeScript
+
+![POW Dashboard](/assets/img/projects/POW-dashboard.png)
+![POW Task View](/assets/img/projects/POW-tasks.png)
+![POW Progress Tracking](/assets/img/projects/POW-progress.png)
+
 ### **TypRs** • [GitHub](https://github.com/Aditya-PS-05/typrs) • [Crates.io](https://crates.io/crates/typrs)
 A touch typing app built in Rust that helps you improve your typing skills right from the comfort of your terminal. Features real-time WPM tracking and customizable lessons.
 
@@ -76,17 +85,21 @@ Contributed to the Rust compiler itself, working on autodiff functionality and c
 
 ## Client Work
 
-### **HAQQ Studios**
+### **HAQQ Studios** • [GitHub](https://github.com/HAQQ-Studios)
 Working remotely as a Full Stack Developer, building [Runitup.ai](https://runitup.ai) and contributing to the codebase by solving GitHub issues one at a time.
 
 **Role:** Full Stack Developer
 **Technologies:** Rust, TypeScript, WebAssembly
 
-### **Journim**
+![HAQQ Studios Interface](/assets/img/projects/POW-haqq.png)
+
+### **Journim** • [GitHub](https://github.com/Aditya-PS-05/Jotion)
 Front-end web development in Next.js and TypeScript. Transforming Figma designs into pixel-perfect, responsive web applications.
 
 **Role:** Front-end Developer
 **Technologies:** Next.js, TypeScript, Tailwind CSS
+
+![Journim Interface](/assets/img/projects/POW-journim.png)
 
 ---
 
