@@ -1,0 +1,135 @@
+---
+---
+
+@import 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Custom styles for GitHub-style PR Cards */
+.pr-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color, #30363d);
+  border-radius: 6px;
+  background-color: var(--card-bg, #0d1117);
+  transition: border-color 0.2s ease;
+}
+
+.pr-card:hover {
+  border-color: var(--border-hover-color, #58a6ff);
+}
+
+.pr-avatar {
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.pr-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+}
+
+.pr-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.pr-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 4px 0;
+  color: var(--text-color, #c9d1d9);
+}
+
+.pr-title a {
+  color: var(--link-color, #c9d1d9);
+  text-decoration: none;
+}
+
+.pr-title a:hover {
+  color: var(--link-hover-color, #58a6ff);
+  text-decoration: underline;
+}
+
+.pr-title code {
+  background-color: rgba(110, 118, 129, 0.4);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+.pr-meta {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-muted, #8b949e);
+  margin-top: 4px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pr-meta svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.pr-number {
+  font-weight: 600;
+}
+
+.pr-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: rgba(163, 113, 247, 0.15);
+  color: #a371f7;
+  margin-left: auto;
+}
+
+.pr-status svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.contributions-section h3 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Dark mode theme variables */
+[data-mode="dark"] .pr-card {
+  --card-bg: #0d1117;
+  --border-color: #30363d;
+  --border-hover-color: #58a6ff;
+  --text-color: #c9d1d9;
+  --link-color: #c9d1d9;
+  --link-hover-color: #58a6ff;
+  --text-muted: #8b949e;
+}
+
+/* Light mode theme variables */
+[data-mode="light"] .pr-card {
+  --card-bg: #ffffff;
+  --border-color: #d0d7de;
+  --border-hover-color: #0969da;
+  --text-color: #24292f;
+  --link-color: #24292f;
+  --link-hover-color: #0969da;
+  --text-muted: #57606a;
+}
