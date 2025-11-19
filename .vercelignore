@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+vendor
+.bundle
+
+# Build artifacts
+_site
+.sass-cache
+.jekyll-cache
+
+# Development files
+.gitignore
+.gitmodules
+README.md
+Gemfile
+Gemfile.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
