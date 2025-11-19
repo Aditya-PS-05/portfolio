@@ -91,7 +91,7 @@ Working remotely as a Full Stack Developer, building [Runitup.ai](https://runitu
 **Role:** Full Stack Developer
 **Technologies:** Rust, TypeScript, WebAssembly
 
-![HAQQ Studios Interface](/assets/img/projects/POW-haqq.png)
+![HAQQ Studios Work Environment](/assets/img/projects/HAQQ-Studios-1.png)
 
 ### **Journim** • [GitHub](https://github.com/Aditya-PS-05/Jotion)
 Front-end web development in Next.js and TypeScript. Transforming Figma designs into pixel-perfect, responsive web applications.
@@ -99,7 +99,7 @@ Front-end web development in Next.js and TypeScript. Transforming Figma designs 
 **Role:** Front-end Developer
 **Technologies:** Next.js, TypeScript, Tailwind CSS
 
-![Journim Interface](/assets/img/projects/POW-journim.png)
+![Journim Development Environment](/assets/img/projects/journim-1.png)
 
 ---
 
