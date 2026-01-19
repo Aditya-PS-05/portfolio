@@ -27,31 +27,56 @@ export default async function Home() {
         <p>I write about Rust, open source, and full-stack development.</p>
       </div>
 
-      <p className="projects-heading">Check out some of my contributions:</p>
+      <p className="projects-heading">Check out some of my public projects:</p>
 
       <div className="projects-list">
-        <span className="keyword">match</span> contribution{" "}
+        <span className="keyword">match</span> title{" "}
         <span className="keyword">with</span>
         <br />
         &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/astral-sh/uv/pull/8226">uv#8226</a>{" "}
+        <a href="https://github.com/Aditya-PS-05/Codesm">Codesm</a>{" "}
         <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Avoid writing duplicate index URLs</span>
+        <span className="desc">Terminal-based AI coding agent with real-time chat, OAuth, and LSP integration (Python, Rust, Claude API)</span>
         <br />
         &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/astral-sh/uv/pull/8215">uv#8215</a>{" "}
+        <a href="https://github.com/Aditya-PS-05/Hyprcurl">Hyprcurl</a>{" "}
         <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Improve color env vars and CLI options</span>
+        <span className="desc">High-performance async HTTP client library with HTTP/1 &amp; HTTP/2 support, written in Rust</span>
         <br />
         &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/astral-sh/uv/pull/7387">uv#7387</a>{" "}
+        <a href="https://github.com/Aditya-PS-05/makemore">Makemore</a>{" "}
         <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Add support for pip-supported file extensions</span>
+        <span className="desc">Character-level language models (MLP, RNN, LSTM, GRU, Transformers) for synthetic text generation</span>
         <br />
         &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/rust-lang/rust/pull/135406">rust#135406</a>{" "}
+        <a href="https://github.com/Aditya-PS-05/Jotion">Jotion</a>{" "}
         <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Update unstable lint docs</span>
+        <span className="desc">Notion-inspired web app with real-time editing and live sync (Next.js, TypeScript, Convex DB)</span>
+        <br />
+        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
+        <a href="https://github.com/Aditya-PS-05/De-Code">De-Code</a>{" "}
+        <span className="arrow">-&gt;</span>{" "}
+        <span className="desc">Online coding platform for NIT Trichy with secure DAuth authentication</span>
+        <br />
+      </div>
+
+      <p className="projects-heading" style={{ marginTop: "2rem" }}>Open source contributions:</p>
+
+      <div className="projects-list">
+        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
+        <a href="https://github.com/astral-sh/uv">astral-sh/uv</a>{" "}
+        <span className="arrow">-&gt;</span>{" "}
+        <span className="desc">10+ merged PRs to the fast Python package manager (Rust)</span>
+        <br />
+        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
+        <a href="https://github.com/rust-lang/rust">rust-lang/rust</a>{" "}
+        <span className="arrow">-&gt;</span>{" "}
+        <span className="desc">Contributor to the Rust programming language compiler</span>
+        <br />
+        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
+        <a href="https://github.com/rust-lang/rust-analyzer">rust-analyzer</a>{" "}
+        <span className="arrow">-&gt;</span>{" "}
+        <span className="desc">Contributions to the Rust LSP implementation</span>
         <br />
       </div>
 

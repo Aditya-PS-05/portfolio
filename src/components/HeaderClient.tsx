@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { auth } from "@/lib/auth";
-import { signInAction, signOutAction } from "@/lib/actions";
+"use client";
 
-export default async function Header() {
-  const session = await auth();
+import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
+
+export default function HeaderClient() {
+  const { data: session } = useSession();
 
   return (
     <header className="site-header">
@@ -34,21 +35,17 @@ export default async function Header() {
           <>
             {" "}
             ⋅{" "}
-            <form action={signOutAction} className="inline">
-              <button type="submit" className="link-button">
-                Sign out
-              </button>
-            </form>
+            <button onClick={() => signOut()} className="link-button">
+              Sign out
+            </button>
           </>
         ) : (
           <>
             {" "}
             ⋅{" "}
-            <form action={signInAction} className="inline">
-              <button type="submit" className="link-button">
-                Sign in
-              </button>
-            </form>
+            <button onClick={() => signIn("github")} className="link-button">
+              Sign in
+            </button>
           </>
         )}
       </nav>

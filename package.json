@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm-run-all --parallel dev:next dev:convex",
+    "dev:next": "next dev",
+    "dev:convex": "convex dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "convex:deploy": "convex deploy"
   },
   "dependencies": {
     "@auth/core": "^0.34.3",
+    "convex": "^1.31.5",
     "gray-matter": "^4.0.3",
+    "jose": "^6.1.3",
     "next": "16.1.3",
     "next-auth": "5.0.0-beta.30",
     "next-mdx-remote": "^5.0.0",
@@ -24,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.3",
+    "npm-run-all": "^4.1.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
+import { ConvexClientProvider } from "@/components/providers/convex-provider";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -33,7 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${openSans.variable} ${sourceCodePro.variable}`}>
       <body className={openSans.className}>
-        {children}
+        <ConvexClientProvider>
+          {children}
+        </ConvexClientProvider>
         <footer>
           <p>© {new Date().getFullYear()} Aditya Pratap Singh</p>
         </footer>
