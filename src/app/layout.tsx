@@ -15,8 +15,14 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Aditya Pratap Singh",
+  title: {
+    default: "Home | Aditya Pratap Singh",
+    template: "%s | Aditya Pratap Singh",
+  },
   description: "Open source Rust programmer, Full Stack Developer, and UI/UX engineer.",
+  icons: {
+    icon: [],
+  },
 };
 
 export default function RootLayout({
