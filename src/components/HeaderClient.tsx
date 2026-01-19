@@ -16,7 +16,7 @@ export default function HeaderClient() {
         <span className="punctuation">|</span>{" "}
         <Link href="/notes">Notes</Link>{" "}
         <span className="punctuation">|</span>{" "}
-        <Link href="/archive">Posts</Link>{" "}
+        <Link href="/posts">Posts</Link>{" "}
         <span className="punctuation">|</span>{" "}
         <Link href="/archive">Archive</Link>
         {session && (

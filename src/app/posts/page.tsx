@@ -91,21 +91,20 @@ export default function PostsPage() {
           font-weight: 600;
         }
         .create-post-btn {
-          padding: 0.75rem 1.5rem;
-          background: #0070f3;
-          color: white;
+          background: none;
           border: none;
-          border-radius: 6px;
           cursor: pointer;
           font-size: 0.95rem;
-          font-weight: 500;
-          transition: background 0.2s;
+          color: #666;
+          padding: 0;
+          text-decoration: underline;
+          text-underline-offset: 3px;
         }
         .create-post-btn:hover {
-          background: #0060df;
+          color: #333;
         }
         .create-post-btn:disabled {
-          opacity: 0.6;
+          opacity: 0.5;
           cursor: not-allowed;
         }
         .loading {

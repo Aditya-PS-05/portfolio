@@ -169,21 +169,22 @@ export default function PostEditorPage() {
           padding: 0.5rem 0;
         }
         .back-btn {
-          padding: 0.5rem 1rem;
-          background: transparent;
-          border: 1px solid #ddd;
-          border-radius: 6px;
+          background: none;
+          border: none;
           cursor: pointer;
           font-size: 0.9rem;
-          transition: background 0.2s;
+          color: #666;
+          padding: 0;
+          text-decoration: underline;
+          text-underline-offset: 3px;
         }
         .back-btn:hover {
-          background: #f5f5f5;
+          color: #333;
         }
         .editor-actions {
           display: flex;
           align-items: center;
-          gap: 1rem;
+          gap: 1.5rem;
         }
         .publish-toggle {
           display: flex;
@@ -191,34 +192,32 @@ export default function PostEditorPage() {
           gap: 0.5rem;
           cursor: pointer;
           font-size: 0.9rem;
-          color: #555;
+          color: #666;
         }
         .publish-toggle input {
-          width: 16px;
-          height: 16px;
+          width: 14px;
+          height: 14px;
           cursor: pointer;
         }
         .save-btn {
-          padding: 0.5rem 1.25rem;
-          background: #0070f3;
-          color: white;
+          background: none;
           border: none;
-          border-radius: 6px;
           cursor: pointer;
           font-size: 0.9rem;
-          font-weight: 500;
-          transition: background 0.2s;
+          color: #666;
+          padding: 0;
+          text-decoration: underline;
+          text-underline-offset: 3px;
         }
         .save-btn:hover {
-          background: #0060df;
+          color: #333;
         }
         .save-btn:disabled {
-          opacity: 0.6;
+          opacity: 0.5;
           cursor: not-allowed;
         }
         .editor-container {
           background: #fff;
-          border-radius: 8px;
           min-height: 500px;
         }
         .notion-editor-wrapper {
