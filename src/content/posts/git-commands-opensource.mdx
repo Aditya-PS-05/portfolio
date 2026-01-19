@@ -1,0 +1,30 @@
+---
+title: "Essential Git Commands for Open Source"
+date: "2025-12-10"
+description: "Git commands every open source contributor should know"
+private: false
+tags: ["git", "open-source"]
+---
+
+## Keeping Your Fork Updated
+
+```bash
+git remote add upstream https://github.com/original/repo.git
+git fetch upstream
+git rebase upstream/main
+```
+
+## Interactive Rebase
+
+Clean up your commits before submitting a PR:
+
+```bash
+git rebase -i HEAD~3
+```
+
+## Amending Commits
+
+```bash
+git commit --amend
+git push --force-with-lease
+```

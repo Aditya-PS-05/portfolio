@@ -1,0 +1,19 @@
+---
+title: "Rust Learning Notes"
+date: "2025-12-01"
+description: "Personal notes on learning Rust"
+private: false
+tags: ["rust", "learning"]
+---
+
+## Ownership Rules
+
+1. Each value has an owner
+2. Only one owner at a time
+3. Value dropped when owner goes out of scope
+
+## Borrowing
+
+- Immutable references: `&T`
+- Mutable references: `&mut T`
+- Can't have mutable and immutable refs simultaneously
