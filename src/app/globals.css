@@ -23,7 +23,8 @@ body {
 
 a {
   color: #333;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 a:hover {
@@ -39,7 +40,7 @@ a:hover {
 
 .site-title {
   font-size: 80px;
-  font-weight: 300;
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -47,6 +48,12 @@ a:hover {
 .site-title a {
   text-decoration: none;
   color: #333;
+  transition: color 0.2s ease;
+}
+
+.site-title a:hover {
+  color: #5dcfea;
+  text-decoration: none;
 }
 
 /* Code-style nav */
@@ -137,6 +144,13 @@ hr {
 .bio strong,
 .bio a {
   font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.bio strong:hover,
+.bio a:hover {
+  color: #5dcfea;
+  text-decoration: none;
 }
 
 /* Projects section */
