@@ -19,13 +19,7 @@ export default function HeaderClient() {
         <Link href="/posts">Posts</Link>{" "}
         <span className="punctuation">|</span>{" "}
         <Link href="/archive">Archive</Link>
-        {session && (
-          <>
-            {" "}
-            <span className="punctuation">|</span>{" "}
-            <Link href="/editor">Editor</Link>
-          </>
-        )}
+
       </div>
       <nav className="social-links">
         <a href="mailto:adipras1407@gmail.com">Email</a> ⋅{" "}

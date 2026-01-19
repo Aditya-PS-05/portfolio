@@ -323,9 +323,16 @@ hr {
   font-weight: 600;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
-  margin-top: 4rem;
+  margin-top: auto;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   border-top: 1px solid #ddd;
   color: #888;
   font-size: 0.85rem;

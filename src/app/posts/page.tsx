@@ -70,9 +70,7 @@ export default function PostsPage() {
           </ul>
         )}
 
-        <p className="back-link">
-          <Link href="/">← Home</Link>
-        </p>
+
       </main>
 
       <style jsx>{`
