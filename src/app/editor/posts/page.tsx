@@ -6,17 +6,20 @@ import { Id } from "../../../../convex/_generated/dataModel";
 import HeaderClient from "@/components/HeaderClient";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function PostsEditorPage() {
   const posts = useQuery(api.posts.getAll);
   const createPost = useMutation(api.posts.create);
   const archivePost = useMutation(api.posts.archive);
   const [isCreating, setIsCreating] = useState(false);
+  const router = useRouter();
 
   const handleCreate = async () => {
     setIsCreating(true);
     try {
-      await createPost({ title: "Untitled" });
+      const postId = await createPost({ title: "Untitled" });
+      router.push(`/editor/posts/${postId}`);
     } finally {
       setIsCreating(false);
     }

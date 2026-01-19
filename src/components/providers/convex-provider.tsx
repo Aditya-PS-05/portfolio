@@ -9,7 +9,7 @@ import { SessionProvider } from "next-auth/react";
 
 const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
 const convex = convexUrl ? new ConvexReactClient(convexUrl) : null;
-const useAuth = !!process.env.NEXT_PUBLIC_AUTH_DOMAIN;
+const useAuth = false; // Disabled auth for development
 
 function useAuthFromNextAuth() {
   const { data: session, status } = useSession();
