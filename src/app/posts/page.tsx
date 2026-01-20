@@ -1,28 +1,12 @@
 "use client";
 
-import { useMutation, useQuery } from "convex/react";
+import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
-import { Id } from "../../../convex/_generated/dataModel";
 import HeaderClient from "@/components/HeaderClient";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 export default function PostsPage() {
   const posts = useQuery(api.posts.getPublished);
-  const createPost = useMutation(api.posts.create);
-  const router = useRouter();
-  const [isCreating, setIsCreating] = useState(false);
-
-  const handleCreatePost = async () => {
-    setIsCreating(true);
-    try {
-      const postId = await createPost({ title: "Untitled" });
-      router.push(`/editor/posts/${postId}`);
-    } finally {
-      setIsCreating(false);
-    }
-  };
 
   const formatDate = (timestamp: number) => {
     return new Date(timestamp).toLocaleDateString("en-US", {
@@ -38,13 +22,6 @@ export default function PostsPage() {
       <main className="posts-page">
         <div className="posts-page-header">
           <h1>Posts</h1>
-          <button
-            onClick={handleCreatePost}
-            disabled={isCreating}
-            className="create-post-btn"
-          >
-            {isCreating ? "Creating..." : "+ Create New Post"}
-          </button>
         </div>
 
         {posts === undefined && <p className="loading">Loading...</p>}
@@ -52,7 +29,6 @@ export default function PostsPage() {
         {posts && posts.length === 0 && (
           <div className="empty-state">
             <p>No posts yet.</p>
-            <p className="empty-hint">Click the button above to create your first post.</p>
           </div>
         )}
 
@@ -88,23 +64,6 @@ export default function PostsPage() {
           font-size: 2rem;
           font-weight: 600;
         }
-        .create-post-btn {
-          background: none;
-          border: none;
-          cursor: pointer;
-          font-size: 0.95rem;
-          color: #666;
-          padding: 0;
-          text-decoration: underline;
-          text-underline-offset: 3px;
-        }
-        .create-post-btn:hover {
-          color: #333;
-        }
-        .create-post-btn:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
         .loading {
           text-align: center;
           color: #666;
@@ -118,11 +77,6 @@ export default function PostsPage() {
         }
         .empty-state p {
           margin: 0;
-        }
-        .empty-hint {
-          color: #888;
-          font-size: 0.9rem;
-          margin-top: 0.5rem !important;
         }
         .post-icon {
           margin-right: 0.5rem;
