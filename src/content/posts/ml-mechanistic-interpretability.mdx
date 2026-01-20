@@ -1,0 +1,80 @@
+---
+title: "Machine Learning & Mechanistic Interpretability"
+date: "2025-01-20"
+description: "Understanding how neural networks work internally through mechanistic interpretability research."
+tags: ["machine-learning", "ai-alignment", "interpretability", "research"]
+private: false
+---
+
+## What is Mechanistic Interpretability?
+
+Mechanistic Interpretability (MI) is a subfield of AI alignment and machine learning research focused on understanding **how** neural networks work internally—not just what they do, but the specific algorithms and representations they learn.
+
+Unlike traditional interpretability methods (like saliency maps or feature importance), MI aims to reverse-engineer the actual computations happening inside models, much like understanding a circuit diagram rather than just observing inputs and outputs.
+
+## Why Does It Matter?
+
+As AI systems become more powerful and are deployed in critical applications, we need to:
+
+1. **Verify alignment** - Ensure models are pursuing intended objectives
+2. **Detect deception** - Identify if models are behaving differently during evaluation vs. deployment
+3. **Predict failures** - Understand edge cases before they occur
+4. **Build trust** - Provide genuine explanations for model behavior
+
+## Key Concepts
+
+### Superposition
+Models represent more features than they have dimensions by encoding features in overlapping, almost-orthogonal directions. This makes interpretation challenging but is key to understanding model capacity.
+
+### Circuits
+Specific computational subgraphs within neural networks that implement identifiable algorithms (e.g., induction heads in transformers that enable in-context learning).
+
+### Features
+The fundamental units of representation that models learn—often corresponding to human-interpretable concepts like "is a proper noun" or "refers to a location."
+
+---
+
+## Resources
+
+### Papers
+- [A Mathematical Framework for Transformer Circuits](https://transformer-circuits.pub/2021/framework/index.html) - Anthropic
+- [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) - Anthropic
+- [Scaling Monosemanticity](https://transformer-circuits.pub/2024/scaling-monosemanticity/) - Anthropic
+- [Zoom In: An Introduction to Circuits](https://distill.pub/2020/circuits/zoom-in/) - Distill
+
+### Courses & Tutorials
+- [ARENA Mechanistic Interpretability](https://arena3-chapter1-transformer-interp.streamlit.app/) - Comprehensive hands-on course
+- [Neel Nanda's MI Tutorials](https://www.neelnanda.io/mechanistic-interpretability) - Excellent starting point
+- [TransformerLens Library](https://github.com/neelnanda-io/TransformerLens) - Python library for MI research
+
+### Blogs & Communities
+- [Transformer Circuits Thread](https://transformer-circuits.pub/) - Anthropic's research blog
+- [AI Alignment Forum](https://www.alignmentforum.org/) - Discussion and papers
+- [LessWrong MI Posts](https://www.lesswrong.com/tag/interpretability-ml-and-ai) - Community research
+
+---
+
+## TODO: Learning Path
+
+- [ ] Read "A Mathematical Framework for Transformer Circuits" paper
+- [ ] Complete ARENA Chapter 1: Transformer Interpretability
+- [ ] Implement attention pattern visualization from scratch
+- [ ] Study induction heads and their role in in-context learning
+- [ ] Explore the TransformerLens library with GPT-2 small
+- [ ] Read "Toy Models of Superposition" paper
+- [ ] Implement sparse autoencoders for feature extraction
+- [ ] Study Anthropic's dictionary learning approach
+- [ ] Read "Scaling Monosemanticity" paper
+- [ ] Contribute to open-source MI tools or replicate a finding
+
+---
+
+## Current Research Directions
+
+1. **Sparse Autoencoders** - Decomposing activations into interpretable features
+2. **Automated Circuit Discovery** - Using algorithms to find circuits automatically
+3. **Scaling Laws for Interpretability** - How interpretation difficulty scales with model size
+4. **Causal Interventions** - Activation patching and causal tracing
+5. **Cross-model Feature Universality** - Do different models learn similar features?
+
+The field is rapidly evolving, with new techniques and discoveries emerging regularly. Stay curious and keep experimenting!

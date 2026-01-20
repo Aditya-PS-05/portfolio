@@ -338,3 +338,31 @@ export const removeCoverImage = mutation({
     });
   },
 });
+
+export const seedPost = mutation({
+  args: {
+    title: v.string(),
+    content: v.string(),
+    slug: v.string(),
+    icon: v.optional(v.string()),
+    excerpt: v.optional(v.string()),
+    tags: v.optional(v.array(v.string())),
+  },
+  handler: async (ctx, args) => {
+    const now = Date.now();
+    const postId = await ctx.db.insert("posts", {
+      title: args.title,
+      content: args.content,
+      slug: args.slug,
+      icon: args.icon,
+      excerpt: args.excerpt,
+      tags: args.tags,
+      userId: "dev-user",
+      isArchived: false,
+      isPublished: true,
+      createdAt: now,
+      updatedAt: now,
+    });
+    return postId;
+  },
+});

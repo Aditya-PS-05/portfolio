@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #d19a66;
+  color: #fff;
+}
+
 html {
   font-size: 18px;
 }
