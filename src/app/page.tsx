@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import { getContentList } from "@/lib/content";
-import { auth, isAdmin } from "@/lib/auth";
 
 const PROJECTS = [
   {
@@ -26,10 +25,8 @@ const PROJECTS = [
   },
 ];
 
-export default async function Home() {
-  const session = await auth();
-  const includePrivate = isAdmin(session?.user?.email);
-  const posts = getContentList("posts", includePrivate).slice(0, 4);
+export default function Home() {
+  const posts = getContentList("posts").slice(0, 4);
 
   return (
     <>

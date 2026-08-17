@@ -1,12 +1,9 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import { getContentList } from "@/lib/content";
-import { auth, isAdmin } from "@/lib/auth";
 
-export default async function ArchivePage() {
-  const session = await auth();
-  const includePrivate = isAdmin(session?.user?.email);
-  const posts = getContentList("posts", includePrivate);
+export default function ArchivePage() {
+  const posts = getContentList("posts");
 
   const postsByYear = posts.reduce(
     (acc, post) => {

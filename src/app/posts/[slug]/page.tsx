@@ -4,24 +4,21 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Header from "@/components/Header";
 import { getContent, getContentList } from "@/lib/content";
-import { auth, isAdmin } from "@/lib/auth";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const posts = getContentList("posts", true);
+  const posts = getContentList("posts");
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
-  const session = await auth();
-  const canViewPrivate = isAdmin(session?.user?.email);
   const post = getContent("posts", slug);
 
-  if (!post || (post.private && !canViewPrivate)) {
+  if (!post || post.private) {
     notFound();
   }
 

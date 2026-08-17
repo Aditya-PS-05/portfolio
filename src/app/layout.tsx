@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
-import { ConvexClientProvider } from "@/components/providers/convex-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,14 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        {children}
         <footer className="site-footer">
           <p className="site-footer-links">
             <a href="mailto:adipras1407@gmail.com">adipras1407@gmail.com</a>
             <span className="dot">·</span>
             <a href="https://github.com/Aditya-PS-05">GitHub</a>
-            <span className="dot">·</span>
-            <Link href="/notes">notes</Link>
           </p>
           <p>© {new Date().getFullYear()} Aditya Pratap Singh</p>
         </footer>
