@@ -55,11 +55,18 @@ export default function Home() {
               </li>
               <li>
                 Contribute upstream to{" "}
-                <a href="https://github.com/rust-lang/rust">rust-lang/rust</a>,{" "}
-                <a href="https://github.com/rust-lang/rust-analyzer">
+                <a href="https://github.com/rust-lang/rust/pulls?q=is%3Apr+is%3Amerged+author%3AAditya-PS-05">
+                  rust-lang/rust
+                </a>
+                ,{" "}
+                <a href="https://github.com/rust-lang/rust-analyzer/pulls?q=is%3Apr+is%3Amerged+author%3AAditya-PS-05">
                   rust-analyzer
                 </a>{" "}
-                and <a href="https://github.com/astral-sh/uv">astral-sh/uv</a> 🦀
+                and{" "}
+                <a href="https://github.com/astral-sh/uv/pulls?q=is%3Apr+is%3Amerged+author%3AAditya-PS-05">
+                  astral-sh/uv
+                </a>{" "}
+                🦀
               </li>
               <li>
                 B.Tech in Mechanical Engineering at NIT Tiruchirappalli,
