@@ -1,0 +1,84 @@
+---
+title: "INLAY: Editing a Model's Knowledge Without Touching Its Weights"
+date: "2026-08-17"
+description: "An independent research project on gradient-free knowledge editing: where it beats ROME, MEMIT, WISE, GRACE and AlphaEdit, and the limitations I'm working on now."
+tags: ["research", "llm", "knowledge-editing", "ml-systems"]
+private: false
+---
+
+## The problem
+
+A language model's factual knowledge is baked into its weights at training time. When a fact changes (a CEO steps down, an API is renamed) you have three bad options: retrain, which is absurdly expensive; fine-tune, which causes catastrophic forgetting; or surgically rewrite weights with methods like ROME and MEMIT, which is slow, and each edit degrades the model a little more.
+
+INLAY takes a fourth path: **don't touch the weights at all.** The base model stays frozen. Edits live in an external memory addressed by semantic keys, and when a query matches a stored edit, the answer is played back in logit space over the frozen model's own decoding. Writing an edit is a memory insert with zero gradient steps, roughly **5 to 15 ms per edit**. Deleting an edit is trivially exact, which no weight-editing method can offer.
+
+## What the benchmarks say
+
+I evaluated INLAY against the published field (ROME, MEMIT, WISE, GRACE, AlphaEdit) plus fine-tuning and in-context (RAG) baselines, on the two standard editing benchmarks, across four model families (GPT-2-XL, GPT-J-6B, Qwen2.5-7B, Mistral-7B), at up to N=5000 edits with held-out gate selection.
+
+<img src="/blog/inlay/method_comparison_full.png" alt="INLAY vs ROME, MEMIT, fine-tuning and RAG on GPT-2-XL: efficacy/locality scatter and write cost" />
+
+**CounterFact (harmonic mean of efficacy, paraphrase, locality):**
+
+| Model | INLAY | ROME | WISE | AlphaEdit | MEMIT | GRACE |
+|---|---|---|---|---|---|---|
+| GPT-J-6B | **0.893** | 0.797 | 0.703 | 0.460 | 0.431 | 0.0 |
+| Qwen2.5-7B | 0.894 | 0.777 | **0.947** | —* | —* | ~0.0 |
+| Mistral-7B | **0.900** | 0.340† | — | — | — | — |
+
+**zsRE:**
+
+| Model | INLAY | WISE | ROME | AlphaEdit | MEMIT | GRACE |
+|---|---|---|---|---|---|---|
+| GPT-J-6B | **1.00** | 0.996 | 0.937 | 0.670 | 0.650 | 0.004 |
+| Qwen2.5-7B | **0.996–1.00** | 0.999 | 0.975 | 0.682 | 0.682 | 0.056 |
+| Mistral-7B | **1.00** | — | 0.702 | — | — | — |
+
+<small>*Qwen MEMIT/AlphaEdit results exist only under a different (probability-success) metric and can't be honestly placed in this column. †ROME on Mistral ran with untuned hyperparameters. Dashes are runs that don't exist yet, not losses.</small>
+
+Note the honest exception in the table: **WISE beats INLAY on Qwen CounterFact** (0.947 vs 0.894). One benchmark, one model, but it's real and it stays in the table.
+
+**The sequential stress test is where the architecture argument lands.** Apply 400 edits one after another: ROME's locality collapses to zero by around 50 edits, effectively destroying the model, while INLAY's retention stays at 1.0 with locality degrading gently, at roughly **1600× lower write cost per edit**:
+
+<img src="/blog/inlay/sequential.png" alt="Sequential editing: INLAY retention stays 1.0 while ROME collapses; ~1600x cheaper per edit" />
+
+This isn't surprising once you see the mechanism: each INLAY edit is an isolated memory slot, so edits can't interfere with each other or with the base model. Weight editors compound damage; a memory table doesn't.
+
+## Current limitations, and what I'm doing about them
+
+The current version stores answers and plays them back, which means it can't yet **re-derive knowledge**. Ask "Who is the CEO of X?" after editing it and INLAY answers correctly. Ask "Where did the CEO of X go to university?" and the stored answer alone isn't enough: the model needs to *compose* the edit with other knowledge, and the playback path doesn't give it that chance.
+
+RippleEdits measures exactly this, and the current version loses there:
+
+<img src="/blog/inlay/rippleedits.png" alt="RippleEdits: RAG leads, INLAY mid on propagation and worst on preservation" />
+
+On the matched-manifest protocol (identical Wikidata-verified subjects for every method), in-context RAG scores 0.396 aggregate on GPT-J vs INLAY's 0.225, and INLAY is **worst of all methods on preservation** (0.05): its semantic keys over-fire on same-subject queries about *different* relations, overwriting facts that should have been left alone. A relation gate reduces over-firing from 0.97 to 0.67 but pays for it with paraphrase generalization.
+
+These are limitations of the current playback design, not of the external-memory architecture, and they're what I'm actively working on now:
+
+- **One shared scope decision for every generation path.** Today the playback path can bypass the relation gate. The redesign routes every query through a single router that returns reject, direct, or reason, so no path skips the scope check.
+- **A trained scope verifier with hard negatives.** A small cross-encoder over question plus candidate edit, trained on exactly the failure cases the data exposes: same subject with a different relation, same relation with a different subject, stale answers. This follows the retrieval/scope separation SERAC pioneered.
+- **A reason mode instead of playback for compositional questions.** When a query needs composition, retrieved edits become evidence in context and the frozen model generates the answer itself, in the spirit of in-context knowledge editing (IKE). Direct playback stays as the fast path for high-confidence atomic queries.
+- **A harder benchmark.** The next evaluation target is AKEW, which tests structured facts, raw unstructured evidence, and extracted triples, plus multi-hop questions from MQuAKE.
+
+The RippleEdits numbers above are the honest baseline this redesign has to beat.
+
+## Where it stands today
+
+What's established, with every number traceable to a logged run:
+
+- INLAY leads every measured baseline on single-edit CounterFact and zsRE on GPT-J and Mistral, and everything except WISE on Qwen, at three to four orders of magnitude lower write cost with zero gradient steps.
+- The lead is sample-stable: going from N=100 to N=5000 moves the score by about 0.01.
+- It's the only method in the comparison whose sequential retention stays flat.
+
+What's *not* established yet, the open gaps I'm still running or haven't run:
+
+- AlphaEdit on GPT-J CounterFact at N=2000 (job currently running).
+- MEMIT/WISE/GRACE/AlphaEdit on Mistral, on any benchmark.
+- Weight-editor baselines under the rigorous matched-manifest RippleEdits protocol; currently only base/RAG/INLAY have been through it.
+- Sequential editing beyond GPT-2-XL.
+- An apples-to-apples MEMIT/AlphaEdit number on Qwen CounterFact (only a different metric variant exists today).
+
+The honest one-line summary: **state of the art on the editing axes the field's leaderboards measure (efficacy, generalization, locality, sequential retention), with a named, measured limitation on compositional propagation in the current version, and a redesign in progress that targets exactly that axis.**
+
+Code, evaluation harnesses, and the full results audit are being prepared for release alongside a preprint. If you work on model editing and want to poke holes in this, please do: adipras1407@gmail.com.

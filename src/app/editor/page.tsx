@@ -17,8 +17,9 @@ export default async function EditorPage() {
   return (
     <>
       <Header />
-      <hr />
-      <OutlinerEditor title="My Notes" />
+      <main className="page">
+        <OutlinerEditor title="My Notes" />
+      </main>
     </>
   );
 }

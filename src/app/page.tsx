@@ -1,109 +1,150 @@
-import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import { getContentList } from "@/lib/content";
 import { auth, isAdmin } from "@/lib/auth";
 
+const PROJECTS = [
+  {
+    name: "Sunny",
+    href: "https://sunny.adityaps.work",
+    desc: "Private, on-device skin lesion tracker — fine-tuned VLM, 93% smaller, fully offline",
+  },
+  {
+    name: "AgentReplay",
+    href: "https://agentreplay.adityaps.work",
+    desc: "Turns production AI-agent failures into verified pull requests",
+  },
+  {
+    name: "Codesm",
+    href: "https://codesm.adityaps.work",
+    desc: "Multi-agent LLM coding system, up to 10 subagents across 4 providers",
+  },
+  {
+    name: "Audex",
+    href: "https://tryaudex.adityaps.work",
+    desc: "Sub-500ms scoped cloud credentials for AI agents",
+  },
+];
+
 export default async function Home() {
   const session = await auth();
   const includePrivate = isAdmin(session?.user?.email);
-  const posts = getContentList("posts", includePrivate).slice(0, 5);
+  const posts = getContentList("posts", includePrivate).slice(0, 4);
 
   return (
     <>
       <Header />
-      <hr />
+      <main className="page">
+        <section className="hero">
+          <div className="hero-bio">
+            <p>Hey, I&rsquo;m Aditya — welcome to my corner of the internet.</p>
+            <p className="muted">
+              I build ML systems that live under real constraints: a phone&rsquo;s
+              memory, a sandboxed microVM, a compiler&rsquo;s diagnostic pass.
+              Sometimes I just fix crashes in Rust for fun.
+            </p>
 
-      <div className="bio">
-        <p>
-          <strong>Open source Rust programmer</strong> contributing to{" "}
-          <a href="https://github.com/astral-sh/uv">Astral-sh/uv</a> and{" "}
-          <a href="https://github.com/rust-lang/rust">Rust-Lang/Rust</a>.
-        </p>
-        <p>
-          Currently: Full Stack Developer at{" "}
-          <a href="https://runitup.ai">HAQQ Studios</a>, Frontend at Journim. CS
-          undergrad.
-        </p>
-        <p>I write about Rust, open source, and full-stack development.</p>
-      </div>
-
-      <p className="projects-heading">Check out some of my public projects:</p>
-
-      <div className="projects-list">
-        <span className="keyword">match</span> title{" "}
-        <span className="keyword">with</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/Aditya-PS-05/Codesm">Codesm</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Terminal-based AI coding agent with real-time chat, OAuth, and LSP integration (Python, Rust, Claude API)</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/Aditya-PS-05/Hyprcurl">Hyprcurl</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">High-performance async HTTP client library with HTTP/1 &amp; HTTP/2 support, written in Rust</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/Aditya-PS-05/makemore">Makemore</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Character-level language models (MLP, RNN, LSTM, GRU, Transformers) for synthetic text generation</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/Aditya-PS-05/Jotion">Jotion</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Notion-inspired web app with real-time editing and live sync (Next.js, TypeScript, Convex DB)</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/Aditya-PS-05/De-Code">De-Code</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Online coding platform for NIT Trichy with secure DAuth authentication</span>
-        <br />
-      </div>
-
-      <p className="projects-heading" style={{ marginTop: "2rem" }}>Open source contributions:</p>
-
-      <div className="projects-list">
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/astral-sh/uv">astral-sh/uv</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">10+ merged PRs to the fast Python package manager (Rust)</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/rust-lang/rust">rust-lang/rust</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Contributor to the Rust programming language compiler</span>
-        <br />
-        &nbsp;&nbsp;<span className="punctuation">|</span>{" "}
-        <a href="https://github.com/rust-lang/rust-analyzer">rust-analyzer</a>{" "}
-        <span className="arrow">-&gt;</span>{" "}
-        <span className="desc">Contributions to the Rust LSP implementation</span>
-        <br />
-      </div>
-
-      <section className="posts-section">
-        <h2>Recent posts:</h2>
-        {posts.length > 0 ? (
-          <ul className="posts-list">
-            {posts.map((post) => (
-              <li key={post.slug}>
-                <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-                <span className="date">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-                {post.private && <span className="private-badge">private</span>}
+            <div className="summary-label">Summary</div>
+            <ul className="summary-list">
+              <li>
+                Currently <strong>Technical Lead, AI Engineering</strong> at
+                HCLTech, building agent infrastructure for a Bank of Ireland
+                engagement
               </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No posts yet.</p>
-        )}
-        <p>
-          <Link href="/archive">View all posts →</Link>
-        </p>
-      </section>
+              <li>
+                Previously, AI Developer at{" "}
+                <a href="https://runitup.ai">Runitup</a>, shipping the
+                ad-generation pipeline in Rust
+              </li>
+              <li>
+                Contribute upstream to{" "}
+                <a href="https://github.com/rust-lang/rust">rust-lang/rust</a>,{" "}
+                <a href="https://github.com/rust-lang/rust-analyzer">
+                  rust-analyzer
+                </a>{" "}
+                and <a href="https://github.com/astral-sh/uv">astral-sh/uv</a> 🦀
+              </li>
+              <li>
+                B.Tech in Mechanical Engineering at NIT Tiruchirappalli,
+                2022–2026
+              </li>
+              <li>Based in India</li>
+            </ul>
+
+            <div className="social-row">
+              <a href="mailto:adipras1407@gmail.com" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 6-10 7L2 6" />
+                </svg>
+              </a>
+              <a href="https://github.com/Aditya-PS-05" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.14c-3.17.69-3.84-1.36-3.84-1.36-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.14.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.05-.12-.29-.5-1.46.11-3.05 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.61 1.59.23 2.76.11 3.05.73.79 1.17 1.81 1.17 3.05 0 4.37-2.67 5.33-5.21 5.62.41.36.77 1.05.77 2.13v3.16c0 .3.21.66.79.55A11.04 11.04 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z" />
+                </svg>
+              </a>
+              <a href="https://twitter.com/0xAditya_pratap" aria-label="X / Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.9 1.6h3.3l-7.2 8.2 8.5 11.2h-6.6L11.5 13l-6 7.9H2.2l7.7-8.8L1.7 1.6h6.8l4.7 6.2 5.7-6.2Zm-1.2 17.5h1.8L7.4 3.5H5.5l12.2 15.6Z" />
+                </svg>
+              </a>
+              <span className="divider" />
+              <a className="now-status" href="https://agentreplay.adityaps.work">
+                <span className="pulse" />
+                Currently shipping AgentReplay ↗
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-avatar">
+            <Image
+              src="/avatar.png"
+              alt="Aditya Pratap Singh"
+              width={1023}
+              height={1537}
+              priority
+            />
+          </div>
+        </section>
+
+        <section className="split" id="projects">
+          <div>
+            <div className="split-label">Projects</div>
+            <div className="item-list">
+              {PROJECTS.map((p) => (
+                <div className="item-row" key={p.name}>
+                  <div>
+                    <a className="item-name" href={p.href}>
+                      {p.name} ↗
+                    </a>
+                    <div className="item-desc">{p.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="split-label">Writing</div>
+            {posts.length > 0 ? (
+              <>
+                <div className="writing-list">
+                  {posts.map((post) => (
+                    <a key={post.slug} href={`/posts/${post.slug}`}>
+                      {post.title}
+                    </a>
+                  ))}
+                </div>
+                <p className="split-more">
+                  <a href="/archive">all posts ↗</a>
+                </p>
+              </>
+            ) : (
+              <p className="writing-empty">I am too lazy to write :&apos;)</p>
+            )}
+          </div>
+        </section>
+      </main>
     </>
   );
 }

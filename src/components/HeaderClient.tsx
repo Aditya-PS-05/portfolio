@@ -1,47 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
+import LiveStatus from "@/components/LiveStatus";
 
 export default function HeaderClient() {
   const { data: session } = useSession();
 
   return (
-    <header className="site-header">
-      <h1 className="site-title">
-        <Link href="/">Aditya Pratap Singh</Link>
-      </h1>
-      <div className="code-nav">
-        <Link href="/">Home</Link>{" "}
-        <span className="punctuation">|</span>{" "}
-        <Link href="/notes">Notes</Link>{" "}
-        <span className="punctuation">|</span>{" "}
-        <Link href="/posts">Posts</Link>{" "}
-        <span className="punctuation">|</span>{" "}
-        <Link href="/archive">Archive</Link>
-
-      </div>
-      <nav className="social-links">
-        <a href="mailto:adipras1407@gmail.com">Email</a> ⋅{" "}
-        <a href="https://github.com/Aditya-PS-05">GitHub</a> ⋅{" "}
-        <a href="https://twitter.com/0xAditya_pratap">Twitter</a>
-        {session ? (
-          <>
-            {" "}
-            ⋅{" "}
-            <button onClick={() => signOut()} className="link-button">
-              Sign out
-            </button>
-          </>
-        ) : (
-          <>
-            {" "}
-            ⋅{" "}
-            <button onClick={() => signIn("github")} className="link-button">
-              Sign in
-            </button>
-          </>
+    <header className="topbar">
+      <Link href="/" className="topbar-name">
+        Aditya Pratap Singh
+      </Link>
+      <nav className="topbar-right">
+        <Link href="/archive">writing</Link>
+        <Link href="/#projects">projects</Link>
+        {session && (
+          <button onClick={() => signOut()} className="link-button">
+            sign out
+          </button>
         )}
+        <span className="topbar-divider" />
+        <LiveStatus />
       </nav>
     </header>
   );

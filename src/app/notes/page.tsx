@@ -17,34 +17,34 @@ export default async function NotesPage() {
   return (
     <>
       <Header />
-      <hr />
+      <main className="page">
+        <h1 className="posts-heading" style={{ marginTop: "3rem" }}>
+          Notes
+        </h1>
 
-      <h1 style={{ fontSize: "1.75rem", fontWeight: "normal", marginBottom: "1rem" }}>
-        Notes
-      </h1>
+        {notes.length > 0 ? (
+          <ul className="posts-list">
+            {notes.map((note) => (
+              <li key={note.slug}>
+                <Link href={`/notes/${note.slug}`}>{note.title}</Link>
+                {note.private && <span className="private-badge">private</span>}
+                <span className="date">
+                  {new Date(note.date).toLocaleDateString("en-US", {
+                    month: "short",
+                    year: "numeric",
+                  })}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="empty-state">No notes yet.</p>
+        )}
 
-      {notes.length > 0 ? (
-        <ul className="posts-list">
-          {notes.map((note) => (
-            <li key={note.slug}>
-              <Link href={`/notes/${note.slug}`}>{note.title}</Link>
-              <span className="date">
-                {new Date(note.date).toLocaleDateString("en-US", {
-                  month: "short",
-                  year: "numeric",
-                })}
-              </span>
-              {note.private && <span className="private-badge">private</span>}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No notes yet.</p>
-      )}
-
-      <p style={{ marginTop: "2rem" }}>
-        <Link href="/">← Home</Link>
-      </p>
+        <p className="post-footer" style={{ border: "none", marginTop: "2rem" }}>
+          <Link href="/">← Home</Link>
+        </p>
+      </main>
     </>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useMemo } from "react";
+import { ReactNode, createContext, useContext, useMemo } from "react";
 import { ConvexReactClient, ConvexProvider } from "convex/react";
 import { ConvexProviderWithAuth } from "convex/react";
 import { useSession } from "next-auth/react";
@@ -10,6 +10,12 @@ import { SessionProvider } from "next-auth/react";
 const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
 const convex = convexUrl ? new ConvexReactClient(convexUrl) : null;
 const useAuth = false; // Disabled auth for development
+
+const ConvexAvailableContext = createContext(false);
+
+export function useConvexAvailable() {
+  return useContext(ConvexAvailableContext);
+}
 
 function useAuthFromNextAuth() {
   const { data: session, status } = useSession();
@@ -63,7 +69,9 @@ export function ConvexClientProvider({
 }) {
   return (
     <SessionProvider session={session}>
-      <ConvexProviderInner>{children}</ConvexProviderInner>
+      <ConvexAvailableContext.Provider value={!!convex}>
+        <ConvexProviderInner>{children}</ConvexProviderInner>
+      </ConvexAvailableContext.Provider>
     </SessionProvider>
   );
 }

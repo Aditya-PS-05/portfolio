@@ -1,29 +1,22 @@
 import type { Metadata } from "next";
-import { Open_Sans, Source_Code_Pro } from "next/font/google";
+import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/providers/convex-provider";
 
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "600"],
-  variable: "--font-open-sans",
-});
-
-const sourceCodePro = Source_Code_Pro({
-  subsets: ["latin"],
-  weight: ["300"],
-  variable: "--font-source-code-pro",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Home | Aditya Pratap Singh",
+    default: "Aditya Pratap Singh — ML Systems Engineer",
     template: "%s | Aditya Pratap Singh",
   },
-  description: "Open source Rust programmer, Full Stack Developer, and UI/UX engineer.",
-  icons: {
-    icon: [],
-  },
+  description:
+    "ML systems engineer: model compression, on-device inference, LLM fine-tuning, agent infrastructure. Rust compiler contributor.",
 };
 
 export default function RootLayout({
@@ -32,12 +25,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${openSans.variable} ${sourceCodePro.variable}`}>
-      <body className={openSans.className}>
-        <ConvexClientProvider>
-          {children}
-        </ConvexClientProvider>
-        <footer>
+    <html lang="en" className={inter.variable}>
+      <body>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <footer className="site-footer">
+          <p className="site-footer-links">
+            <a href="mailto:adipras1407@gmail.com">adipras1407@gmail.com</a>
+            <span className="dot">·</span>
+            <a href="https://github.com/Aditya-PS-05">GitHub</a>
+            <span className="dot">·</span>
+            <Link href="/notes">notes</Link>
+          </p>
           <p>© {new Date().getFullYear()} Aditya Pratap Singh</p>
         </footer>
       </body>

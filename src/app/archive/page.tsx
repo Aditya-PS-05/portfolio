@@ -23,39 +23,39 @@ export default async function ArchivePage() {
   return (
     <>
       <Header />
-      <hr />
+      <main className="page">
+        <h1 className="posts-heading" style={{ marginTop: "3rem" }}>
+          Archive
+        </h1>
 
-      <h1 style={{ fontSize: "1.75rem", fontWeight: "normal", marginBottom: "1rem" }}>
-        Archive
-      </h1>
+        {years.length > 0 ? (
+          years.map((year) => (
+            <div key={year}>
+              <h2 className="archive-year">{year}</h2>
+              <ul className="posts-list">
+                {postsByYear[year].map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                    {post.private && <span className="private-badge">private</span>}
+                    <span className="date">
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        ) : (
+          <p className="empty-state">No posts yet.</p>
+        )}
 
-      {years.length > 0 ? (
-        years.map((year) => (
-          <div key={year}>
-            <h2 className="archive-year">{year}</h2>
-            <ul className="posts-list">
-              {postsByYear[year].map((post) => (
-                <li key={post.slug}>
-                  <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-                  <span className="date">
-                    {new Date(post.date).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </span>
-                  {post.private && <span className="private-badge">private</span>}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      ) : (
-        <p>No posts yet.</p>
-      )}
-
-      <p style={{ marginTop: "2rem" }}>
-        <Link href="/">← Home</Link>
-      </p>
+        <p className="post-footer" style={{ border: "none", marginTop: "2rem" }}>
+          <Link href="/">← Home</Link>
+        </p>
+      </main>
     </>
   );
 }
