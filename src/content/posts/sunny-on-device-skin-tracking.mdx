@@ -1,0 +1,49 @@
+---
+title: "Sunny: A 412MB Vision Model That Never Phones Home"
+date: "2026-08-17"
+description: "How I fine-tuned a 500M-parameter VLM to describe skin lesions fully offline on Android, and why small models are quietly changing the game."
+tags: ["on-device", "slm", "fine-tuning", "quantization", "privacy", "ml-systems"]
+private: false
+---
+
+Skin photos are about as private as personal data gets. If you're building an app that looks at them every week to track changes over time, "we upload your photos to our API" is not a privacy policy, it's a dealbreaker. So Sunny had one non-negotiable constraint from day one: **the model runs on the phone, and photos never leave it.**
+
+One more constraint, just as hard: Sunny is **not a diagnostic tool**. It describes what a lesion looks like (type, colour, symmetry, borders, texture) so you can compare this month's photo against last month's. It must never assert a diagnosis, a benign/malignant verdict, or a risk score. That's not a disclaimer bolted on at the end; as you'll see, it's enforced at the decoding level.
+
+## The dead ends that shaped the design
+
+The obvious first move was a big vision-language model. I fine-tuned one: a Gemma E4B pack that weighed **5.86 GB** quantized. It worked, and it was completely unshippable. Nobody downloads a 6 GB app for skin tracking, and mid-range phones can't hold it in memory anyway.
+
+The opposite extreme was tiny classifiers: a 6 MB MobileNetV3 and a 111 MB ConvNeXt-Tiny producing the schema fields directly. They were fast, but they plateaued in the mid-60s on exact-match field accuracy, the ensemble gain over the small one wasn't even statistically reliable (the bootstrap interval included zero), and a bank of classifier heads can't write the one thing users actually read: a coherent summary in plain language.
+
+So the answer wasn't "bigger" or "smaller." It was a **small language model fine-tuned into a specialist**.
+
+## The recipe
+
+The base is SmolVLM-500M-Instruct, a 500M-parameter vision-language model. The pipeline:
+
+- **Data:** PAD-UFES-20, a public dataset of 2,298 smartphone photos of skin lesions (real phone photos, not dermatoscope images, which is exactly the distribution the app sees). 2,292 survived preprocessing; split into 2,015 training and 277 validation images, grouped by lesion so no lesion appears in both sides.
+- **Fine-tune:** three epochs of LoRA (r=16, alpha=16, lr 2e-4, effective batch 16), tracked in Weights & Biases. The target output is a fixed six-field schema: Lesion Type, Colour, Symmetry, Borders, Texture, Summary.
+- **Shrink:** merge the adapter, quantize the language model to Q4_K_M and the vision projector to Q8_0, package as GGUF. The whole phone pack is **412 MB**: a 303 MB text model plus a 109 MB projector. That's 93% smaller than the E4B pack it replaced.
+- **Run:** llama.cpp on Android behind a stable JNI boundary. Google Play installs the model pack with the app; every artifact is verified against a pinned size and SHA-256 before it's copied into private storage. No sneaky post-install download, no silent cloud fallback. Cloud analysis exists but only fires on explicit, timestamped user consent, because that's the one case where a photo leaves the device.
+
+## The part I'd argue matters most: constrained decoding
+
+A fine-tuned model is still a language model, and language models freelance. The fix is a **GBNF grammar** that constrains decoding itself: the model is mechanically unable to emit anything except the six-field schema, greedy-decoded under a 160-token cap, ending with the exact non-diagnosis line.
+
+On all 277 held-out validation images this gave **100% format compliance and 100% safety compliance**. Not "we prompted it nicely and it usually behaves." The token sampler cannot produce a diagnosis, the same way a JSON parser cannot accept malformed JSON.
+
+To be precise about what that claims and doesn't: it's a guarantee about output *structure and safety*, not about descriptive *accuracy*. Whether the description is dermatologically faithful still needs independent clinician-labelled validation, along with skin-tone and device coverage, on-device thermals and battery, and everything else on the release-gate list. Sunny is honest about being pre-clinical.
+
+## Why I think small models are changing the game
+
+The lesson from Sunny generalizes well beyond skin tracking:
+
+- **Specialization beats scale for narrow jobs.** A 500M model fine-tuned on 2,000 in-distribution images produces better structured output for this task than prompting a frontier model, and it does it in airplane mode.
+- **Capability per byte is the metric that matters on-device.** 5.86 GB to 412 MB isn't an optimization, it's the difference between a product that can exist and one that can't.
+- **Grammar-constrained decoding turns an SLM into a reliable component.** The reason people distrust LLMs in products is unpredictable output. Constrain the decoder and a small model becomes something you can build an interface on top of, with compliance you can measure at 100% instead of "usually."
+- **On-device flips the privacy default.** When inference is local, "your data never leaves your phone" stops being a promise and becomes an architecture. Zero marginal inference cost is a nice side effect: no API bill scaling with users.
+
+The frontier-model race is real, but there's a quieter shift underneath it: for a huge class of narrow, structured, privacy-sensitive tasks, a fine-tuned sub-1B model with constrained decoding is already the right engineering answer. Sunny is my existence proof.
+
+Sunny lives at [sunny.adityaps.work](https://sunny.adityaps.work). If you're building on-device ML and want to compare notes: adipras1407@gmail.com.
