@@ -85,6 +85,14 @@ export default function Home() {
                   <path d="M18.9 1.6h3.3l-7.2 8.2 8.5 11.2h-6.6L11.5 13l-6 7.9H2.2l7.7-8.8L1.7 1.6h6.8l4.7 6.2 5.7-6.2Zm-1.2 17.5h1.8L7.4 3.5H5.5l12.2 15.6Z" />
                 </svg>
               </a>
+              <a
+                href="https://www.linkedin.com/in/aditya-pratap-singh-952a8820a/"
+                aria-label="LinkedIn"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+                </svg>
+              </a>
               <span className="divider" />
               <a className="now-status" href="https://agentreplay.adityaps.work">
                 <span className="pulse" />
