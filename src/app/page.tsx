@@ -36,9 +36,10 @@ export default function Home() {
           <div className="hero-bio">
             <p>Hey, I&rsquo;m Aditya — welcome to my corner of the internet.</p>
             <p className="muted">
-              I build ML systems that live under real constraints: a phone&rsquo;s
-              memory, a sandboxed microVM, a compiler&rsquo;s diagnostic pass.
-              Sometimes I just fix crashes in Rust for fun.
+              ML engineer, currently doing independent research on knowledge
+              editing for LLMs. Previously an AI developer at an AI startup. I
+              work in Python and Rust, believe small language models are
+              underrated, and sometimes fix Rust compiler crashes for fun.
             </p>
 
             <div className="summary-label">Summary</div>
