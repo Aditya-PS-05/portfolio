@@ -19,6 +19,7 @@ export default function ReadingList({
   const [filter, setFilter] = useState<"all" | "unread" | "read">("all");
 
   const cats = useMemo(() => Array.from(new Set(items.map((i) => i.cat))), [items]);
+  const phases = useMemo(() => Array.from(new Set(items.map((i) => i.phase))), [items]);
   const q = query.trim().toLowerCase();
   const readCount = items.filter((i) => meta[i.id]?.status === "read").length;
   const readingCount = items.filter((i) => meta[i.id]?.status === "reading").length;
@@ -83,15 +84,15 @@ export default function ReadingList({
         </div>
       </div>
 
-      {cats.map((c) => {
-        const sub = items.filter((i) => i.cat === c && visible(i));
+      {phases.map((ph) => {
+        const sub = items.filter((i) => i.phase === ph && visible(i));
         if (sub.length === 0) return null;
-        const total = items.filter((i) => i.cat === c).length;
-        const read = items.filter((i) => i.cat === c && meta[i.id]?.status === "read").length;
+        const total = items.filter((i) => i.phase === ph).length;
+        const read = items.filter((i) => i.phase === ph && meta[i.id]?.status === "read").length;
         return (
-          <section key={c} className="reading-section">
+          <section key={ph} className="reading-section">
             <h2>
-              {c} <span className="reading-n">{read}/{total}</span>
+              {ph} <span className="reading-n">{read}/{total}</span>
             </h2>
             <ol>
               {sub.map((i) => {
@@ -104,7 +105,7 @@ export default function ReadingList({
                     </span>
                     <div>
                       <div className="reading-title">
-                        <span className="reading-num">{String(i.id).padStart(3, "0")}</span>
+                        <span className="reading-num" title={`id ${i.id}`}>{String(i.order).padStart(3, "0")}</span>
                         <a href={i.url} target="_blank" rel="noopener noreferrer">
                           {i.title}
                         </a>
@@ -112,6 +113,7 @@ export default function ReadingList({
                       <div className="reading-meta">
                         <span>{i.who}</span>
                         <span className="reading-type">{i.type}</span>
+                        <span className="reading-type">{i.cat}</span>
                         {i.url !== i.search && (
                           <a href={i.search} target="_blank" rel="noopener noreferrer">
                             search

@@ -12,6 +12,8 @@ export interface ReadingItem {
   url: string;
   search: string;
   why: string;
+  phase: string;
+  order: number;
 }
 
 export type ReadingStatus = "read" | "reading";
@@ -47,5 +49,5 @@ export function getReadingNotes(): Record<number, ReadingNote> {
 }
 
 export function getReadingCatalog(): ReadingItem[] {
-  return catalog as ReadingItem[];
+  return [...(catalog as ReadingItem[])].sort((a, b) => a.order - b.order);
 }

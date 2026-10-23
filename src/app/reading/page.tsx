@@ -44,8 +44,9 @@ export default function ReadingPage() {
             <a href="https://vkrakovna.wordpress.com/ai-safety-resources/">
               Victoria Krakovna&rsquo;s resources list
             </a>
-            ; the rest fills in the ML and MIRI material it leaves out. One line
-            under each item says why it is here. Items I have finished carry the
+            ; the rest fills in the ML and MIRI material it leaves out. They are arranged in
+            ten phases in the order I plan to read them, dependency first, with
+            a line under each item on why it is here. Items I have finished carry the
             date and my notes.
           </p>
         </div>

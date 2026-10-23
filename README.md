@@ -104,7 +104,7 @@ src/
 │   ├── Header.tsx          # top bar
 │   └── LiveStatus.tsx      # live clock + weather
 ├── content/posts/          # the writing (MDX)
-├── content/reading-list.json  # the reading list data
+├── content/reading-list.json  # the reading list data (phase + order fields set the sequence)
 ├── content/reading-notes/  # one MDX note per finished paper, named by id
 └── lib/content.ts          # frontmatter loader
 ```
