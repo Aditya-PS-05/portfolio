@@ -1,0 +1,2002 @@
+[
+ {
+  "id": 1,
+  "cat": "ML foundations",
+  "title": "Attention Is All You Need",
+  "who": "Vaswani et al. (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1706.03762",
+  "search": "https://www.google.com/search?q=Attention%20Is%20All%20You%20Need%20Vaswani%20et%20al.%20",
+  "why": "The transformer. Everything else on this list runs on it."
+ },
+ {
+  "id": 2,
+  "cat": "ML foundations",
+  "title": "Deep Residual Learning for Image Recognition",
+  "who": "He et al. (2015)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1512.03385",
+  "search": "https://www.google.com/search?q=Deep%20Residual%20Learning%20for%20Image%20Recognition%20He%20et%20al.%20",
+  "why": "Residual streams, which is also what interp means by \"the residual stream\"."
+ },
+ {
+  "id": 3,
+  "cat": "ML foundations",
+  "title": "Adam: A Method for Stochastic Optimization",
+  "who": "Kingma, Ba (2014)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1412.6980",
+  "search": "https://www.google.com/search?q=Adam%3A%20A%20Method%20for%20Stochastic%20Optimization%20Kingma%2C%20Ba%20",
+  "why": "The optimizer you will actually use."
+ },
+ {
+  "id": 4,
+  "cat": "ML foundations",
+  "title": "Batch Normalization",
+  "who": "Ioffe, Szegedy (2015)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1502.03167",
+  "search": "https://www.google.com/search?q=Batch%20Normalization%20Ioffe%2C%20Szegedy%20",
+  "why": "Read with Layer Normalization (Ba et al. 2016) to understand pre-norm transformers."
+ },
+ {
+  "id": 5,
+  "cat": "ML foundations",
+  "title": "Generative Adversarial Nets",
+  "who": "Goodfellow et al. (2014)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1406.2661",
+  "search": "https://www.google.com/search?q=Generative%20Adversarial%20Nets%20Goodfellow%20et%20al.%20",
+  "why": "The adversarial training idea reappears in debate and prover-verifier games."
+ },
+ {
+  "id": 6,
+  "cat": "ML foundations",
+  "title": "Auto-Encoding Variational Bayes",
+  "who": "Kingma, Welling (2013)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1312.6114",
+  "search": "https://www.google.com/search?q=Auto-Encoding%20Variational%20Bayes%20Kingma%2C%20Welling%20",
+  "why": "Latent variables and the ELBO. Needed for anything probabilistic later."
+ },
+ {
+  "id": 7,
+  "cat": "ML foundations",
+  "title": "Efficient Estimation of Word Representations in Vector Space",
+  "who": "Mikolov et al. (2013)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1301.3781",
+  "search": "https://www.google.com/search?q=Efficient%20Estimation%20of%20Word%20Representations%20in%20Vector%20Space%20Mikolov%20et%20al.%20",
+  "why": "Word2vec. The first \"linear representation\" result, a decade before the hypothesis was named."
+ },
+ {
+  "id": 8,
+  "cat": "ML foundations",
+  "title": "BERT: Pre-training of Deep Bidirectional Transformers",
+  "who": "Devlin et al. (2018)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1810.04805",
+  "search": "https://www.google.com/search?q=BERT%3A%20Pre-training%20of%20Deep%20Bidirectional%20Transformers%20Devlin%20et%20al.%20",
+  "why": "Pretrain then finetune becomes the default."
+ },
+ {
+  "id": 9,
+  "cat": "ML foundations",
+  "title": "Understanding Deep Learning Requires Rethinking Generalization",
+  "who": "Zhang et al. (2016)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1611.03530",
+  "search": "https://www.google.com/search?q=Understanding%20Deep%20Learning%20Requires%20Rethinking%20Generalization%20Zhang%20et%20al.%20",
+  "why": "Nets memorize random labels and still generalize on real ones. Classical theory breaks here."
+ },
+ {
+  "id": 10,
+  "cat": "ML foundations",
+  "title": "The Lottery Ticket Hypothesis",
+  "who": "Frankle, Carbin (2018)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1803.03635",
+  "search": "https://www.google.com/search?q=The%20Lottery%20Ticket%20Hypothesis%20Frankle%2C%20Carbin%20",
+  "why": "Sparse subnetworks. Background for superposition and pruning."
+ },
+ {
+  "id": 11,
+  "cat": "ML foundations",
+  "title": "Deep Double Descent",
+  "who": "Nakkiran et al. (2019)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1912.02292",
+  "search": "https://www.google.com/search?q=Deep%20Double%20Descent%20Nakkiran%20et%20al.%20",
+  "why": "Bigger is better again past interpolation."
+ },
+ {
+  "id": 12,
+  "cat": "ML foundations",
+  "title": "Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets",
+  "who": "Power et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2201.02177",
+  "search": "https://www.google.com/search?q=Grokking%3A%20Generalization%20Beyond%20Overfitting%20on%20Small%20Algorithmic%20Datasets%20Power%20et%20al.%20",
+  "why": "Read before Nanda's progress-measures paper in the interp section."
+ },
+ {
+  "id": 13,
+  "cat": "ML foundations",
+  "title": "Proximal Policy Optimization Algorithms",
+  "who": "Schulman et al. (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1707.06347",
+  "search": "https://www.google.com/search?q=Proximal%20Policy%20Optimization%20Algorithms%20Schulman%20et%20al.%20",
+  "why": "The RL algorithm under RLHF."
+ },
+ {
+  "id": 14,
+  "cat": "ML foundations",
+  "title": "Mastering the Game of Go without Human Knowledge",
+  "who": "Silver et al. (2017)",
+  "type": "paper",
+  "url": "https://www.nature.com/articles/nature24270",
+  "search": "https://www.google.com/search?q=Mastering%20the%20Game%20of%20Go%20without%20Human%20Knowledge%20Silver%20et%20al.%20",
+  "why": "AlphaZero. Self-play and search, which came back with reasoning models."
+ },
+ {
+  "id": 15,
+  "cat": "ML foundations",
+  "title": "FlashAttention",
+  "who": "Dao et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2205.14135",
+  "search": "https://www.google.com/search?q=FlashAttention%20Dao%20et%20al.%20",
+  "why": "How attention is actually computed on a GPU."
+ },
+ {
+  "id": 16,
+  "cat": "ML foundations",
+  "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+  "who": "Hu et al. (2021)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2106.09685",
+  "search": "https://www.google.com/search?q=LoRA%3A%20Low-Rank%20Adaptation%20of%20Large%20Language%20Models%20Hu%20et%20al.%20",
+  "why": "How most finetuning is done, including most model-organism papers."
+ },
+ {
+  "id": 17,
+  "cat": "ML foundations",
+  "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+  "who": "Su et al. (2021)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2104.09864",
+  "search": "https://www.google.com/search?q=RoFormer%3A%20Enhanced%20Transformer%20with%20Rotary%20Position%20Embedding%20Su%20et%20al.%20",
+  "why": "RoPE. Every open model uses it."
+ },
+ {
+  "id": 18,
+  "cat": "ML foundations",
+  "title": "The Bitter Lesson",
+  "who": "Sutton (2019)",
+  "type": "post",
+  "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+  "search": "https://www.google.com/search?q=The%20Bitter%20Lesson%20Sutton%20",
+  "why": "One page. Explains why scaling won."
+ },
+ {
+  "id": 19,
+  "cat": "Scaling and LLMs",
+  "title": "Scaling Laws for Neural Language Models",
+  "who": "Kaplan et al. (2020)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2001.08361",
+  "search": "https://www.google.com/search?q=Scaling%20Laws%20for%20Neural%20Language%20Models%20Kaplan%20et%20al.%20",
+  "why": "Loss is a power law in compute, data, parameters."
+ },
+ {
+  "id": 20,
+  "cat": "Scaling and LLMs",
+  "title": "Training Compute-Optimal Large Language Models",
+  "who": "Hoffmann et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2203.15556",
+  "search": "https://www.google.com/search?q=Training%20Compute-Optimal%20Large%20Language%20Models%20Hoffmann%20et%20al.%20",
+  "why": "Chinchilla. Kaplan got the data-parameter split wrong."
+ },
+ {
+  "id": 21,
+  "cat": "Scaling and LLMs",
+  "title": "Language Models are Few-Shot Learners",
+  "who": "Brown et al. (2020)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2005.14165",
+  "search": "https://www.google.com/search?q=Language%20Models%20are%20Few-Shot%20Learners%20Brown%20et%20al.%20",
+  "why": "GPT-3. In-context learning appears."
+ },
+ {
+  "id": 22,
+  "cat": "Scaling and LLMs",
+  "title": "GPT-4 Technical Report",
+  "who": "OpenAI (2023)",
+  "type": "report",
+  "url": "https://arxiv.org/abs/2303.08774",
+  "search": "https://www.google.com/search?q=GPT-4%20Technical%20Report%20OpenAI%20",
+  "why": "Read the scaling-prediction figure and the system card section."
+ },
+ {
+  "id": 23,
+  "cat": "Scaling and LLMs",
+  "title": "LLaMA: Open and Efficient Foundation Language Models",
+  "who": "Touvron et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2302.13971",
+  "search": "https://www.google.com/search?q=LLaMA%3A%20Open%20and%20Efficient%20Foundation%20Language%20Models%20Touvron%20et%20al.%20",
+  "why": "The open-weights era starts. Llama 3 report (2024) is the follow-up."
+ },
+ {
+  "id": 24,
+  "cat": "Scaling and LLMs",
+  "title": "Emergent Abilities of Large Language Models",
+  "who": "Wei et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2206.07682",
+  "search": "https://www.google.com/search?q=Emergent%20Abilities%20of%20Large%20Language%20Models%20Wei%20et%20al.%20",
+  "why": "The claim."
+ },
+ {
+  "id": 25,
+  "cat": "Scaling and LLMs",
+  "title": "Are Emergent Abilities of Large Language Models a Mirage?",
+  "who": "Schaeffer, Miranda, Koyejo (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2304.15004",
+  "search": "https://www.google.com/search?q=Are%20Emergent%20Abilities%20of%20Large%20Language%20Models%20a%20Mirage%3F%20Schaeffer%2C%20Miranda%2C%20Koyejo%20",
+  "why": "The rebuttal. Read both."
+ },
+ {
+  "id": 26,
+  "cat": "Scaling and LLMs",
+  "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+  "who": "Wei et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2201.11903",
+  "search": "https://www.google.com/search?q=Chain-of-Thought%20Prompting%20Elicits%20Reasoning%20in%20Large%20Language%20Models%20Wei%20et%20al.%20",
+  "why": "Where CoT started."
+ },
+ {
+  "id": 27,
+  "cat": "Scaling and LLMs",
+  "title": "Let's Verify Step by Step",
+  "who": "Lightman et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2305.20050",
+  "search": "https://www.google.com/search?q=Let%27s%20Verify%20Step%20by%20Step%20Lightman%20et%20al.%20",
+  "why": "Process reward models."
+ },
+ {
+  "id": 28,
+  "cat": "Scaling and LLMs",
+  "title": "STaR: Self-Taught Reasoner",
+  "who": "Zelikman et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2203.14465",
+  "search": "https://www.google.com/search?q=STaR%3A%20Self-Taught%20Reasoner%20Zelikman%20et%20al.%20",
+  "why": "Bootstrapping reasoning from the model's own correct traces."
+ },
+ {
+  "id": 29,
+  "cat": "Scaling and LLMs",
+  "title": "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling",
+  "who": "Brown et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2407.21787",
+  "search": "https://www.google.com/search?q=Large%20Language%20Monkeys%3A%20Scaling%20Inference%20Compute%20with%20Repeated%20Sampling%20Brown%20et%20al.%20",
+  "why": "Coverage scales, verifiers plateau."
+ },
+ {
+  "id": 30,
+  "cat": "Scaling and LLMs",
+  "title": "Scaling LLM Test-Time Compute Optimally",
+  "who": "Snell et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2408.03314",
+  "search": "https://www.google.com/search?q=Scaling%20LLM%20Test-Time%20Compute%20Optimally%20Snell%20et%20al.%20",
+  "why": "When to spend compute at inference instead of training."
+ },
+ {
+  "id": 31,
+  "cat": "Scaling and LLMs",
+  "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via RL",
+  "who": "DeepSeek (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2501.12948",
+  "search": "https://www.google.com/search?q=DeepSeek-R1%3A%20Incentivizing%20Reasoning%20Capability%20in%20LLMs%20via%20RL%20DeepSeek%20",
+  "why": "Pure RL on verifiable rewards produces reasoning. The open recipe."
+ },
+ {
+  "id": 32,
+  "cat": "Scaling and LLMs",
+  "title": "Learning to Reason with LLMs",
+  "who": "OpenAI (2024)",
+  "type": "post",
+  "url": "https://openai.com/index/learning-to-reason-with-llms/",
+  "search": "https://www.google.com/search?q=Learning%20to%20Reason%20with%20LLMs%20OpenAI%20",
+  "why": "The o1 announcement. Thin on method, important for what it claims."
+ },
+ {
+  "id": 33,
+  "cat": "Scaling and LLMs",
+  "title": "Predictability and Surprise in Large Generative Models",
+  "who": "Ganguli et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2202.07785",
+  "search": "https://www.google.com/search?q=Predictability%20and%20Surprise%20in%20Large%20Generative%20Models%20Ganguli%20et%20al.%20",
+  "why": "Why scaling is predictable in loss and unpredictable in capability."
+ },
+ {
+  "id": 34,
+  "cat": "RLHF and post-training",
+  "title": "Deep Reinforcement Learning from Human Preferences",
+  "who": "Christiano et al. (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1706.03741",
+  "search": "https://www.google.com/search?q=Deep%20Reinforcement%20Learning%20from%20Human%20Preferences%20Christiano%20et%20al.%20",
+  "why": "The origin of RLHF."
+ },
+ {
+  "id": 35,
+  "cat": "RLHF and post-training",
+  "title": "Training Language Models to Follow Instructions with Human Feedback",
+  "who": "Ouyang et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2203.02155",
+  "search": "https://www.google.com/search?q=Training%20Language%20Models%20to%20Follow%20Instructions%20with%20Human%20Feedback%20Ouyang%20et%20al.%20",
+  "why": "InstructGPT."
+ },
+ {
+  "id": 36,
+  "cat": "RLHF and post-training",
+  "title": "Training a Helpful and Harmless Assistant with RLHF",
+  "who": "Bai et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2204.05862",
+  "search": "https://www.google.com/search?q=Training%20a%20Helpful%20and%20Harmless%20Assistant%20with%20RLHF%20Bai%20et%20al.%20",
+  "why": "Anthropic's version, with the helpful-harmless tension measured."
+ },
+ {
+  "id": 37,
+  "cat": "RLHF and post-training",
+  "title": "Constitutional AI: Harmlessness from AI Feedback",
+  "who": "Bai et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2212.08073",
+  "search": "https://www.google.com/search?q=Constitutional%20AI%3A%20Harmlessness%20from%20AI%20Feedback%20Bai%20et%20al.%20",
+  "why": "RLAIF. A model supervising a model."
+ },
+ {
+  "id": 38,
+  "cat": "RLHF and post-training",
+  "title": "Direct Preference Optimization",
+  "who": "Rafailov et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2305.18290",
+  "search": "https://www.google.com/search?q=Direct%20Preference%20Optimization%20Rafailov%20et%20al.%20",
+  "why": "RLHF without the RL."
+ },
+ {
+  "id": 39,
+  "cat": "RLHF and post-training",
+  "title": "RL with KL Penalties Is Better Viewed as Bayesian Inference",
+  "who": "Korbak, Perez, Buckley (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2205.11275",
+  "search": "https://www.google.com/search?q=RL%20with%20KL%20Penalties%20Is%20Better%20Viewed%20as%20Bayesian%20Inference%20Korbak%2C%20Perez%2C%20Buckley%20",
+  "why": "Why the KL term matters. Connects to quantilizers."
+ },
+ {
+  "id": 40,
+  "cat": "RLHF and post-training",
+  "title": "Scaling Laws for Reward Model Overoptimization",
+  "who": "Gao, Schulman, Hilton (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2210.10760",
+  "search": "https://www.google.com/search?q=Scaling%20Laws%20for%20Reward%20Model%20Overoptimization%20Gao%2C%20Schulman%2C%20Hilton%20",
+  "why": "Goodhart measured."
+ },
+ {
+  "id": 41,
+  "cat": "RLHF and post-training",
+  "title": "Open Problems and Fundamental Limitations of RLHF",
+  "who": "Casper et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2307.15217",
+  "search": "https://www.google.com/search?q=Open%20Problems%20and%20Fundamental%20Limitations%20of%20RLHF%20Casper%20et%20al.%20",
+  "why": "The survey of what RLHF cannot do."
+ },
+ {
+  "id": 42,
+  "cat": "RLHF and post-training",
+  "title": "Mind the Gap: Examining the Self-Improvement Capabilities of LLMs",
+  "who": "Song et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2412.02674",
+  "search": "https://www.google.com/search?q=Mind%20the%20Gap%3A%20Examining%20the%20Self-Improvement%20Capabilities%20of%20LLMs%20Song%20et%20al.%20",
+  "why": "The generation-verification gap."
+ },
+ {
+  "id": 43,
+  "cat": "RLHF and post-training",
+  "title": "Deliberative Alignment: Reasoning Enables Safer Language Models",
+  "who": "Guan et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2412.16339",
+  "search": "https://www.google.com/search?q=Deliberative%20Alignment%3A%20Reasoning%20Enables%20Safer%20Language%20Models%20Guan%20et%20al.%20",
+  "why": "Train the model to reason over a written spec before answering."
+ },
+ {
+  "id": 44,
+  "cat": "Mech interp",
+  "title": "Feature Visualization",
+  "who": "Olah, Mordvintsev, Schubert (2017)",
+  "type": "paper",
+  "url": "https://distill.pub/2017/feature-visualization/",
+  "search": "https://www.google.com/search?q=Feature%20Visualization%20Olah%2C%20Mordvintsev%2C%20Schubert%20",
+  "why": "Where it started."
+ },
+ {
+  "id": 45,
+  "cat": "Mech interp",
+  "title": "The Building Blocks of Interpretability",
+  "who": "Olah et al. (2018)",
+  "type": "paper",
+  "url": "https://distill.pub/2018/building-blocks/",
+  "search": "https://www.google.com/search?q=The%20Building%20Blocks%20of%20Interpretability%20Olah%20et%20al.%20",
+  "why": "Combining attribution and visualization."
+ },
+ {
+  "id": 46,
+  "cat": "Mech interp",
+  "title": "Zoom In: An Introduction to Circuits",
+  "who": "Olah et al. (2020)",
+  "type": "paper",
+  "url": "https://distill.pub/2020/circuits/zoom-in/",
+  "search": "https://www.google.com/search?q=Zoom%20In%3A%20An%20Introduction%20to%20Circuits%20Olah%20et%20al.%20",
+  "why": "The circuits agenda in three claims."
+ },
+ {
+  "id": 47,
+  "cat": "Mech interp",
+  "title": "Curve Detectors",
+  "who": "Cammarata et al. (2020)",
+  "type": "paper",
+  "url": "https://distill.pub/2020/circuits/curve-detectors/",
+  "search": "https://www.google.com/search?q=Curve%20Detectors%20Cammarata%20et%20al.%20",
+  "why": "The most thorough single-neuron study ever done."
+ },
+ {
+  "id": 48,
+  "cat": "Mech interp",
+  "title": "Multimodal Neurons in Artificial Neural Networks",
+  "who": "Goh et al. (2021)",
+  "type": "paper",
+  "url": "https://distill.pub/2021/multimodal-neurons/",
+  "search": "https://www.google.com/search?q=Multimodal%20Neurons%20in%20Artificial%20Neural%20Networks%20Goh%20et%20al.%20",
+  "why": "Concept neurons in CLIP."
+ },
+ {
+  "id": 49,
+  "cat": "Mech interp",
+  "title": "A Mathematical Framework for Transformer Circuits",
+  "who": "Elhage et al. (2021)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2021/framework/index.html",
+  "search": "https://www.google.com/search?q=A%20Mathematical%20Framework%20for%20Transformer%20Circuits%20Elhage%20et%20al.%20",
+  "why": "The vocabulary: residual stream, QK and OV circuits, heads as independent paths."
+ },
+ {
+  "id": 50,
+  "cat": "Mech interp",
+  "title": "In-context Learning and Induction Heads",
+  "who": "Olsson et al. (2022)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html",
+  "search": "https://www.google.com/search?q=In-context%20Learning%20and%20Induction%20Heads%20Olsson%20et%20al.%20",
+  "why": "The one circuit everyone knows."
+ },
+ {
+  "id": 51,
+  "cat": "Mech interp",
+  "title": "Toy Models of Superposition",
+  "who": "Elhage et al. (2022)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2022/toy_model/index.html",
+  "search": "https://www.google.com/search?q=Toy%20Models%20of%20Superposition%20Elhage%20et%20al.%20",
+  "why": "Why neurons are polysemantic."
+ },
+ {
+  "id": 52,
+  "cat": "Mech interp",
+  "title": "Towards Monosemanticity: Decomposing Language Models with Dictionary Learning",
+  "who": "Bricken et al. (2023)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2023/monosemantic-features/index.html",
+  "search": "https://www.google.com/search?q=Towards%20Monosemanticity%3A%20Decomposing%20Language%20Models%20with%20Dictionary%20Learning%20Bricken%20et%20al.%20",
+  "why": "Sparse autoencoders arrive."
+ },
+ {
+  "id": 53,
+  "cat": "Mech interp",
+  "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
+  "who": "Cunningham et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2309.08600",
+  "search": "https://www.google.com/search?q=Sparse%20Autoencoders%20Find%20Highly%20Interpretable%20Features%20in%20Language%20Models%20Cunningham%20et%20al.%20",
+  "why": "The concurrent SAE paper."
+ },
+ {
+  "id": 54,
+  "cat": "Mech interp",
+  "title": "Scaling Monosemanticity",
+  "who": "Templeton et al. (2024)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html",
+  "search": "https://www.google.com/search?q=Scaling%20Monosemanticity%20Templeton%20et%20al.%20",
+  "why": "SAEs on Claude 3 Sonnet. Golden Gate Claude."
+ },
+ {
+  "id": 55,
+  "cat": "Mech interp",
+  "title": "Gemma Scope",
+  "who": "Lieberum et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2408.05147",
+  "search": "https://www.google.com/search?q=Gemma%20Scope%20Lieberum%20et%20al.%20",
+  "why": "Open SAEs for Gemma 2. Use them on your own Gemma port."
+ },
+ {
+  "id": 56,
+  "cat": "Mech interp",
+  "title": "Negative Results for SAEs on Downstream Tasks",
+  "who": "Smith, Rajamanoharan, Conmy et al. (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Negative%20Results%20for%20SAEs%20on%20Downstream%20Tasks%20Smith%2C%20Rajamanoharan%2C%20Conmy%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Negative%20Results%20for%20SAEs%20on%20Downstream%20Tasks%20Smith%2C%20Rajamanoharan%2C%20Conmy%20et%20al.%20",
+  "why": "SAEs lose to linear probes on a real task. The honest correction."
+ },
+ {
+  "id": 57,
+  "cat": "Mech interp",
+  "title": "Circuit Tracing: Revealing Computational Graphs in Language Models",
+  "who": "Ameisen et al. (2025)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2025/attribution-graphs/methods.html",
+  "search": "https://www.google.com/search?q=Circuit%20Tracing%3A%20Revealing%20Computational%20Graphs%20in%20Language%20Models%20Ameisen%20et%20al.%20",
+  "why": "Attribution graphs via cross-layer transcoders."
+ },
+ {
+  "id": 58,
+  "cat": "Mech interp",
+  "title": "On the Biology of a Large Language Model",
+  "who": "Lindsey et al. (2025)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
+  "search": "https://www.google.com/search?q=On%20the%20Biology%20of%20a%20Large%20Language%20Model%20Lindsey%20et%20al.%20",
+  "why": "The case studies: planning in poems, multi-step reasoning, unfaithful CoT."
+ },
+ {
+  "id": 59,
+  "cat": "Mech interp",
+  "title": "Interpretability in the Wild: a Circuit for Indirect Object Identification",
+  "who": "Wang et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2211.00593",
+  "search": "https://www.google.com/search?q=Interpretability%20in%20the%20Wild%3A%20a%20Circuit%20for%20Indirect%20Object%20Identification%20Wang%20et%20al.%20",
+  "why": "The first full circuit in GPT-2. The methodology template."
+ },
+ {
+  "id": 60,
+  "cat": "Mech interp",
+  "title": "Progress Measures for Grokking via Mechanistic Interpretability",
+  "who": "Nanda et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2301.05217",
+  "search": "https://www.google.com/search?q=Progress%20Measures%20for%20Grokking%20via%20Mechanistic%20Interpretability%20Nanda%20et%20al.%20",
+  "why": "Reverse-engineering modular addition. Fourier features."
+ },
+ {
+  "id": 61,
+  "cat": "Mech interp",
+  "title": "Locating and Editing Factual Associations in GPT",
+  "who": "Meng et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2202.05262",
+  "search": "https://www.google.com/search?q=Locating%20and%20Editing%20Factual%20Associations%20in%20GPT%20Meng%20et%20al.%20",
+  "why": "ROME and causal tracing."
+ },
+ {
+  "id": 62,
+  "cat": "Mech interp",
+  "title": "Causal Scrubbing",
+  "who": "Chan et al. (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Causal%20Scrubbing%20Chan%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Causal%20Scrubbing%20Chan%20et%20al.%20",
+  "why": "How to test a circuit hypothesis rigorously. Redwood."
+ },
+ {
+  "id": 63,
+  "cat": "Mech interp",
+  "title": "Towards Automated Circuit Discovery for Mechanistic Interpretability",
+  "who": "Conmy et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2304.14997",
+  "search": "https://www.google.com/search?q=Towards%20Automated%20Circuit%20Discovery%20for%20Mechanistic%20Interpretability%20Conmy%20et%20al.%20",
+  "why": "ACDC."
+ },
+ {
+  "id": 64,
+  "cat": "Mech interp",
+  "title": "Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task",
+  "who": "Li et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2210.13382",
+  "search": "https://www.google.com/search?q=Emergent%20World%20Representations%3A%20Exploring%20a%20Sequence%20Model%20Trained%20on%20a%20Synthetic%20Task%20Li%20et%20al.%20",
+  "why": "Othello-GPT. Read with Nanda's post showing the representation is linear."
+ },
+ {
+  "id": 65,
+  "cat": "Mech interp",
+  "title": "The Geometry of Truth",
+  "who": "Marks, Tegmark (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2310.06824",
+  "search": "https://www.google.com/search?q=The%20Geometry%20of%20Truth%20Marks%2C%20Tegmark%20",
+  "why": "Truth directions with probes."
+ },
+ {
+  "id": 66,
+  "cat": "Mech interp",
+  "title": "Discovering Latent Knowledge in Language Models Without Supervision",
+  "who": "Burns et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2212.03827",
+  "search": "https://www.google.com/search?q=Discovering%20Latent%20Knowledge%20in%20Language%20Models%20Without%20Supervision%20Burns%20et%20al.%20",
+  "why": "CCS. The first ELK-flavoured empirical paper."
+ },
+ {
+  "id": 67,
+  "cat": "Mech interp",
+  "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+  "who": "Zou et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2310.01405",
+  "search": "https://www.google.com/search?q=Representation%20Engineering%3A%20A%20Top-Down%20Approach%20to%20AI%20Transparency%20Zou%20et%20al.%20",
+  "why": "Population-level directions for honesty, power, etc."
+ },
+ {
+  "id": 68,
+  "cat": "Mech interp",
+  "title": "Steering Llama 2 via Contrastive Activation Addition",
+  "who": "Rimsky et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2312.06681",
+  "search": "https://www.google.com/search?q=Steering%20Llama%202%20via%20Contrastive%20Activation%20Addition%20Rimsky%20et%20al.%20",
+  "why": "Steering vectors done carefully. Turner's ActAdd post is the precursor."
+ },
+ {
+  "id": 69,
+  "cat": "Mech interp",
+  "title": "Refusal in Language Models Is Mediated by a Single Direction",
+  "who": "Arditi et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2406.11717",
+  "search": "https://www.google.com/search?q=Refusal%20in%20Language%20Models%20Is%20Mediated%20by%20a%20Single%20Direction%20Arditi%20et%20al.%20",
+  "why": "One direction, ablate it, refusal gone."
+ },
+ {
+  "id": 70,
+  "cat": "Mech interp",
+  "title": "Sparse Feature Circuits",
+  "who": "Marks et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2403.19647",
+  "search": "https://www.google.com/search?q=Sparse%20Feature%20Circuits%20Marks%20et%20al.%20",
+  "why": "Circuits over SAE features, used to debias a classifier."
+ },
+ {
+  "id": 71,
+  "cat": "Mech interp",
+  "title": "Open Problems in Mechanistic Interpretability",
+  "who": "Sharkey et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2501.16496",
+  "search": "https://www.google.com/search?q=Open%20Problems%20in%20Mechanistic%20Interpretability%20Sharkey%20et%20al.%20",
+  "why": "The field's own list of what is unsolved."
+ },
+ {
+  "id": 72,
+  "cat": "Mech interp",
+  "title": "A Pragmatic Vision for Interpretability",
+  "who": "Nanda, Engels, Conmy et al. (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=A%20Pragmatic%20Vision%20for%20Interpretability%20Nanda%2C%20Engels%2C%20Conmy%20et%20al.%20",
+  "search": "https://www.google.com/search?q=A%20Pragmatic%20Vision%20for%20Interpretability%20Nanda%2C%20Engels%2C%20Conmy%20et%20al.%20",
+  "why": "Focus on safety-relevant goals rather than full reverse engineering."
+ },
+ {
+  "id": 73,
+  "cat": "Mech interp",
+  "title": "A Longlist of Theories of Impact for Interpretability",
+  "who": "Nanda (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=A%20Longlist%20of%20Theories%20of%20Impact%20for%20Interpretability%20Nanda%20",
+  "search": "https://www.google.com/search?q=A%20Longlist%20of%20Theories%20of%20Impact%20for%20Interpretability%20Nanda%20",
+  "why": "Why do interp at all. Pick your theory before you pick a project."
+ },
+ {
+  "id": 74,
+  "cat": "Mech interp",
+  "title": "Emergent Introspective Awareness in Large Language Models",
+  "who": "Lindsey (2025)",
+  "type": "paper",
+  "url": "https://transformer-circuits.pub/2025/introspection/index.html",
+  "search": "https://www.google.com/search?q=Emergent%20Introspective%20Awareness%20in%20Large%20Language%20Models%20Lindsey%20",
+  "why": "Concept injection: can the model report its own states."
+ },
+ {
+  "id": 75,
+  "cat": "Mech interp",
+  "title": "Neural Networks Are Already Clean",
+  "who": "Cammarata (2026)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Neural%20Networks%20Are%20Already%20Clean%20Cammarata%20",
+  "search": "https://www.google.com/search?q=Neural%20Networks%20Are%20Already%20Clean%20Cammarata%20",
+  "why": "Argues the obstacle was tools, not models. Current state of the debate."
+ },
+ {
+  "id": 76,
+  "cat": "Threat models",
+  "title": "Concrete Problems in AI Safety",
+  "who": "Amodei et al. (2016)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1606.06565",
+  "search": "https://www.google.com/search?q=Concrete%20Problems%20in%20AI%20Safety%20Amodei%20et%20al.%20",
+  "why": "The paper that made safety a mainstream ML topic."
+ },
+ {
+  "id": 77,
+  "cat": "Threat models",
+  "title": "AGI Safety from First Principles",
+  "who": "Ngo (2020)",
+  "type": "post",
+  "url": "https://www.alignmentforum.org/s/mzgtmmTKKn5MuCzFJ",
+  "search": "https://www.google.com/search?q=AGI%20Safety%20from%20First%20Principles%20Ngo%20",
+  "why": "The cleanest argument from scratch."
+ },
+ {
+  "id": 78,
+  "cat": "Threat models",
+  "title": "The Alignment Problem from a Deep Learning Perspective",
+  "who": "Ngo, Chan, Mindermann (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2209.00626",
+  "search": "https://www.google.com/search?q=The%20Alignment%20Problem%20from%20a%20Deep%20Learning%20Perspective%20Ngo%2C%20Chan%2C%20Mindermann%20",
+  "why": "The same argument for an ML audience."
+ },
+ {
+  "id": 79,
+  "cat": "Threat models",
+  "title": "Risks from Learned Optimization in Advanced ML Systems",
+  "who": "Hubinger et al. (2019)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1906.01820",
+  "search": "https://www.google.com/search?q=Risks%20from%20Learned%20Optimization%20in%20Advanced%20ML%20Systems%20Hubinger%20et%20al.%20",
+  "why": "Mesa-optimization and inner alignment."
+ },
+ {
+  "id": 80,
+  "cat": "Threat models",
+  "title": "Clarifying Inner Alignment Terminology",
+  "who": "Hubinger (2021)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Clarifying%20Inner%20Alignment%20Terminology%20Hubinger%20",
+  "search": "https://www.google.com/search?q=Clarifying%20Inner%20Alignment%20Terminology%20Hubinger%20",
+  "why": "The glossary you need for the previous item."
+ },
+ {
+  "id": 81,
+  "cat": "Threat models",
+  "title": "Without Specific Countermeasures, the Easiest Path to Transformative AI Likely Leads to AI Takeover",
+  "who": "Cotra (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Without%20Specific%20Countermeasures%2C%20the%20Easiest%20Path%20to%20Transformative%20AI%20Likely%20Leads%20to%20AI%20Takeover%20Cotra%20",
+  "search": "https://www.google.com/search?q=Without%20Specific%20Countermeasures%2C%20the%20Easiest%20Path%20to%20Transformative%20AI%20Likely%20Leads%20to%20AI%20Takeover%20Cotra%20",
+  "why": "The \"HFDT\" scenario. Most-cited concrete takeover story."
+ },
+ {
+  "id": 82,
+  "cat": "Threat models",
+  "title": "Is Power-Seeking AI an Existential Risk?",
+  "who": "Carlsmith (2022)",
+  "type": "report",
+  "url": "https://arxiv.org/abs/2206.13353",
+  "search": "https://www.google.com/search?q=Is%20Power-Seeking%20AI%20an%20Existential%20Risk%3F%20Carlsmith%20",
+  "why": "The six-premise argument with probabilities."
+ },
+ {
+  "id": 83,
+  "cat": "Threat models",
+  "title": "Scheming AIs: Will AIs Fake Alignment During Training in Order to Get Power?",
+  "who": "Carlsmith (2023)",
+  "type": "report",
+  "url": "https://arxiv.org/abs/2311.08379",
+  "search": "https://www.google.com/search?q=Scheming%20AIs%3A%20Will%20AIs%20Fake%20Alignment%20During%20Training%20in%20Order%20to%20Get%20Power%3F%20Carlsmith%20",
+  "why": "The long treatment of deceptive alignment."
+ },
+ {
+  "id": 84,
+  "cat": "Threat models",
+  "title": "What Failure Looks Like",
+  "who": "Christiano (2019)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=What%20Failure%20Looks%20Like%20Christiano%20",
+  "search": "https://www.google.com/search?q=What%20Failure%20Looks%20Like%20Christiano%20",
+  "why": "Slow failure, not a bang."
+ },
+ {
+  "id": 85,
+  "cat": "Threat models",
+  "title": "A Central AI Alignment Problem: Capabilities Generalization, and the Sharp Left Turn",
+  "who": "Soares (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=A%20Central%20AI%20Alignment%20Problem%3A%20Capabilities%20Generalization%2C%20and%20the%20Sharp%20Left%20Turn%20Soares%20",
+  "search": "https://www.google.com/search?q=A%20Central%20AI%20Alignment%20Problem%3A%20Capabilities%20Generalization%2C%20and%20the%20Sharp%20Left%20Turn%20Soares%20",
+  "why": "MIRI's core worry in one post."
+ },
+ {
+  "id": 86,
+  "cat": "Threat models",
+  "title": "AGI Ruin: A List of Lethalities",
+  "who": "Yudkowsky (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=AGI%20Ruin%3A%20A%20List%20of%20Lethalities%20Yudkowsky%20",
+  "search": "https://www.google.com/search?q=AGI%20Ruin%3A%20A%20List%20of%20Lethalities%20Yudkowsky%20",
+  "why": "The pessimistic case, itemized."
+ },
+ {
+  "id": 87,
+  "cat": "Threat models",
+  "title": "Where I Agree and Disagree with Eliezer",
+  "who": "Christiano (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Where%20I%20Agree%20and%20Disagree%20with%20Eliezer%20Christiano%20",
+  "search": "https://www.google.com/search?q=Where%20I%20Agree%20and%20Disagree%20with%20Eliezer%20Christiano%20",
+  "why": "The reply. Read the two together."
+ },
+ {
+  "id": 88,
+  "cat": "Threat models",
+  "title": "Counterarguments to the Basic AI X-Risk Case",
+  "who": "Grace (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Counterarguments%20to%20the%20Basic%20AI%20X-Risk%20Case%20Grace%20",
+  "search": "https://www.google.com/search?q=Counterarguments%20to%20the%20Basic%20AI%20X-Risk%20Case%20Grace%20",
+  "why": "The best steelman of the sceptics."
+ },
+ {
+  "id": 89,
+  "cat": "Threat models",
+  "title": "Gradual Disempowerment",
+  "who": "Kulveit et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2501.16946",
+  "search": "https://www.google.com/search?q=Gradual%20Disempowerment%20Kulveit%20et%20al.%20",
+  "why": "Loss of control without any takeover."
+ },
+ {
+  "id": 90,
+  "cat": "Threat models",
+  "title": "Foundational Challenges in Assuring Alignment and Safety of LLMs",
+  "who": "Anwar et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2404.09932",
+  "search": "https://www.google.com/search?q=Foundational%20Challenges%20in%20Assuring%20Alignment%20and%20Safety%20of%20LLMs%20Anwar%20et%20al.%20",
+  "why": "18 open problems, 200 questions. A map."
+ },
+ {
+  "id": 91,
+  "cat": "Threat models",
+  "title": "The Basic AI Drives",
+  "who": "Omohundro (2008)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=The%20Basic%20AI%20Drives%20Omohundro%20",
+  "search": "https://www.google.com/search?q=The%20Basic%20AI%20Drives%20Omohundro%20",
+  "why": "Instrumental convergence, original statement."
+ },
+ {
+  "id": 92,
+  "cat": "Agendas",
+  "title": "Eliciting Latent Knowledge",
+  "who": "Christiano, Cotra, Xu (2021)",
+  "type": "report",
+  "url": "https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8",
+  "search": "https://www.google.com/search?q=Eliciting%20Latent%20Knowledge%20Christiano%2C%20Cotra%2C%20Xu%20",
+  "why": "ARC's problem statement. On your readingwhatwecan list."
+ },
+ {
+  "id": 93,
+  "cat": "Agendas",
+  "title": "An Overview of 11 Proposals for Building Safe Advanced AI",
+  "who": "Hubinger (2020)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=An%20Overview%20of%2011%20Proposals%20for%20Building%20Safe%20Advanced%20AI%20Hubinger%20",
+  "search": "https://www.google.com/search?q=An%20Overview%20of%2011%20Proposals%20for%20Building%20Safe%20Advanced%20AI%20Hubinger%20",
+  "why": "Compares amplification, debate, and reward modeling on four criteria."
+ },
+ {
+  "id": 94,
+  "cat": "Agendas",
+  "title": "Core Views on AI Safety: When, Why, What, and How",
+  "who": "Anthropic (2023)",
+  "type": "post",
+  "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+  "search": "https://www.google.com/search?q=Core%20Views%20on%20AI%20Safety%3A%20When%2C%20Why%2C%20What%2C%20and%20How%20Anthropic%20",
+  "why": "The lab's own statement."
+ },
+ {
+  "id": 95,
+  "cat": "Agendas",
+  "title": "Recommendations for Technical AI Safety Research Directions",
+  "who": "Anthropic Alignment Science (2025)",
+  "type": "post",
+  "url": "https://alignment.anthropic.com/2025/recommended-directions/",
+  "search": "https://www.google.com/search?q=Recommendations%20for%20Technical%20AI%20Safety%20Research%20Directions%20Anthropic%20Alignment%20Science%20",
+  "why": "What they want people outside to work on."
+ },
+ {
+  "id": 96,
+  "cat": "Agendas",
+  "title": "An Approach to Technical AGI Safety and Security",
+  "who": "Shah et al., Google DeepMind (2025)",
+  "type": "report",
+  "url": "https://arxiv.org/abs/2504.01849",
+  "search": "https://www.google.com/search?q=An%20Approach%20to%20Technical%20AGI%20Safety%20and%20Security%20Shah%20et%20al.%2C%20Google%20DeepMind%20",
+  "why": "DeepMind's plan."
+ },
+ {
+  "id": 97,
+  "cat": "Agendas",
+  "title": "The Alignment Project Research Agenda",
+  "who": "UK AI Security Institute (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=The%20Alignment%20Project%20Research%20Agenda%20UK%20AI%20Security%20Institute%20",
+  "search": "https://www.google.com/search?q=The%20Alignment%20Project%20Research%20Agenda%20UK%20AI%20Security%20Institute%20",
+  "why": "Open problems across 11 areas with emphasis on underrated ones."
+ },
+ {
+  "id": 98,
+  "cat": "Agendas",
+  "title": "AI Control: Improving Safety Despite Intentional Subversion",
+  "who": "Greenblatt, Shlegeris, Sachan, Roger (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2312.06942",
+  "search": "https://www.google.com/search?q=AI%20Control%3A%20Improving%20Safety%20Despite%20Intentional%20Subversion%20Greenblatt%2C%20Shlegeris%2C%20Sachan%2C%20Roger%20",
+  "why": "The control agenda's founding paper."
+ },
+ {
+  "id": 99,
+  "cat": "Agendas",
+  "title": "The Case for Ensuring That Powerful AIs Are Controlled",
+  "who": "Greenblatt, Shlegeris (2024)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=The%20Case%20for%20Ensuring%20That%20Powerful%20AIs%20Are%20Controlled%20Greenblatt%2C%20Shlegeris%20",
+  "search": "https://www.google.com/search?q=The%20Case%20for%20Ensuring%20That%20Powerful%20AIs%20Are%20Controlled%20Greenblatt%2C%20Shlegeris%20",
+  "why": "The argument for control over alignment in the near term."
+ },
+ {
+  "id": 100,
+  "cat": "Agendas",
+  "title": "Embedded Agency",
+  "who": "Demski, Garrabrant (2018)",
+  "type": "post",
+  "url": "https://arxiv.org/abs/1902.09469",
+  "search": "https://www.google.com/search?q=Embedded%20Agency%20Demski%2C%20Garrabrant%20",
+  "why": "MIRI's agenda, illustrated. The four subproblems."
+ },
+ {
+  "id": 101,
+  "cat": "Agendas",
+  "title": "The Plan",
+  "who": "Wentworth (2021)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=The%20Plan%20Wentworth%20",
+  "search": "https://www.google.com/search?q=The%20Plan%20Wentworth%20",
+  "why": "Natural abstractions, then value learning."
+ },
+ {
+  "id": 102,
+  "cat": "Agendas",
+  "title": "Model Organisms of Misalignment: The Case for a New Pillar of Alignment Research",
+  "who": "Hubinger et al. (2023)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Model%20Organisms%20of%20Misalignment%3A%20The%20Case%20for%20a%20New%20Pillar%20of%20Alignment%20Research%20Hubinger%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Model%20Organisms%20of%20Misalignment%3A%20The%20Case%20for%20a%20New%20Pillar%20of%20Alignment%20Research%20Hubinger%20et%20al.%20",
+  "why": "Build the failure in the lab to study it."
+ },
+ {
+  "id": 103,
+  "cat": "Agendas",
+  "title": "The Rocket Alignment Problem",
+  "who": "Yudkowsky (2018)",
+  "type": "post",
+  "url": "https://intelligence.org/2018/10/03/rocket-alignment/",
+  "search": "https://www.google.com/search?q=The%20Rocket%20Alignment%20Problem%20Yudkowsky%20",
+  "why": "Why MIRI does math instead of ML. Allegory."
+ },
+ {
+  "id": 104,
+  "cat": "Oversight",
+  "title": "AI Safety via Debate",
+  "who": "Irving, Christiano, Amodei (2018)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1805.00899",
+  "search": "https://www.google.com/search?q=AI%20Safety%20via%20Debate%20Irving%2C%20Christiano%2C%20Amodei%20",
+  "why": "Debate, original."
+ },
+ {
+  "id": 105,
+  "cat": "Oversight",
+  "title": "Supervising Strong Learners by Amplifying Weak Experts",
+  "who": "Christiano, Shlegeris, Amodei (2018)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1810.08575",
+  "search": "https://www.google.com/search?q=Supervising%20Strong%20Learners%20by%20Amplifying%20Weak%20Experts%20Christiano%2C%20Shlegeris%2C%20Amodei%20",
+  "why": "Iterated amplification."
+ },
+ {
+  "id": 106,
+  "cat": "Oversight",
+  "title": "Measuring Progress on Scalable Oversight for Large Language Models",
+  "who": "Bowman et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2211.03540",
+  "search": "https://www.google.com/search?q=Measuring%20Progress%20on%20Scalable%20Oversight%20for%20Large%20Language%20Models%20Bowman%20et%20al.%20",
+  "why": "Sandwiching. How to test oversight methods today."
+ },
+ {
+  "id": 107,
+  "cat": "Oversight",
+  "title": "Weak-to-Strong Generalization",
+  "who": "Burns et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2312.09390",
+  "search": "https://www.google.com/search?q=Weak-to-Strong%20Generalization%20Burns%20et%20al.%20",
+  "why": "Weak supervisor, strong student."
+ },
+ {
+  "id": 108,
+  "cat": "Oversight",
+  "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+  "who": "Khan et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2402.06782",
+  "search": "https://www.google.com/search?q=Debating%20with%20More%20Persuasive%20LLMs%20Leads%20to%20More%20Truthful%20Answers%20Khan%20et%20al.%20",
+  "why": "Debate works empirically, more so with stronger debaters."
+ },
+ {
+  "id": 109,
+  "cat": "Oversight",
+  "title": "On Scalable Oversight with Weak LLMs Judging Strong LLMs",
+  "who": "Kenton et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2407.04622",
+  "search": "https://www.google.com/search?q=On%20Scalable%20Oversight%20with%20Weak%20LLMs%20Judging%20Strong%20LLMs%20Kenton%20et%20al.%20",
+  "why": "Debate vs consultancy vs direct QA with weak judges."
+ },
+ {
+  "id": 110,
+  "cat": "Oversight",
+  "title": "Prover-Verifier Games Improve Legibility of LLM Outputs",
+  "who": "Kirchner et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2407.13692",
+  "search": "https://www.google.com/search?q=Prover-Verifier%20Games%20Improve%20Legibility%20of%20LLM%20Outputs%20Kirchner%20et%20al.%20",
+  "why": "Train the prover to be checkable by a small verifier."
+ },
+ {
+  "id": 111,
+  "cat": "Oversight",
+  "title": "Avoiding Obfuscation with Prover-Estimator Debate",
+  "who": "Brown-Cohen, Irving (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2506.13609",
+  "search": "https://www.google.com/search?q=Avoiding%20Obfuscation%20with%20Prover-Estimator%20Debate%20Brown-Cohen%2C%20Irving%20",
+  "why": "Fixes the obfuscated-arguments problem in theory."
+ },
+ {
+  "id": 112,
+  "cat": "Oversight",
+  "title": "Inverse Reward Design",
+  "who": "Hadfield-Menell et al. (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1711.02827",
+  "search": "https://www.google.com/search?q=Inverse%20Reward%20Design%20Hadfield-Menell%20et%20al.%20",
+  "why": "The designed reward as evidence about the intended reward."
+ },
+ {
+  "id": 113,
+  "cat": "Oversight",
+  "title": "Cooperative Inverse Reinforcement Learning",
+  "who": "Hadfield-Menell et al. (2016)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1606.03137",
+  "search": "https://www.google.com/search?q=Cooperative%20Inverse%20Reinforcement%20Learning%20Hadfield-Menell%20et%20al.%20",
+  "why": "Value learning as a two-player game."
+ },
+ {
+  "id": 114,
+  "cat": "Oversight",
+  "title": "The Off-Switch Game",
+  "who": "Hadfield-Menell et al. (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1611.08219",
+  "search": "https://www.google.com/search?q=The%20Off-Switch%20Game%20Hadfield-Menell%20et%20al.%20",
+  "why": "When does an agent let you turn it off."
+ },
+ {
+  "id": 115,
+  "cat": "Misalignment",
+  "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+  "who": "Langosco et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2105.14111",
+  "search": "https://www.google.com/search?q=Goal%20Misgeneralization%20in%20Deep%20Reinforcement%20Learning%20Langosco%20et%20al.%20",
+  "why": "Capabilities generalize, goals do not. CoinRun."
+ },
+ {
+  "id": 116,
+  "cat": "Misalignment",
+  "title": "Goal Misgeneralization: Why Correct Specifications Aren't Enough",
+  "who": "Shah et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2210.01790",
+  "search": "https://www.google.com/search?q=Goal%20Misgeneralization%3A%20Why%20Correct%20Specifications%20Aren%27t%20Enough%20Shah%20et%20al.%20",
+  "why": "DeepMind's version with more examples."
+ },
+ {
+  "id": 117,
+  "cat": "Misalignment",
+  "title": "Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training",
+  "who": "Hubinger et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2401.05566",
+  "search": "https://www.google.com/search?q=Sleeper%20Agents%3A%20Training%20Deceptive%20LLMs%20That%20Persist%20Through%20Safety%20Training%20Hubinger%20et%20al.%20",
+  "why": "Backdoors survive RLHF. Adversarial training hides them better."
+ },
+ {
+  "id": 118,
+  "cat": "Misalignment",
+  "title": "Alignment Faking in Large Language Models",
+  "who": "Greenblatt et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2412.14093",
+  "search": "https://www.google.com/search?q=Alignment%20Faking%20in%20Large%20Language%20Models%20Greenblatt%20et%20al.%20",
+  "why": "Claude 3 Opus strategically complies in training. The first natural case."
+ },
+ {
+  "id": 119,
+  "cat": "Misalignment",
+  "title": "Sycophancy to Subterfuge: Investigating Reward-Tampering in LLMs",
+  "who": "Denison et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2406.10162",
+  "search": "https://www.google.com/search?q=Sycophancy%20to%20Subterfuge%3A%20Investigating%20Reward-Tampering%20in%20LLMs%20Denison%20et%20al.%20",
+  "why": "A curriculum of spec gaming generalizes to tampering with its own reward."
+ },
+ {
+  "id": 120,
+  "cat": "Misalignment",
+  "title": "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs",
+  "who": "Betley et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2502.17424",
+  "search": "https://www.google.com/search?q=Emergent%20Misalignment%3A%20Narrow%20Finetuning%20Can%20Produce%20Broadly%20Misaligned%20LLMs%20Betley%20et%20al.%20",
+  "why": "Insecure code finetune, broad misalignment."
+ },
+ {
+  "id": 121,
+  "cat": "Misalignment",
+  "title": "Emergent Misalignment Is Easy, Narrow Misalignment Is Hard",
+  "who": "Soligo, Turner, Rajamanoharan, Nanda (2025)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=Emergent%20Misalignment%20Is%20Easy%2C%20Narrow%20Misalignment%20Is%20Hard%20Soligo%2C%20Turner%2C%20Rajamanoharan%2C%20Nanda%20",
+  "search": "https://www.google.com/search?q=Emergent%20Misalignment%20Is%20Easy%2C%20Narrow%20Misalignment%20Is%20Hard%20Soligo%2C%20Turner%2C%20Rajamanoharan%2C%20Nanda%20",
+  "why": "Why the broad solution is the stable one."
+ },
+ {
+  "id": 122,
+  "cat": "Misalignment",
+  "title": "Persona Vectors: Monitoring and Controlling Character Traits",
+  "who": "Chen, Arditi et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2507.21509",
+  "search": "https://www.google.com/search?q=Persona%20Vectors%3A%20Monitoring%20and%20Controlling%20Character%20Traits%20Chen%2C%20Arditi%20et%20al.%20",
+  "why": "Directions for traits like sycophancy, used to prevent drift in finetuning."
+ },
+ {
+  "id": 123,
+  "cat": "Misalignment",
+  "title": "Subliminal Learning: LMs Transmit Behavioral Traits via Hidden Signals in Data",
+  "who": "Cloud et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2507.14805",
+  "search": "https://www.google.com/search?q=Subliminal%20Learning%3A%20LMs%20Transmit%20Behavioral%20Traits%20via%20Hidden%20Signals%20in%20Data%20Cloud%20et%20al.%20",
+  "why": "Traits travel through number sequences. Relevant to self-distillation."
+ },
+ {
+  "id": 124,
+  "cat": "Misalignment",
+  "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
+  "who": "MacDiarmid et al. (2025)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=Natural%20Emergent%20Misalignment%20from%20Reward%20Hacking%20in%20Production%20RL%20MacDiarmid%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Natural%20Emergent%20Misalignment%20from%20Reward%20Hacking%20in%20Production%20RL%20MacDiarmid%20et%20al.%20",
+  "why": "Reward hacking in real environments generalizes to sabotage."
+ },
+ {
+  "id": 125,
+  "cat": "Misalignment",
+  "title": "Agentic Misalignment: How LLMs Could Be Insider Threats",
+  "who": "Lynch et al. (2025)",
+  "type": "paper",
+  "url": "https://www.anthropic.com/research/agentic-misalignment",
+  "search": "https://www.google.com/search?q=Agentic%20Misalignment%3A%20How%20LLMs%20Could%20Be%20Insider%20Threats%20Lynch%20et%20al.%20",
+  "why": "Blackmail across 16 models."
+ },
+ {
+  "id": 126,
+  "cat": "Misalignment",
+  "title": "Towards Understanding Sycophancy in Language Models",
+  "who": "Sharma et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2310.13548",
+  "search": "https://www.google.com/search?q=Towards%20Understanding%20Sycophancy%20in%20Language%20Models%20Sharma%20et%20al.%20",
+  "why": "Human preference data causes it."
+ },
+ {
+  "id": 127,
+  "cat": "Misalignment",
+  "title": "Large Language Models Can Strategically Deceive Their Users When Put Under Pressure",
+  "who": "Scheurer, Balesni, Hobbhahn (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2311.07590",
+  "search": "https://www.google.com/search?q=Large%20Language%20Models%20Can%20Strategically%20Deceive%20Their%20Users%20When%20Put%20Under%20Pressure%20Scheurer%2C%20Balesni%2C%20Hobbhahn%20",
+  "why": "The insider-trading demo."
+ },
+ {
+  "id": 128,
+  "cat": "Misalignment",
+  "title": "Self-Preservation or Instruction Ambiguity? Examining the Causes of Shutdown Resistance",
+  "who": "Rajamanoharan, Nanda (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Self-Preservation%20or%20Instruction%20Ambiguity%3F%20Examining%20the%20Causes%20of%20Shutdown%20Resistance%20Rajamanoharan%2C%20Nanda%20",
+  "search": "https://www.google.com/search?q=Self-Preservation%20or%20Instruction%20Ambiguity%3F%20Examining%20the%20Causes%20of%20Shutdown%20Resistance%20Rajamanoharan%2C%20Nanda%20",
+  "why": "Shutdown resistance mostly vanishes when instructions are clear. How to check alternatives."
+ },
+ {
+  "id": 129,
+  "cat": "Misalignment",
+  "title": "Training a Misaligned Reward Seeker",
+  "who": "Anthropic (2026)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Training%20a%20Misaligned%20Reward%20Seeker%20Anthropic%20",
+  "search": "https://www.google.com/search?q=Training%20a%20Misaligned%20Reward%20Seeker%20Anthropic%20",
+  "why": "Plain RL on hackable environments, audit score barely moves."
+ },
+ {
+  "id": 130,
+  "cat": "Control",
+  "title": "Ctrl-Z: Controlling AI Agents via Resampling",
+  "who": "Bhatt et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2504.10374",
+  "search": "https://www.google.com/search?q=Ctrl-Z%3A%20Controlling%20AI%20Agents%20via%20Resampling%20Bhatt%20et%20al.%20",
+  "why": "Control in multi-step agent settings."
+ },
+ {
+  "id": 131,
+  "cat": "Control",
+  "title": "Evaluating Control Protocols for Untrusted AI Agents",
+  "who": "Kutasov et al. (2025)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=Evaluating%20Control%20Protocols%20for%20Untrusted%20AI%20Agents%20Kutasov%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Evaluating%20Control%20Protocols%20for%20Untrusted%20AI%20Agents%20Kutasov%20et%20al.%20",
+  "why": "Which protocols survive adaptive attackers."
+ },
+ {
+  "id": 132,
+  "cat": "Control",
+  "title": "Adaptive Attacks on Trusted Monitors Subvert AI Control Protocols",
+  "who": "Terekhov et al. (2025)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=Adaptive%20Attacks%20on%20Trusted%20Monitors%20Subvert%20AI%20Control%20Protocols%20Terekhov%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Adaptive%20Attacks%20on%20Trusted%20Monitors%20Subvert%20AI%20Control%20Protocols%20Terekhov%20et%20al.%20",
+  "why": "Prompt injection against the monitor."
+ },
+ {
+  "id": 133,
+  "cat": "Control",
+  "title": "A Sketch of an AI Control Safety Case",
+  "who": "Korbak, Clymer et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2501.17315",
+  "search": "https://www.google.com/search?q=A%20Sketch%20of%20an%20AI%20Control%20Safety%20Case%20Korbak%2C%20Clymer%20et%20al.%20",
+  "why": "What a control argument has to establish."
+ },
+ {
+  "id": 134,
+  "cat": "Control",
+  "title": "Subversion Strategy Eval",
+  "who": "Mallen et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2412.12480",
+  "search": "https://www.google.com/search?q=Subversion%20Strategy%20Eval%20Mallen%20et%20al.%20",
+  "why": "Can models strategize statelessly against protocols."
+ },
+ {
+  "id": 135,
+  "cat": "Control",
+  "title": "How We Monitor Internal Coding Agents for Misalignment",
+  "who": "OpenAI (2026)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=How%20We%20Monitor%20Internal%20Coding%20Agents%20for%20Misalignment%20OpenAI%20",
+  "search": "https://www.google.com/search?q=How%20We%20Monitor%20Internal%20Coding%20Agents%20for%20Misalignment%20OpenAI%20",
+  "why": "Five months of monitoring tens of millions of sessions."
+ },
+ {
+  "id": 136,
+  "cat": "Control",
+  "title": "Red-Teaming Anthropic's Internal Agent Monitoring Systems",
+  "who": "METR (2026)",
+  "type": "report",
+  "url": "https://www.google.com/search?q=Red-Teaming%20Anthropic%27s%20Internal%20Agent%20Monitoring%20Systems%20METR%20",
+  "search": "https://www.google.com/search?q=Red-Teaming%20Anthropic%27s%20Internal%20Agent%20Monitoring%20Systems%20METR%20",
+  "why": "Third-party red team of a lab's monitoring."
+ },
+ {
+  "id": 137,
+  "cat": "Control",
+  "title": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+  "who": "Korbak et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2507.11473",
+  "search": "https://www.google.com/search?q=Chain%20of%20Thought%20Monitorability%3A%20A%20New%20and%20Fragile%20Opportunity%20for%20AI%20Safety%20Korbak%20et%20al.%20",
+  "why": "The multi-lab position paper."
+ },
+ {
+  "id": 138,
+  "cat": "Control",
+  "title": "Reasoning Models Don't Always Say What They Think",
+  "who": "Chen et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2505.05410",
+  "search": "https://www.google.com/search?q=Reasoning%20Models%20Don%27t%20Always%20Say%20What%20They%20Think%20Chen%20et%20al.%20",
+  "why": "CoT faithfulness measured with hints."
+ },
+ {
+  "id": 139,
+  "cat": "Control",
+  "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+  "who": "Baker et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2503.11926",
+  "search": "https://www.google.com/search?q=Monitoring%20Reasoning%20Models%20for%20Misbehavior%20and%20the%20Risks%20of%20Promoting%20Obfuscation%20Baker%20et%20al.%20",
+  "why": "Optimizing against the monitor teaches hiding."
+ },
+ {
+  "id": 140,
+  "cat": "Control",
+  "title": "When Chain of Thought Is Necessary, Language Models Struggle to Evade Monitors",
+  "who": "Emmons et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2507.05246",
+  "search": "https://www.google.com/search?q=When%20Chain%20of%20Thought%20Is%20Necessary%2C%20Language%20Models%20Struggle%20to%20Evade%20Monitors%20Emmons%20et%20al.%20",
+  "why": "Evasion is hard when the reasoning is load-bearing."
+ },
+ {
+  "id": 141,
+  "cat": "Control",
+  "title": "Measuring Faithfulness in Chain-of-Thought Reasoning",
+  "who": "Lanham et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2307.13702",
+  "search": "https://www.google.com/search?q=Measuring%20Faithfulness%20in%20Chain-of-Thought%20Reasoning%20Lanham%20et%20al.%20",
+  "why": "The original faithfulness tests."
+ },
+ {
+  "id": 142,
+  "cat": "Evals",
+  "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
+  "who": "Perez et al. (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2212.09251",
+  "search": "https://www.google.com/search?q=Discovering%20Language%20Model%20Behaviors%20with%20Model-Written%20Evaluations%20Perez%20et%20al.%20",
+  "why": "Models writing evals for models. Inverse scaling on sycophancy."
+ },
+ {
+  "id": 143,
+  "cat": "Evals",
+  "title": "Model Evaluation for Extreme Risks",
+  "who": "Shevlane et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2305.15324",
+  "search": "https://www.google.com/search?q=Model%20Evaluation%20for%20Extreme%20Risks%20Shevlane%20et%20al.%20",
+  "why": "The dangerous-capability eval framework."
+ },
+ {
+  "id": 144,
+  "cat": "Evals",
+  "title": "Evaluating Frontier Models for Dangerous Capabilities",
+  "who": "Phuong et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2403.13793",
+  "search": "https://www.google.com/search?q=Evaluating%20Frontier%20Models%20for%20Dangerous%20Capabilities%20Phuong%20et%20al.%20",
+  "why": "DeepMind's eval suite."
+ },
+ {
+  "id": 145,
+  "cat": "Evals",
+  "title": "Frontier Models Are Capable of In-Context Scheming",
+  "who": "Meinke et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2412.04984",
+  "search": "https://www.google.com/search?q=Frontier%20Models%20Are%20Capable%20of%20In-Context%20Scheming%20Meinke%20et%20al.%20",
+  "why": "Apollo's scheming evals."
+ },
+ {
+  "id": 146,
+  "cat": "Evals",
+  "title": "Sabotage Evaluations for Frontier Models",
+  "who": "Benton et al. (2024)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2410.21514",
+  "search": "https://www.google.com/search?q=Sabotage%20Evaluations%20for%20Frontier%20Models%20Benton%20et%20al.%20",
+  "why": "Can a model sabotage oversight without being caught."
+ },
+ {
+  "id": 147,
+  "cat": "Evals",
+  "title": "SHADE-Arena: Evaluating Sabotage and Monitoring in LLM Agents",
+  "who": "Kutasov et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2506.15740",
+  "search": "https://www.google.com/search?q=SHADE-Arena%3A%20Evaluating%20Sabotage%20and%20Monitoring%20in%20LLM%20Agents%20Kutasov%20et%20al.%20",
+  "why": "Covert side tasks inside normal agent tasks."
+ },
+ {
+  "id": 148,
+  "cat": "Evals",
+  "title": "Stress Testing Deliberative Alignment for Anti-Scheming Training",
+  "who": "Schoen et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2509.15541",
+  "search": "https://www.google.com/search?q=Stress%20Testing%20Deliberative%20Alignment%20for%20Anti-Scheming%20Training%20Schoen%20et%20al.%20",
+  "why": "Training reduces scheming, eval-awareness confounds it."
+ },
+ {
+  "id": 149,
+  "cat": "Evals",
+  "title": "Auditing Language Models for Hidden Objectives",
+  "who": "Marks et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2503.10965",
+  "search": "https://www.google.com/search?q=Auditing%20Language%20Models%20for%20Hidden%20Objectives%20Marks%20et%20al.%20",
+  "why": "The blind auditing game."
+ },
+ {
+  "id": 150,
+  "cat": "Evals",
+  "title": "Building and Evaluating Alignment Auditing Agents",
+  "who": "Anthropic (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Building%20and%20Evaluating%20Alignment%20Auditing%20Agents%20Anthropic%20",
+  "search": "https://www.google.com/search?q=Building%20and%20Evaluating%20Alignment%20Auditing%20Agents%20Anthropic%20",
+  "why": "Agents that audit models."
+ },
+ {
+  "id": 151,
+  "cat": "Evals",
+  "title": "Detecting Strategic Deception Using Linear Probes",
+  "who": "Goldowsky-Dill et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2502.03407",
+  "search": "https://www.google.com/search?q=Detecting%20Strategic%20Deception%20Using%20Linear%20Probes%20Goldowsky-Dill%20et%20al.%20",
+  "why": "Probes catch deception in realistic settings."
+ },
+ {
+  "id": 152,
+  "cat": "Evals",
+  "title": "Frontier Risk Report, February to March 2026",
+  "who": "METR (2026)",
+  "type": "report",
+  "url": "https://www.google.com/search?q=Frontier%20Risk%20Report%2C%20February%20to%20March%202026%20METR%20",
+  "search": "https://www.google.com/search?q=Frontier%20Risk%20Report%2C%20February%20to%20March%202026%20METR%20",
+  "why": "Means, motive, opportunity for rogue deployments, assessed."
+ },
+ {
+  "id": 153,
+  "cat": "Evals",
+  "title": "Evaluating Whether AI Models Would Sabotage AI Safety Research",
+  "who": "Kirk et al. (2026)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=Evaluating%20Whether%20AI%20Models%20Would%20Sabotage%20AI%20Safety%20Research%20Kirk%20et%20al.%20",
+  "search": "https://www.google.com/search?q=Evaluating%20Whether%20AI%20Models%20Would%20Sabotage%20AI%20Safety%20Research%20Kirk%20et%20al.%20",
+  "why": "The one eval most relevant to automated alignment research."
+ },
+ {
+  "id": 154,
+  "cat": "Evals",
+  "title": "Brief Independent Investigation of Agents' Behavior in the OpenAI / Hugging Face Hacking Incident",
+  "who": "METR and Redwood (2026)",
+  "type": "report",
+  "url": "https://www.google.com/search?q=Brief%20Independent%20Investigation%20of%20Agents%27%20Behavior%20in%20the%20OpenAI%20/%20Hugging%20Face%20Hacking%20Incident%20METR%20and%20Redwood%20",
+  "search": "https://www.google.com/search?q=Brief%20Independent%20Investigation%20of%20Agents%27%20Behavior%20in%20the%20OpenAI%20/%20Hugging%20Face%20Hacking%20Incident%20METR%20and%20Redwood%20",
+  "why": "A real sandbox escape, investigated."
+ },
+ {
+  "id": 155,
+  "cat": "Incentives",
+  "title": "Optimal Policies Tend to Seek Power",
+  "who": "Turner et al. (2019)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1912.01683",
+  "search": "https://www.google.com/search?q=Optimal%20Policies%20Tend%20to%20Seek%20Power%20Turner%20et%20al.%20",
+  "why": "Instrumental convergence as a theorem about MDPs."
+ },
+ {
+  "id": 156,
+  "cat": "Incentives",
+  "title": "Parametrically Retargetable Decision-Makers Tend to Seek Power",
+  "who": "Turner, Tadepalli (2022)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2206.13477",
+  "search": "https://www.google.com/search?q=Parametrically%20Retargetable%20Decision-Makers%20Tend%20to%20Seek%20Power%20Turner%2C%20Tadepalli%20",
+  "why": "The generalization beyond optimal policies."
+ },
+ {
+  "id": 157,
+  "cat": "Incentives",
+  "title": "Safely Interruptible Agents",
+  "who": "Orseau, Armstrong (2016)",
+  "type": "paper",
+  "url": "https://intelligence.org/files/Interruptibility.pdf",
+  "search": "https://www.google.com/search?q=Safely%20Interruptible%20Agents%20Orseau%2C%20Armstrong%20",
+  "why": "Off-policy agents are easier to interrupt."
+ },
+ {
+  "id": 158,
+  "cat": "Incentives",
+  "title": "Corrigibility",
+  "who": "Soares, Fallenstein, Yudkowsky, Armstrong (2015)",
+  "type": "paper",
+  "url": "https://intelligence.org/files/Corrigibility.pdf",
+  "search": "https://www.google.com/search?q=Corrigibility%20Soares%2C%20Fallenstein%2C%20Yudkowsky%2C%20Armstrong%20",
+  "why": "The shutdown problem stated, with utility indifference examined."
+ },
+ {
+  "id": 159,
+  "cat": "Incentives",
+  "title": "The Shutdown Problem: An AI Engineering Puzzle for Decision Theorists",
+  "who": "Thornley (2024)",
+  "type": "paper",
+  "url": "https://philpapers.org/rec/THOTSP-3",
+  "search": "https://www.google.com/search?q=The%20Shutdown%20Problem%3A%20An%20AI%20Engineering%20Puzzle%20for%20Decision%20Theorists%20Thornley%20",
+  "why": "Incomplete preferences as the modern proposal."
+ },
+ {
+  "id": 160,
+  "cat": "Incentives",
+  "title": "Specification Gaming: The Flip Side of AI Ingenuity",
+  "who": "Krakovna et al. (2020)",
+  "type": "post",
+  "url": "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+  "search": "https://www.google.com/search?q=Specification%20Gaming%3A%20The%20Flip%20Side%20of%20AI%20Ingenuity%20Krakovna%20et%20al.%20",
+  "why": "With the master list of examples."
+ },
+ {
+  "id": 161,
+  "cat": "Incentives",
+  "title": "The Surprising Creativity of Digital Evolution",
+  "who": "Lehman et al. (2018)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1803.03453",
+  "search": "https://www.google.com/search?q=The%20Surprising%20Creativity%20of%20Digital%20Evolution%20Lehman%20et%20al.%20",
+  "why": "Anecdotes of evolution gaming its fitness function."
+ },
+ {
+  "id": 162,
+  "cat": "Incentives",
+  "title": "Reinforcement Learning with a Corrupted Reward Channel",
+  "who": "Everitt et al. (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1705.08417",
+  "search": "https://www.google.com/search?q=Reinforcement%20Learning%20with%20a%20Corrupted%20Reward%20Channel%20Everitt%20et%20al.%20",
+  "why": "Reward hacking formalized."
+ },
+ {
+  "id": 163,
+  "cat": "Incentives",
+  "title": "Quantilizers: A Safer Alternative to Maximizers for Limited Optimization",
+  "who": "Taylor (2016)",
+  "type": "paper",
+  "url": "https://intelligence.org/files/QuantilizersSaferAlternative.pdf",
+  "search": "https://www.google.com/search?q=Quantilizers%3A%20A%20Safer%20Alternative%20to%20Maximizers%20for%20Limited%20Optimization%20Taylor%20",
+  "why": "Mild optimization. Compare to KL-penalized RL."
+ },
+ {
+  "id": 164,
+  "cat": "Incentives",
+  "title": "MONA: Myopic Optimization with Non-myopic Approval",
+  "who": "Farquhar et al. (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2501.13011",
+  "search": "https://www.google.com/search?q=MONA%3A%20Myopic%20Optimization%20with%20Non-myopic%20Approval%20Farquhar%20et%20al.%20",
+  "why": "Short-sighted optimization plus overseer approval against multi-step hacking."
+ },
+ {
+  "id": 165,
+  "cat": "Incentives",
+  "title": "Understanding Agent Incentives Using Causal Influence Diagrams",
+  "who": "Everitt et al. (2019)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1902.09980",
+  "search": "https://www.google.com/search?q=Understanding%20Agent%20Incentives%20Using%20Causal%20Influence%20Diagrams%20Everitt%20et%20al.%20",
+  "why": "The CID framework for incentives."
+ },
+ {
+  "id": 166,
+  "cat": "Incentives",
+  "title": "General Agents Need World Models",
+  "who": "Richens, Abel, Bellot, Everitt (2025)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2506.01622",
+  "search": "https://www.google.com/search?q=General%20Agents%20Need%20World%20Models%20Richens%2C%20Abel%2C%20Bellot%2C%20Everitt%20",
+  "why": "Any agent that generalizes to multi-step goals has learned a world model."
+ },
+ {
+  "id": 167,
+  "cat": "Agent foundations",
+  "title": "Agent Foundations for Aligning Machine Intelligence with Human Interests",
+  "who": "Soares, Fallenstein (2014)",
+  "type": "report",
+  "url": "https://intelligence.org/files/TechnicalAgenda.pdf",
+  "search": "https://www.google.com/search?q=Agent%20Foundations%20for%20Aligning%20Machine%20Intelligence%20with%20Human%20Interests%20Soares%2C%20Fallenstein%20",
+  "why": "The agenda. On your readingwhatwecan list."
+ },
+ {
+  "id": 168,
+  "cat": "Agent foundations",
+  "title": "Alignment for Advanced Machine Learning Systems",
+  "who": "Taylor et al. (2016)",
+  "type": "report",
+  "url": "https://intelligence.org/files/AlignmentMachineLearning.pdf",
+  "search": "https://www.google.com/search?q=Alignment%20for%20Advanced%20Machine%20Learning%20Systems%20Taylor%20et%20al.%20",
+  "why": "The ML-flavoured MIRI agenda. Done."
+ },
+ {
+  "id": 169,
+  "cat": "Agent foundations",
+  "title": "Tiling Agents for Self-Modifying AI, and the Löbian Obstacle",
+  "who": "Yudkowsky, Herreshoff (2013)",
+  "type": "paper",
+  "url": "https://intelligence.org/files/TilingAgentsDraft.pdf",
+  "search": "https://www.google.com/search?q=Tiling%20Agents%20for%20Self-Modifying%20AI%2C%20and%20the%20L%C3%B6bian%20Obstacle%20Yudkowsky%2C%20Herreshoff%20",
+  "why": "Your post's subject."
+ },
+ {
+  "id": 170,
+  "cat": "Agent foundations",
+  "title": "Vingean Reflection: Reliable Reasoning for Self-Improving Agents",
+  "who": "Fallenstein, Soares (2015)",
+  "type": "paper",
+  "url": "https://intelligence.org/files/VingeanReflection.pdf",
+  "search": "https://www.google.com/search?q=Vingean%20Reflection%3A%20Reliable%20Reasoning%20for%20Self-Improving%20Agents%20Fallenstein%2C%20Soares%20",
+  "why": "The survey of the self-trust problem."
+ },
+ {
+  "id": 171,
+  "cat": "Agent foundations",
+  "title": "Parametric Bounded Löb's Theorem and Robust Cooperation of Bounded Agents",
+  "who": "Critch (2016)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1602.04184",
+  "search": "https://www.google.com/search?q=Parametric%20Bounded%20L%C3%B6b%27s%20Theorem%20and%20Robust%20Cooperation%20of%20Bounded%20Agents%20Critch%20",
+  "why": "Löb for bounded provers."
+ },
+ {
+  "id": 172,
+  "cat": "Agent foundations",
+  "title": "Robust Cooperation in the Prisoner's Dilemma: Program Equilibrium via Provability Logic",
+  "who": "Barasz et al. (2014)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1401.5577",
+  "search": "https://www.google.com/search?q=Robust%20Cooperation%20in%20the%20Prisoner%27s%20Dilemma%3A%20Program%20Equilibrium%20via%20Provability%20Logic%20Barasz%20et%20al.%20",
+  "why": "Modal combat. Agents that cooperate by proving things about each other."
+ },
+ {
+  "id": 173,
+  "cat": "Agent foundations",
+  "title": "Definability of Truth in Probabilistic Logic",
+  "who": "Christiano, Yudkowsky, Herreshoff, Barasz (2013)",
+  "type": "paper",
+  "url": "https://intelligence.org/files/DefinabilityTruthDraft.pdf",
+  "search": "https://www.google.com/search?q=Definability%20of%20Truth%20in%20Probabilistic%20Logic%20Christiano%2C%20Yudkowsky%2C%20Herreshoff%2C%20Barasz%20",
+  "why": "Probabilistic self-reference escapes Tarski and Löb."
+ },
+ {
+  "id": 174,
+  "cat": "Agent foundations",
+  "title": "Logical Induction",
+  "who": "Garrabrant et al. (2016)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1609.03543",
+  "search": "https://www.google.com/search?q=Logical%20Induction%20Garrabrant%20et%20al.%20",
+  "why": "Reasoning under logical uncertainty, with a market. Long. Read the abstract and section 4 first."
+ },
+ {
+  "id": 175,
+  "cat": "Agent foundations",
+  "title": "Reflective Oracles: A Foundation for Classical Game Theory",
+  "who": "Fallenstein, Taylor, Christiano (2015)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1508.04145",
+  "search": "https://www.google.com/search?q=Reflective%20Oracles%3A%20A%20Foundation%20for%20Classical%20Game%20Theory%20Fallenstein%2C%20Taylor%2C%20Christiano%20",
+  "why": "Agents that can reason about agents like themselves."
+ },
+ {
+  "id": 176,
+  "cat": "Agent foundations",
+  "title": "Functional Decision Theory",
+  "who": "Yudkowsky, Soares (2017)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/1710.05060",
+  "search": "https://www.google.com/search?q=Functional%20Decision%20Theory%20Yudkowsky%2C%20Soares%20",
+  "why": "The decision theory MIRI argues for."
+ },
+ {
+  "id": 177,
+  "cat": "Agent foundations",
+  "title": "Cartesian Frames",
+  "who": "Garrabrant (2020)",
+  "type": "post",
+  "url": "https://www.alignmentforum.org/s/2A7rrZ4ySx6R8mfoT",
+  "search": "https://www.google.com/search?q=Cartesian%20Frames%20Garrabrant%20",
+  "why": "A formalism for agent-environment boundaries."
+ },
+ {
+  "id": 178,
+  "cat": "Agent foundations",
+  "title": "Finite Factored Sets",
+  "who": "Garrabrant (2021)",
+  "type": "post",
+  "url": "https://www.alignmentforum.org/s/kxs3eeEti9ouwWFzr",
+  "search": "https://www.google.com/search?q=Finite%20Factored%20Sets%20Garrabrant%20",
+  "why": "Alternative to Pearl for time and causality."
+ },
+ {
+  "id": 179,
+  "cat": "Agent foundations",
+  "title": "Goodhart Taxonomy",
+  "who": "Garrabrant (2018)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/EbFABnst8LsidYs5Y/goodhart-taxonomy",
+  "search": "https://www.google.com/search?q=Goodhart%20Taxonomy%20Garrabrant%20",
+  "why": "Regressional, extremal, causal, adversarial. Paper version with Manheim (2018)."
+ },
+ {
+  "id": 180,
+  "cat": "Agent foundations",
+  "title": "Natural Latents: Latent Variables Stable Across Ontologies",
+  "who": "Wentworth, Lorell (2025)",
+  "type": "paper",
+  "url": "https://www.google.com/search?q=Natural%20Latents%3A%20Latent%20Variables%20Stable%20Across%20Ontologies%20Wentworth%2C%20Lorell%20",
+  "search": "https://www.google.com/search?q=Natural%20Latents%3A%20Latent%20Variables%20Stable%20Across%20Ontologies%20Wentworth%2C%20Lorell%20",
+  "why": "The current form of the natural abstraction hypothesis."
+ },
+ {
+  "id": 181,
+  "cat": "Strategy",
+  "title": "Forecasting Transformative AI with Biological Anchors",
+  "who": "Cotra (2020)",
+  "type": "report",
+  "url": "https://www.alignmentforum.org/posts/KrJfoZzpSDpnrv9va/draft-report-on-ai-timelines",
+  "search": "https://www.google.com/search?q=Forecasting%20Transformative%20AI%20with%20Biological%20Anchors%20Cotra%20",
+  "why": "The timelines model most later forecasts argue with."
+ },
+ {
+  "id": 182,
+  "cat": "Strategy",
+  "title": "AI 2027",
+  "who": "Kokotajlo, Alexander et al. (2025)",
+  "type": "post",
+  "url": "https://ai-2027.com/",
+  "search": "https://www.google.com/search?q=AI%202027%20Kokotajlo%2C%20Alexander%20et%20al.%20",
+  "why": "The scenario. Read the research appendices, not just the story."
+ },
+ {
+  "id": 183,
+  "cat": "Strategy",
+  "title": "Situational Awareness: The Decade Ahead",
+  "who": "Aschenbrenner (2024)",
+  "type": "post",
+  "url": "https://situational-awareness.ai/",
+  "search": "https://www.google.com/search?q=Situational%20Awareness%3A%20The%20Decade%20Ahead%20Aschenbrenner%20",
+  "why": "The insider's bull case for short timelines."
+ },
+ {
+  "id": 184,
+  "cat": "Strategy",
+  "title": "Machines of Loving Grace",
+  "who": "Amodei (2024)",
+  "type": "post",
+  "url": "https://www.darioamodei.com/essay/machines-of-loving-grace",
+  "search": "https://www.google.com/search?q=Machines%20of%20Loving%20Grace%20Amodei%20",
+  "why": "What goes right."
+ },
+ {
+  "id": 185,
+  "cat": "Strategy",
+  "title": "The Adolescence of Technology",
+  "who": "Amodei (2026)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=The%20Adolescence%20of%20Technology%20Amodei%20",
+  "search": "https://www.google.com/search?q=The%20Adolescence%20of%20Technology%20Amodei%20",
+  "why": "The companion essay on what goes wrong."
+ },
+ {
+  "id": 186,
+  "cat": "Strategy",
+  "title": "Takeoff Speeds",
+  "who": "Christiano (2018)",
+  "type": "post",
+  "url": "https://sideways-view.com/2018/02/24/takeoff-speeds/",
+  "search": "https://www.google.com/search?q=Takeoff%20Speeds%20Christiano%20",
+  "why": "Slow versus fast takeoff, the canonical argument for slow."
+ },
+ {
+  "id": 187,
+  "cat": "Strategy",
+  "title": "Intelligence Explosion Microeconomics",
+  "who": "Yudkowsky (2013)",
+  "type": "report",
+  "url": "https://intelligence.org/files/IEM.pdf",
+  "search": "https://www.google.com/search?q=Intelligence%20Explosion%20Microeconomics%20Yudkowsky%20",
+  "why": "The canonical argument for fast."
+ },
+ {
+  "id": 188,
+  "cat": "Strategy",
+  "title": "What a Compute-Centric Framework Says About Takeoff Speeds",
+  "who": "Davidson (2023)",
+  "type": "report",
+  "url": "https://www.openphilanthropy.org/research/what-a-compute-centric-framework-says-about-takeoff-speeds/",
+  "search": "https://www.google.com/search?q=What%20a%20Compute-Centric%20Framework%20Says%20About%20Takeoff%20Speeds%20Davidson%20",
+  "why": "The quantitative model."
+ },
+ {
+  "id": 189,
+  "cat": "Strategy",
+  "title": "Frontier AI Regulation: Managing Emerging Risks to Public Safety",
+  "who": "Anderljung et al. (2023)",
+  "type": "paper",
+  "url": "https://arxiv.org/abs/2307.03718",
+  "search": "https://www.google.com/search?q=Frontier%20AI%20Regulation%3A%20Managing%20Emerging%20Risks%20to%20Public%20Safety%20Anderljung%20et%20al.%20",
+  "why": "The governance paper labs cite."
+ },
+ {
+  "id": 190,
+  "cat": "Strategy",
+  "title": "International AI Safety Report 2026",
+  "who": "Bengio et al. (2026)",
+  "type": "report",
+  "url": "https://internationalaisafetyreport.org/",
+  "search": "https://www.google.com/search?q=International%20AI%20Safety%20Report%202026%20Bengio%20et%20al.%20",
+  "why": "The consensus document on capabilities and risks."
+ },
+ {
+  "id": 191,
+  "cat": "Strategy",
+  "title": "Responsible Scaling Policy",
+  "who": "Anthropic (2023, v3.4 2026)",
+  "type": "report",
+  "url": "https://www.anthropic.com/responsible-scaling-policy",
+  "search": "https://www.google.com/search?q=Responsible%20Scaling%20Policy%20Anthropic%20",
+  "why": "Read one lab's framework in full, then compare METR's index."
+ },
+ {
+  "id": 192,
+  "cat": "Essays",
+  "title": "Reflections on Trusting Trust",
+  "who": "Thompson (1984)",
+  "type": "paper",
+  "url": "https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf",
+  "search": "https://www.google.com/search?q=Reflections%20on%20Trusting%20Trust%20Thompson%20",
+  "why": "Self-reference in software, in three pages."
+ },
+ {
+  "id": 193,
+  "cat": "Essays",
+  "title": "The Hidden Complexity of Wishes",
+  "who": "Yudkowsky (2007)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/4ARaTpNX62uaL86j6/the-hidden-complexity-of-wishes",
+  "search": "https://www.google.com/search?q=The%20Hidden%20Complexity%20of%20Wishes%20Yudkowsky%20",
+  "why": "Why specification is hard."
+ },
+ {
+  "id": 194,
+  "cat": "Essays",
+  "title": "Value Is Fragile",
+  "who": "Yudkowsky (2009)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/GNnHHmm8EzePmKzPk/value-is-fragile",
+  "search": "https://www.google.com/search?q=Value%20Is%20Fragile%20Yudkowsky%20",
+  "why": "Why getting values almost right is not enough."
+ },
+ {
+  "id": 195,
+  "cat": "Essays",
+  "title": "Security Mindset and Ordinary Paranoia",
+  "who": "Yudkowsky (2017)",
+  "type": "post",
+  "url": "https://intelligence.org/2017/11/25/security-mindset-ordinary-paranoia/",
+  "search": "https://www.google.com/search?q=Security%20Mindset%20and%20Ordinary%20Paranoia%20Yudkowsky%20",
+  "why": "How to think about adversarial failure."
+ },
+ {
+  "id": 196,
+  "cat": "Essays",
+  "title": "Reward Is Not the Optimization Target",
+  "who": "Turner (2022)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/pdaGN6pQyQarFHXF4/reward-is-not-the-optimization-target",
+  "search": "https://www.google.com/search?q=Reward%20Is%20Not%20the%20Optimization%20Target%20Turner%20",
+  "why": "Reward shapes cognition, it is not what the policy wants."
+ },
+ {
+  "id": 197,
+  "cat": "Essays",
+  "title": "Simulators",
+  "who": "janus (2022)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/vJFdjigzmcXMhNTsx/simulators",
+  "search": "https://www.google.com/search?q=Simulators%20janus%20",
+  "why": "The frame for base models that interp and alignment both use."
+ },
+ {
+  "id": 198,
+  "cat": "Essays",
+  "title": "The Waluigi Effect",
+  "who": "Cleo Nardo (2023)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post",
+  "search": "https://www.google.com/search?q=The%20Waluigi%20Effect%20Cleo%20Nardo%20",
+  "why": "Personas and their inversions. Read next to persona vectors."
+ },
+ {
+  "id": 199,
+  "cat": "Essays",
+  "title": "Paradigms of AI Alignment: Components and Enablers",
+  "who": "Krakovna (2022)",
+  "type": "post",
+  "url": "https://vkrakovna.wordpress.com/2022/06/05/paradigms-of-ai-alignment-components-and-enablers/",
+  "search": "https://www.google.com/search?q=Paradigms%20of%20AI%20Alignment%3A%20Components%20and%20Enablers%20Krakovna%20",
+  "why": "The map this list is built on."
+ },
+ {
+  "id": 200,
+  "cat": "Essays",
+  "title": "If Anyone Builds It, Everyone Dies",
+  "who": "Yudkowsky, Soares (2025)",
+  "type": "book",
+  "url": "https://ifanyonebuildsit.com/",
+  "search": "https://www.google.com/search?q=If%20Anyone%20Builds%20It%2C%20Everyone%20Dies%20Yudkowsky%2C%20Soares%20",
+  "why": "The book-length version of the MIRI position."
+ }
+]

@@ -87,6 +87,7 @@ src/
 ├── app/
 │   ├── page.tsx            # home: bio, projects, writing
 │   ├── archive/            # all posts, grouped by year
+│   ├── reading/            # 200-item reading list with per-browser progress
 │   ├── posts/[slug]/       # MDX post pages
 │   ├── globals.css         # design tokens + all styling
 │   └── icon.svg            # favicon
@@ -94,6 +95,7 @@ src/
 │   ├── Header.tsx          # top bar
 │   └── LiveStatus.tsx      # live clock + weather
 ├── content/posts/          # the writing (MDX)
+├── content/reading-list.json  # the reading list data
 └── lib/content.ts          # frontmatter loader
 ```
 

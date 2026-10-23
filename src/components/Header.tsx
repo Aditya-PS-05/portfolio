@@ -10,6 +10,7 @@ export default function Header() {
       <nav className="topbar-right">
         <Link href="/archive">writing</Link>
         <Link href="/#projects">projects</Link>
+        <Link href="/reading">reading</Link>
         <span className="topbar-divider" />
         <LiveStatus />
       </nav>
