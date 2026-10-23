@@ -80,6 +80,15 @@ Your words. Tables, images, and code blocks all work.
 
 It appears on the homepage and `/archive` automatically. Files with `private: true` never build.
 
+## Finishing a paper on the reading list
+
+```bash
+pnpm read            # shows what's unread, with ids
+pnpm read 42         # creates src/content/reading-notes/42.mdx dated today
+```
+
+Write your notes under the frontmatter (MDX, so tables and images work), commit, push. The item shows as read on `/reading` with the date and a "My notes" fold-out. Use `pnpm read 42 --reading` for in-progress, and an optional `rating: 1-5` in the frontmatter.
+
 ## Structure
 
 ```
@@ -96,6 +105,7 @@ src/
 │   └── LiveStatus.tsx      # live clock + weather
 ├── content/posts/          # the writing (MDX)
 ├── content/reading-list.json  # the reading list data
+├── content/reading-notes/  # one MDX note per finished paper, named by id
 └── lib/content.ts          # frontmatter loader
 ```
 

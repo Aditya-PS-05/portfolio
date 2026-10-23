@@ -1,80 +1,36 @@
 "use client";
 
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useMemo, useState, type ReactNode } from "react";
+import type { ReadingItem } from "@/lib/reading";
 
-export interface ReadingItem {
-  id: number;
-  cat: string;
-  title: string;
-  who: string;
-  type: string;
-  url: string;
-  search: string;
-  why: string;
-}
+type Meta = { status: "read" | "reading"; readOn: string; rating?: number };
 
-const KEY = "reading200.done";
-type Done = Record<number, boolean>;
-const EMPTY: Done = {};
-
-// A tiny external store over localStorage, so React reads it with
-// useSyncExternalStore instead of setting state inside an effect.
-const listeners = new Set<() => void>();
-let memory: Done = EMPTY;
-let lastRaw: string | null = null;
-
-function subscribe(cb: () => void) {
-  listeners.add(cb);
-  return () => {
-    listeners.delete(cb);
-  };
-}
-
-function getSnapshot(): Done {
-  let raw: string | null = null;
-  try {
-    raw = localStorage.getItem(KEY);
-  } catch {
-    return memory; // storage unavailable: page still works, nothing is remembered
-  }
-  if (raw !== lastRaw) {
-    lastRaw = raw;
-    try {
-      memory = raw ? (JSON.parse(raw) as Done) : EMPTY;
-    } catch {
-      memory = EMPTY;
-    }
-  }
-  return memory;
-}
-
-function getServerSnapshot(): Done {
-  return EMPTY;
-}
-
-function writeDone(next: Done) {
-  memory = next;
-  try {
-    localStorage.setItem(KEY, JSON.stringify(next));
-  } catch {
-    /* ignore */
-  }
-  listeners.forEach((l) => l());
-}
-
-export default function ReadingList({ items }: { items: ReadingItem[] }) {
-  const done = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+export default function ReadingList({
+  items,
+  meta,
+  notes,
+}: {
+  items: ReadingItem[];
+  meta: Record<number, Meta>;
+  notes: Record<number, ReactNode>;
+}) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<string | null>(null);
-  const [hideDone, setHideDone] = useState(false);
-
-  function toggle(id: number, value: boolean) {
-    writeDone({ ...done, [id]: value });
-  }
+  const [filter, setFilter] = useState<"all" | "unread" | "read">("all");
 
   const cats = useMemo(() => Array.from(new Set(items.map((i) => i.cat))), [items]);
   const q = query.trim().toLowerCase();
-  const readCount = items.filter((i) => done[i.id]).length;
+  const readCount = items.filter((i) => meta[i.id]?.status === "read").length;
+  const readingCount = items.filter((i) => meta[i.id]?.status === "reading").length;
+
+  function visible(i: ReadingItem) {
+    const st = meta[i.id]?.status;
+    if (filter === "unread" && st === "read") return false;
+    if (filter === "read" && !st) return false;
+    if (cat && cat !== i.cat) return false;
+    if (q && !`${i.title} ${i.who} ${i.why}`.toLowerCase().includes(q)) return false;
+    return true;
+  }
 
   return (
     <div className="reading">
@@ -88,23 +44,21 @@ export default function ReadingList({ items }: { items: ReadingItem[] }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <button
-            type="button"
-            className="reading-chip"
-            aria-pressed={hideDone}
-            onClick={() => setHideDone((v) => !v)}
-          >
-            Hide read
-          </button>
+          {(["all", "unread", "read"] as const).map((f) => (
+            <button
+              key={f}
+              type="button"
+              className="reading-chip"
+              aria-pressed={filter === f}
+              onClick={() => setFilter(f)}
+            >
+              {f}
+            </button>
+          ))}
         </div>
         <div className="reading-row">
-          <button
-            type="button"
-            className="reading-chip"
-            aria-pressed={cat === null}
-            onClick={() => setCat(null)}
-          >
-            All
+          <button type="button" className="reading-chip" aria-pressed={cat === null} onClick={() => setCat(null)}>
+            All sections
           </button>
           {cats.map((c) => (
             <button
@@ -121,64 +75,66 @@ export default function ReadingList({ items }: { items: ReadingItem[] }) {
         <div className="reading-progress">
           <span>
             {readCount} / {items.length} read
+            {readingCount > 0 ? `, ${readingCount} in progress` : ""}
           </span>
           <div className="reading-track">
-            <div
-              className="reading-fill"
-              style={{ width: `${(100 * readCount) / items.length}%` }}
-            />
+            <div className="reading-fill" style={{ width: `${(100 * readCount) / items.length}%` }} />
           </div>
         </div>
       </div>
 
       {cats.map((c) => {
-        if (cat && cat !== c) return null;
-        const sub = items.filter(
-          (i) =>
-            i.cat === c &&
-            (!q || `${i.title} ${i.who} ${i.why}`.toLowerCase().includes(q)) &&
-            !(hideDone && done[i.id])
-        );
+        const sub = items.filter((i) => i.cat === c && visible(i));
         if (sub.length === 0) return null;
         const total = items.filter((i) => i.cat === c).length;
-        const read = items.filter((i) => i.cat === c && done[i.id]).length;
+        const read = items.filter((i) => i.cat === c && meta[i.id]?.status === "read").length;
         return (
           <section key={c} className="reading-section">
             <h2>
               {c} <span className="reading-n">{read}/{total}</span>
             </h2>
             <ol>
-              {sub.map((i) => (
-                <li key={i.id} className={done[i.id] ? "done" : undefined}>
-                  <input
-                    type="checkbox"
-                    id={`r${i.id}`}
-                    checked={!!done[i.id]}
-                    onChange={(e) => toggle(i.id, e.target.checked)}
-                    aria-label={`Mark read: ${i.title}`}
-                  />
-                  <div>
-                    <div className="reading-title">
-                      <label htmlFor={`r${i.id}`} className="reading-num">
-                        {String(i.id).padStart(3, "0")}
-                      </label>
-                      <a href={i.url} target="_blank" rel="noopener noreferrer">
-                        {i.title}
-                      </a>
-                    </div>
-                    <div className="reading-meta">
-                      <span>{i.who}</span>
-                      <span className="reading-type">{i.type}</span>
-                      {i.url !== i.search && (
-                        <a href={i.search} target="_blank" rel="noopener noreferrer">
-                          search
+              {sub.map((i) => {
+                const m = meta[i.id];
+                const note = notes[i.id];
+                return (
+                  <li key={i.id} className={m?.status === "read" ? "done" : m?.status === "reading" ? "reading-now" : undefined}>
+                    <span className="reading-mark" aria-hidden="true">
+                      {m?.status === "read" ? "✓" : m?.status === "reading" ? "…" : ""}
+                    </span>
+                    <div>
+                      <div className="reading-title">
+                        <span className="reading-num">{String(i.id).padStart(3, "0")}</span>
+                        <a href={i.url} target="_blank" rel="noopener noreferrer">
+                          {i.title}
                         </a>
+                      </div>
+                      <div className="reading-meta">
+                        <span>{i.who}</span>
+                        <span className="reading-type">{i.type}</span>
+                        {i.url !== i.search && (
+                          <a href={i.search} target="_blank" rel="noopener noreferrer">
+                            search
+                          </a>
+                        )}
+                        {m?.readOn && (
+                          <span className="reading-date">
+                            {m.status === "reading" ? "started" : "read"} {m.readOn}
+                            {m.rating ? ` · ${"★".repeat(m.rating)}` : ""}
+                          </span>
+                        )}
+                      </div>
+                      <div className="reading-why">{i.why}</div>
+                      {note && (
+                        <details className="reading-note">
+                          <summary>My notes</summary>
+                          <div className="post-content">{note}</div>
+                        </details>
                       )}
                     </div>
-                    <div className="reading-why">{i.why}</div>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ol>
           </section>
         );
