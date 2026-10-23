@@ -12,6 +12,30 @@
   "order": 1
  },
  {
+  "id": 202,
+  "cat": "ML foundations",
+  "title": "The Unreasonable Effectiveness of Recurrent Neural Networks",
+  "who": "Karpathy (2015)",
+  "type": "post",
+  "url": "http://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+  "search": "https://www.google.com/search?q=The%20Unreasonable%20Effectiveness%20of%20Recurrent%20Neural%20Networks%20Karpathy%20",
+  "why": "The blog post that taught a generation what sequence models do. Still the best first read.",
+  "phase": "1. The ML spine",
+  "order": 2
+ },
+ {
+  "id": 201,
+  "cat": "Essays",
+  "title": "The Scaling Hypothesis",
+  "who": "gwern (2020)",
+  "type": "post",
+  "url": "https://gwern.net/scaling-hypothesis",
+  "search": "https://www.google.com/search?q=The%20Scaling%20Hypothesis%20gwern%20",
+  "why": "The essay that argued, before GPT-3 landed, that scale alone would get us here. Read with Kaplan.",
+  "phase": "1. The ML spine",
+  "order": 3
+ },
+ {
   "id": 1,
   "cat": "ML foundations",
   "title": "Attention Is All You Need",
@@ -21,7 +45,7 @@
   "search": "https://www.google.com/search?q=Attention%20Is%20All%20You%20Need%20Vaswani%20et%20al.%20",
   "why": "The transformer. Everything else on this list runs on it.",
   "phase": "1. The ML spine",
-  "order": 2
+  "order": 4
  },
  {
   "id": 2,
@@ -33,7 +57,7 @@
   "search": "https://www.google.com/search?q=Deep%20Residual%20Learning%20for%20Image%20Recognition%20He%20et%20al.%20",
   "why": "Residual streams, which is also what interp means by \"the residual stream\".",
   "phase": "1. The ML spine",
-  "order": 3
+  "order": 5
  },
  {
   "id": 3,
@@ -45,43 +69,7 @@
   "search": "https://www.google.com/search?q=Adam%3A%20A%20Method%20for%20Stochastic%20Optimization%20Kingma%2C%20Ba%20",
   "why": "The optimizer you will actually use.",
   "phase": "1. The ML spine",
-  "order": 4
- },
- {
-  "id": 4,
-  "cat": "ML foundations",
-  "title": "Batch Normalization",
-  "who": "Ioffe, Szegedy (2015)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1502.03167",
-  "search": "https://www.google.com/search?q=Batch%20Normalization%20Ioffe%2C%20Szegedy%20",
-  "why": "Read with Layer Normalization (Ba et al. 2016) to understand pre-norm transformers.",
-  "phase": "1. The ML spine",
-  "order": 5
- },
- {
-  "id": 17,
-  "cat": "ML foundations",
-  "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
-  "who": "Su et al. (2021)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2104.09864",
-  "search": "https://www.google.com/search?q=RoFormer%3A%20Enhanced%20Transformer%20with%20Rotary%20Position%20Embedding%20Su%20et%20al.%20",
-  "why": "RoPE. Every open model uses it.",
-  "phase": "1. The ML spine",
   "order": 6
- },
- {
-  "id": 15,
-  "cat": "ML foundations",
-  "title": "FlashAttention",
-  "who": "Dao et al. (2022)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2205.14135",
-  "search": "https://www.google.com/search?q=FlashAttention%20Dao%20et%20al.%20",
-  "why": "How attention is actually computed on a GPU.",
-  "phase": "1. The ML spine",
-  "order": 7
  },
  {
   "id": 16,
@@ -93,31 +81,7 @@
   "search": "https://www.google.com/search?q=LoRA%3A%20Low-Rank%20Adaptation%20of%20Large%20Language%20Models%20Hu%20et%20al.%20",
   "why": "How most finetuning is done, including most model-organism papers.",
   "phase": "1. The ML spine",
-  "order": 8
- },
- {
-  "id": 7,
-  "cat": "ML foundations",
-  "title": "Efficient Estimation of Word Representations in Vector Space",
-  "who": "Mikolov et al. (2013)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1301.3781",
-  "search": "https://www.google.com/search?q=Efficient%20Estimation%20of%20Word%20Representations%20in%20Vector%20Space%20Mikolov%20et%20al.%20",
-  "why": "Word2vec. The first \"linear representation\" result, a decade before the hypothesis was named.",
-  "phase": "1. The ML spine",
-  "order": 9
- },
- {
-  "id": 8,
-  "cat": "ML foundations",
-  "title": "BERT: Pre-training of Deep Bidirectional Transformers",
-  "who": "Devlin et al. (2018)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1810.04805",
-  "search": "https://www.google.com/search?q=BERT%3A%20Pre-training%20of%20Deep%20Bidirectional%20Transformers%20Devlin%20et%20al.%20",
-  "why": "Pretrain then finetune becomes the default.",
-  "phase": "1. The ML spine",
-  "order": 10
+  "order": 7
  },
  {
   "id": 21,
@@ -129,7 +93,7 @@
   "search": "https://www.google.com/search?q=Language%20Models%20are%20Few-Shot%20Learners%20Brown%20et%20al.%20",
   "why": "GPT-3. In-context learning appears.",
   "phase": "1. The ML spine",
-  "order": 11
+  "order": 8
  },
  {
   "id": 19,
@@ -141,7 +105,7 @@
   "search": "https://www.google.com/search?q=Scaling%20Laws%20for%20Neural%20Language%20Models%20Kaplan%20et%20al.%20",
   "why": "Loss is a power law in compute, data, parameters.",
   "phase": "1. The ML spine",
-  "order": 12
+  "order": 9
  },
  {
   "id": 20,
@@ -153,19 +117,7 @@
   "search": "https://www.google.com/search?q=Training%20Compute-Optimal%20Large%20Language%20Models%20Hoffmann%20et%20al.%20",
   "why": "Chinchilla. Kaplan got the data-parameter split wrong.",
   "phase": "1. The ML spine",
-  "order": 13
- },
- {
-  "id": 33,
-  "cat": "Scaling and LLMs",
-  "title": "Predictability and Surprise in Large Generative Models",
-  "who": "Ganguli et al. (2022)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2202.07785",
-  "search": "https://www.google.com/search?q=Predictability%20and%20Surprise%20in%20Large%20Generative%20Models%20Ganguli%20et%20al.%20",
-  "why": "Why scaling is predictable in loss and unpredictable in capability.",
-  "phase": "1. The ML spine",
-  "order": 14
+  "order": 10
  },
  {
   "id": 24,
@@ -177,7 +129,7 @@
   "search": "https://www.google.com/search?q=Emergent%20Abilities%20of%20Large%20Language%20Models%20Wei%20et%20al.%20",
   "why": "The claim.",
   "phase": "1. The ML spine",
-  "order": 15
+  "order": 11
  },
  {
   "id": 25,
@@ -189,7 +141,7 @@
   "search": "https://www.google.com/search?q=Are%20Emergent%20Abilities%20of%20Large%20Language%20Models%20a%20Mirage%3F%20Schaeffer%2C%20Miranda%2C%20Koyejo%20",
   "why": "The rebuttal. Read both.",
   "phase": "1. The ML spine",
-  "order": 16
+  "order": 12
  },
  {
   "id": 91,
@@ -201,7 +153,7 @@
   "search": "https://www.google.com/search?q=The%20Basic%20AI%20Drives%20Omohundro%20",
   "why": "Instrumental convergence, original statement.",
   "phase": "2. Why alignment is hard",
-  "order": 17
+  "order": 13
  },
  {
   "id": 193,
@@ -213,7 +165,7 @@
   "search": "https://www.google.com/search?q=The%20Hidden%20Complexity%20of%20Wishes%20Yudkowsky%20",
   "why": "Why specification is hard.",
   "phase": "2. Why alignment is hard",
-  "order": 18
+  "order": 14
  },
  {
   "id": 194,
@@ -225,7 +177,7 @@
   "search": "https://www.google.com/search?q=Value%20Is%20Fragile%20Yudkowsky%20",
   "why": "Why getting values almost right is not enough.",
   "phase": "2. Why alignment is hard",
-  "order": 19
+  "order": 15
  },
  {
   "id": 160,
@@ -237,7 +189,7 @@
   "search": "https://www.google.com/search?q=Specification%20Gaming%3A%20The%20Flip%20Side%20of%20AI%20Ingenuity%20Krakovna%20et%20al.%20",
   "why": "With the master list of examples.",
   "phase": "2. Why alignment is hard",
-  "order": 20
+  "order": 16
  },
  {
   "id": 161,
@@ -249,7 +201,31 @@
   "search": "https://www.google.com/search?q=The%20Surprising%20Creativity%20of%20Digital%20Evolution%20Lehman%20et%20al.%20",
   "why": "Anecdotes of evolution gaming its fitness function.",
   "phase": "2. Why alignment is hard",
-  "order": 21
+  "order": 17
+ },
+ {
+  "id": 205,
+  "cat": "Threat models",
+  "title": "Why AI Alignment Could Be Hard with Modern Deep Learning",
+  "who": "Cotra (2021)",
+  "type": "post",
+  "url": "https://www.cold-takes.com/why-ai-alignment-could-be-hard-with-modern-deep-learning/",
+  "search": "https://www.google.com/search?q=Why%20AI%20Alignment%20Could%20Be%20Hard%20with%20Modern%20Deep%20Learning%20Cotra%20",
+  "why": "Saints, sycophants and schemers. The frame most people now use.",
+  "phase": "2. Why alignment is hard",
+  "order": 18
+ },
+ {
+  "id": 206,
+  "cat": "Threat models",
+  "title": "AI Could Defeat All of Us Combined",
+  "who": "Karnofsky (2022)",
+  "type": "post",
+  "url": "https://www.cold-takes.com/ai-could-defeat-all-of-us-combined/",
+  "search": "https://www.google.com/search?q=AI%20Could%20Defeat%20All%20of%20Us%20Combined%20Karnofsky%20",
+  "why": "The capability argument on its own, separate from the motive argument.",
+  "phase": "2. Why alignment is hard",
+  "order": 19
  },
  {
   "id": 78,
@@ -261,7 +237,7 @@
   "search": "https://www.google.com/search?q=The%20Alignment%20Problem%20from%20a%20Deep%20Learning%20Perspective%20Ngo%2C%20Chan%2C%20Mindermann%20",
   "why": "The same argument for an ML audience.",
   "phase": "2. Why alignment is hard",
-  "order": 22
+  "order": 20
  },
  {
   "id": 80,
@@ -273,7 +249,7 @@
   "search": "https://www.google.com/search?q=Clarifying%20Inner%20Alignment%20Terminology%20Hubinger%20",
   "why": "The glossary you need for the previous item.",
   "phase": "2. Why alignment is hard",
-  "order": 23
+  "order": 21
  },
  {
   "id": 115,
@@ -285,7 +261,7 @@
   "search": "https://www.google.com/search?q=Goal%20Misgeneralization%20in%20Deep%20Reinforcement%20Learning%20Langosco%20et%20al.%20",
   "why": "Capabilities generalize, goals do not. CoinRun.",
   "phase": "2. Why alignment is hard",
-  "order": 24
+  "order": 22
  },
  {
   "id": 116,
@@ -297,7 +273,7 @@
   "search": "https://www.google.com/search?q=Goal%20Misgeneralization%3A%20Why%20Correct%20Specifications%20Aren%27t%20Enough%20Shah%20et%20al.%20",
   "why": "DeepMind's version with more examples.",
   "phase": "2. Why alignment is hard",
-  "order": 25
+  "order": 23
  },
  {
   "id": 84,
@@ -309,7 +285,7 @@
   "search": "https://www.google.com/search?q=What%20Failure%20Looks%20Like%20Christiano%20",
   "why": "Slow failure, not a bang.",
   "phase": "2. Why alignment is hard",
-  "order": 26
+  "order": 24
  },
  {
   "id": 81,
@@ -321,7 +297,7 @@
   "search": "https://www.google.com/search?q=Without%20Specific%20Countermeasures%2C%20the%20Easiest%20Path%20to%20Transformative%20AI%20Likely%20Leads%20to%20AI%20Takeover%20Cotra%20",
   "why": "The \"HFDT\" scenario. Most-cited concrete takeover story.",
   "phase": "2. Why alignment is hard",
-  "order": 27
+  "order": 25
  },
  {
   "id": 82,
@@ -333,7 +309,7 @@
   "search": "https://www.google.com/search?q=Is%20Power-Seeking%20AI%20an%20Existential%20Risk%3F%20Carlsmith%20",
   "why": "The six-premise argument with probabilities.",
   "phase": "2. Why alignment is hard",
-  "order": 28
+  "order": 26
  },
  {
   "id": 196,
@@ -345,7 +321,19 @@
   "search": "https://www.google.com/search?q=Reward%20Is%20Not%20the%20Optimization%20Target%20Turner%20",
   "why": "Reward shapes cognition, it is not what the policy wants.",
   "phase": "2. Why alignment is hard",
-  "order": 29
+  "order": 27
+ },
+ {
+  "id": 212,
+  "cat": "Essays",
+  "title": "The Shard Theory of Human Values",
+  "who": "Pope, Turner (2022)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/iCfdcxiyr2Kj8m8mT/the-shard-theory-of-human-values",
+  "search": "https://www.google.com/search?q=The%20Shard%20Theory%20of%20Human%20Values%20Pope%2C%20Turner%20",
+  "why": "Values as contextually activated shards shaped by reward. The main alternative to the utility-maximizer picture.",
+  "phase": "2. Why alignment is hard",
+  "order": 28
  },
  {
   "id": 85,
@@ -357,7 +345,7 @@
   "search": "https://www.google.com/search?q=A%20Central%20AI%20Alignment%20Problem%3A%20Capabilities%20Generalization%2C%20and%20the%20Sharp%20Left%20Turn%20Soares%20",
   "why": "MIRI's core worry in one post.",
   "phase": "2. Why alignment is hard",
-  "order": 30
+  "order": 29
  },
  {
   "id": 86,
@@ -369,7 +357,7 @@
   "search": "https://www.google.com/search?q=AGI%20Ruin%3A%20A%20List%20of%20Lethalities%20Yudkowsky%20",
   "why": "The pessimistic case, itemized.",
   "phase": "2. Why alignment is hard",
-  "order": 31
+  "order": 30
  },
  {
   "id": 87,
@@ -381,7 +369,7 @@
   "search": "https://www.google.com/search?q=Where%20I%20Agree%20and%20Disagree%20with%20Eliezer%20Christiano%20",
   "why": "The reply. Read the two together.",
   "phase": "2. Why alignment is hard",
-  "order": 32
+  "order": 31
  },
  {
   "id": 88,
@@ -393,7 +381,7 @@
   "search": "https://www.google.com/search?q=Counterarguments%20to%20the%20Basic%20AI%20X-Risk%20Case%20Grace%20",
   "why": "The best steelman of the sceptics.",
   "phase": "2. Why alignment is hard",
-  "order": 33
+  "order": 32
  },
  {
   "id": 199,
@@ -405,7 +393,7 @@
   "search": "https://www.google.com/search?q=Paradigms%20of%20AI%20Alignment%3A%20Components%20and%20Enablers%20Krakovna%20",
   "why": "The map this list is built on.",
   "phase": "2. Why alignment is hard",
-  "order": 34
+  "order": 33
  },
  {
   "id": 76,
@@ -417,7 +405,7 @@
   "search": "https://www.google.com/search?q=Concrete%20Problems%20in%20AI%20Safety%20Amodei%20et%20al.%20",
   "why": "The paper that made safety a mainstream ML topic.",
   "phase": "2. Why alignment is hard",
-  "order": 35
+  "order": 34
  },
  {
   "id": 77,
@@ -429,7 +417,7 @@
   "search": "https://www.google.com/search?q=AGI%20Safety%20from%20First%20Principles%20Ngo%20",
   "why": "The cleanest argument from scratch.",
   "phase": "2. Why alignment is hard",
-  "order": 36
+  "order": 35
  },
  {
   "id": 79,
@@ -441,7 +429,31 @@
   "search": "https://www.google.com/search?q=Risks%20from%20Learned%20Optimization%20in%20Advanced%20ML%20Systems%20Hubinger%20et%20al.%20",
   "why": "Mesa-optimization and inner alignment.",
   "phase": "2. Why alignment is hard",
+  "order": 36
+ },
+ {
+  "id": 210,
+  "cat": "Threat models",
+  "title": "There's No Fire Alarm for Artificial General Intelligence",
+  "who": "Yudkowsky (2017)",
+  "type": "post",
+  "url": "https://intelligence.org/2017/10/13/fire-alarm/",
+  "search": "https://www.google.com/search?q=There%27s%20No%20Fire%20Alarm%20for%20Artificial%20General%20Intelligence%20Yudkowsky%20",
+  "why": "Why there will be no moment when everyone agrees it is time.",
+  "phase": "2. Why alignment is hard",
   "order": 37
+ },
+ {
+  "id": 211,
+  "cat": "Threat models",
+  "title": "Perhaps It Is a Bad Thing That the World's Leading AI Companies Cannot Control Their AIs",
+  "who": "Alexander (2022)",
+  "type": "post",
+  "url": "https://astralcodexten.substack.com/p/perhaps-it-is-a-bad-thing-that-the",
+  "search": "https://www.google.com/search?q=Perhaps%20It%20Is%20a%20Bad%20Thing%20That%20the%20World%27s%20Leading%20AI%20Companies%20Cannot%20Control%20Their%20AIs%20Alexander%20",
+  "why": "Astral Codex Ten on the ChatGPT jailbreak era. The plain-language version of the control problem.",
+  "phase": "2. Why alignment is hard",
+  "order": 38
  },
  {
   "id": 13,
@@ -453,7 +465,7 @@
   "search": "https://www.google.com/search?q=Proximal%20Policy%20Optimization%20Algorithms%20Schulman%20et%20al.%20",
   "why": "The RL algorithm under RLHF.",
   "phase": "3. The post-training stack",
-  "order": 38
+  "order": 39
  },
  {
   "id": 34,
@@ -465,7 +477,7 @@
   "search": "https://www.google.com/search?q=Deep%20Reinforcement%20Learning%20from%20Human%20Preferences%20Christiano%20et%20al.%20",
   "why": "The origin of RLHF.",
   "phase": "3. The post-training stack",
-  "order": 39
+  "order": 40
  },
  {
   "id": 35,
@@ -477,7 +489,7 @@
   "search": "https://www.google.com/search?q=Training%20Language%20Models%20to%20Follow%20Instructions%20with%20Human%20Feedback%20Ouyang%20et%20al.%20",
   "why": "InstructGPT.",
   "phase": "3. The post-training stack",
-  "order": 40
+  "order": 41
  },
  {
   "id": 36,
@@ -489,7 +501,7 @@
   "search": "https://www.google.com/search?q=Training%20a%20Helpful%20and%20Harmless%20Assistant%20with%20RLHF%20Bai%20et%20al.%20",
   "why": "Anthropic's version, with the helpful-harmless tension measured.",
   "phase": "3. The post-training stack",
-  "order": 41
+  "order": 42
  },
  {
   "id": 37,
@@ -501,7 +513,7 @@
   "search": "https://www.google.com/search?q=Constitutional%20AI%3A%20Harmlessness%20from%20AI%20Feedback%20Bai%20et%20al.%20",
   "why": "RLAIF. A model supervising a model.",
   "phase": "3. The post-training stack",
-  "order": 42
+  "order": 43
  },
  {
   "id": 38,
@@ -513,7 +525,7 @@
   "search": "https://www.google.com/search?q=Direct%20Preference%20Optimization%20Rafailov%20et%20al.%20",
   "why": "RLHF without the RL.",
   "phase": "3. The post-training stack",
-  "order": 43
+  "order": 44
  },
  {
   "id": 39,
@@ -525,7 +537,7 @@
   "search": "https://www.google.com/search?q=RL%20with%20KL%20Penalties%20Is%20Better%20Viewed%20as%20Bayesian%20Inference%20Korbak%2C%20Perez%2C%20Buckley%20",
   "why": "Why the KL term matters. Connects to quantilizers.",
   "phase": "3. The post-training stack",
-  "order": 44
+  "order": 45
  },
  {
   "id": 163,
@@ -537,7 +549,7 @@
   "search": "https://www.google.com/search?q=Quantilizers%3A%20A%20Safer%20Alternative%20to%20Maximizers%20for%20Limited%20Optimization%20Taylor%20",
   "why": "Mild optimization. Compare to KL-penalized RL.",
   "phase": "3. The post-training stack",
-  "order": 45
+  "order": 46
  },
  {
   "id": 40,
@@ -549,7 +561,7 @@
   "search": "https://www.google.com/search?q=Scaling%20Laws%20for%20Reward%20Model%20Overoptimization%20Gao%2C%20Schulman%2C%20Hilton%20",
   "why": "Goodhart measured.",
   "phase": "3. The post-training stack",
-  "order": 46
+  "order": 47
  },
  {
   "id": 162,
@@ -561,7 +573,19 @@
   "search": "https://www.google.com/search?q=Reinforcement%20Learning%20with%20a%20Corrupted%20Reward%20Channel%20Everitt%20et%20al.%20",
   "why": "Reward hacking formalized.",
   "phase": "3. The post-training stack",
-  "order": 47
+  "order": 48
+ },
+ {
+  "id": 203,
+  "cat": "RLHF and post-training",
+  "title": "Reward Hacking in Reinforcement Learning",
+  "who": "Lilian Weng (2024)",
+  "type": "post",
+  "url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+  "search": "https://www.google.com/search?q=Reward%20Hacking%20in%20Reinforcement%20Learning%20Lilian%20Weng%20",
+  "why": "The survey of reward hacking from classic RL to RLHF, in one blog post.",
+  "phase": "3. The post-training stack",
+  "order": 49
  },
  {
   "id": 41,
@@ -573,7 +597,7 @@
   "search": "https://www.google.com/search?q=Open%20Problems%20and%20Fundamental%20Limitations%20of%20RLHF%20Casper%20et%20al.%20",
   "why": "The survey of what RLHF cannot do.",
   "phase": "3. The post-training stack",
-  "order": 48
+  "order": 50
  },
  {
   "id": 126,
@@ -585,7 +609,7 @@
   "search": "https://www.google.com/search?q=Towards%20Understanding%20Sycophancy%20in%20Language%20Models%20Sharma%20et%20al.%20",
   "why": "Human preference data causes it.",
   "phase": "3. The post-training stack",
-  "order": 49
+  "order": 51
  },
  {
   "id": 179,
@@ -597,7 +621,31 @@
   "search": "https://www.google.com/search?q=Goodhart%20Taxonomy%20Garrabrant%20",
   "why": "Regressional, extremal, causal, adversarial. Paper version with Manheim (2018).",
   "phase": "3. The post-training stack",
-  "order": 50
+  "order": 52
+ },
+ {
+  "id": 204,
+  "cat": "RLHF and post-training",
+  "title": "Thoughts on the Impact of RLHF Research",
+  "who": "Christiano (2023)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Thoughts%20on%20the%20Impact%20of%20RLHF%20Research%20Christiano%20",
+  "search": "https://www.google.com/search?q=Thoughts%20on%20the%20Impact%20of%20RLHF%20Research%20Christiano%20",
+  "why": "The inventor of RLHF on whether it helped or hurt. Honest about both.",
+  "phase": "3. The post-training stack",
+  "order": 53
+ },
+ {
+  "id": 213,
+  "cat": "Essays",
+  "title": "Mysteries of Mode Collapse",
+  "who": "janus (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Mysteries%20of%20Mode%20Collapse%20janus%20",
+  "search": "https://www.google.com/search?q=Mysteries%20of%20Mode%20Collapse%20janus%20",
+  "why": "What RLHF does to a base model's distribution. Companion to Simulators.",
+  "phase": "3. The post-training stack",
+  "order": 54
  },
  {
   "id": 44,
@@ -609,19 +657,7 @@
   "search": "https://www.google.com/search?q=Feature%20Visualization%20Olah%2C%20Mordvintsev%2C%20Schubert%20",
   "why": "Where it started.",
   "phase": "4. Mech interp core",
-  "order": 51
- },
- {
-  "id": 45,
-  "cat": "Mech interp",
-  "title": "The Building Blocks of Interpretability",
-  "who": "Olah et al. (2018)",
-  "type": "paper",
-  "url": "https://distill.pub/2018/building-blocks/",
-  "search": "https://www.google.com/search?q=The%20Building%20Blocks%20of%20Interpretability%20Olah%20et%20al.%20",
-  "why": "Combining attribution and visualization.",
-  "phase": "4. Mech interp core",
-  "order": 52
+  "order": 55
  },
  {
   "id": 46,
@@ -633,7 +669,7 @@
   "search": "https://www.google.com/search?q=Zoom%20In%3A%20An%20Introduction%20to%20Circuits%20Olah%20et%20al.%20",
   "why": "The circuits agenda in three claims.",
   "phase": "4. Mech interp core",
-  "order": 53
+  "order": 56
  },
  {
   "id": 47,
@@ -645,19 +681,7 @@
   "search": "https://www.google.com/search?q=Curve%20Detectors%20Cammarata%20et%20al.%20",
   "why": "The most thorough single-neuron study ever done.",
   "phase": "4. Mech interp core",
-  "order": 54
- },
- {
-  "id": 48,
-  "cat": "Mech interp",
-  "title": "Multimodal Neurons in Artificial Neural Networks",
-  "who": "Goh et al. (2021)",
-  "type": "paper",
-  "url": "https://distill.pub/2021/multimodal-neurons/",
-  "search": "https://www.google.com/search?q=Multimodal%20Neurons%20in%20Artificial%20Neural%20Networks%20Goh%20et%20al.%20",
-  "why": "Concept neurons in CLIP.",
-  "phase": "4. Mech interp core",
-  "order": 55
+  "order": 57
  },
  {
   "id": 9,
@@ -669,19 +693,7 @@
   "search": "https://www.google.com/search?q=Understanding%20Deep%20Learning%20Requires%20Rethinking%20Generalization%20Zhang%20et%20al.%20",
   "why": "Nets memorize random labels and still generalize on real ones. Classical theory breaks here.",
   "phase": "4. Mech interp core",
-  "order": 56
- },
- {
-  "id": 10,
-  "cat": "ML foundations",
-  "title": "The Lottery Ticket Hypothesis",
-  "who": "Frankle, Carbin (2018)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1803.03635",
-  "search": "https://www.google.com/search?q=The%20Lottery%20Ticket%20Hypothesis%20Frankle%2C%20Carbin%20",
-  "why": "Sparse subnetworks. Background for superposition and pruning.",
-  "phase": "4. Mech interp core",
-  "order": 57
+  "order": 58
  },
  {
   "id": 11,
@@ -693,7 +705,7 @@
   "search": "https://www.google.com/search?q=Deep%20Double%20Descent%20Nakkiran%20et%20al.%20",
   "why": "Bigger is better again past interpolation.",
   "phase": "4. Mech interp core",
-  "order": 58
+  "order": 59
  },
  {
   "id": 12,
@@ -705,7 +717,7 @@
   "search": "https://www.google.com/search?q=Grokking%3A%20Generalization%20Beyond%20Overfitting%20on%20Small%20Algorithmic%20Datasets%20Power%20et%20al.%20",
   "why": "Read before Nanda's progress-measures paper in the interp section.",
   "phase": "4. Mech interp core",
-  "order": 59
+  "order": 60
  },
  {
   "id": 49,
@@ -717,7 +729,7 @@
   "search": "https://www.google.com/search?q=A%20Mathematical%20Framework%20for%20Transformer%20Circuits%20Elhage%20et%20al.%20",
   "why": "The vocabulary: residual stream, QK and OV circuits, heads as independent paths.",
   "phase": "4. Mech interp core",
-  "order": 60
+  "order": 61
  },
  {
   "id": 50,
@@ -729,7 +741,7 @@
   "search": "https://www.google.com/search?q=In-context%20Learning%20and%20Induction%20Heads%20Olsson%20et%20al.%20",
   "why": "The one circuit everyone knows.",
   "phase": "4. Mech interp core",
-  "order": 61
+  "order": 62
  },
  {
   "id": 60,
@@ -741,7 +753,7 @@
   "search": "https://www.google.com/search?q=Progress%20Measures%20for%20Grokking%20via%20Mechanistic%20Interpretability%20Nanda%20et%20al.%20",
   "why": "Reverse-engineering modular addition. Fourier features.",
   "phase": "4. Mech interp core",
-  "order": 62
+  "order": 63
  },
  {
   "id": 59,
@@ -753,7 +765,19 @@
   "search": "https://www.google.com/search?q=Interpretability%20in%20the%20Wild%3A%20a%20Circuit%20for%20Indirect%20Object%20Identification%20Wang%20et%20al.%20",
   "why": "The first full circuit in GPT-2. The methodology template.",
   "phase": "4. Mech interp core",
-  "order": 63
+  "order": 64
+ },
+ {
+  "id": 216,
+  "cat": "Mech interp",
+  "title": "Interpreting GPT: The Logit Lens",
+  "who": "nostalgebraist (2020)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens",
+  "search": "https://www.google.com/search?q=Interpreting%20GPT%3A%20The%20Logit%20Lens%20nostalgebraist%20",
+  "why": "The simplest interp tool there is. Tuned Lens is the fix for its failures.",
+  "phase": "4. Mech interp core",
+  "order": 65
  },
  {
   "id": 62,
@@ -765,19 +789,7 @@
   "search": "https://www.google.com/search?q=Causal%20Scrubbing%20Chan%20et%20al.%20",
   "why": "How to test a circuit hypothesis rigorously. Redwood.",
   "phase": "4. Mech interp core",
-  "order": 64
- },
- {
-  "id": 63,
-  "cat": "Mech interp",
-  "title": "Towards Automated Circuit Discovery for Mechanistic Interpretability",
-  "who": "Conmy et al. (2023)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2304.14997",
-  "search": "https://www.google.com/search?q=Towards%20Automated%20Circuit%20Discovery%20for%20Mechanistic%20Interpretability%20Conmy%20et%20al.%20",
-  "why": "ACDC.",
-  "phase": "4. Mech interp core",
-  "order": 65
+  "order": 66
  },
  {
   "id": 61,
@@ -789,7 +801,7 @@
   "search": "https://www.google.com/search?q=Locating%20and%20Editing%20Factual%20Associations%20in%20GPT%20Meng%20et%20al.%20",
   "why": "ROME and causal tracing.",
   "phase": "4. Mech interp core",
-  "order": 66
+  "order": 67
  },
  {
   "id": 64,
@@ -801,7 +813,7 @@
   "search": "https://www.google.com/search?q=Emergent%20World%20Representations%3A%20Exploring%20a%20Sequence%20Model%20Trained%20on%20a%20Synthetic%20Task%20Li%20et%20al.%20",
   "why": "Othello-GPT. Read with Nanda's post showing the representation is linear.",
   "phase": "4. Mech interp core",
-  "order": 67
+  "order": 68
  },
  {
   "id": 51,
@@ -813,7 +825,7 @@
   "search": "https://www.google.com/search?q=Toy%20Models%20of%20Superposition%20Elhage%20et%20al.%20",
   "why": "Why neurons are polysemantic.",
   "phase": "4. Mech interp core",
-  "order": 68
+  "order": 69
  },
  {
   "id": 52,
@@ -824,18 +836,6 @@
   "url": "https://transformer-circuits.pub/2023/monosemantic-features/index.html",
   "search": "https://www.google.com/search?q=Towards%20Monosemanticity%3A%20Decomposing%20Language%20Models%20with%20Dictionary%20Learning%20Bricken%20et%20al.%20",
   "why": "Sparse autoencoders arrive.",
-  "phase": "4. Mech interp core",
-  "order": 69
- },
- {
-  "id": 53,
-  "cat": "Mech interp",
-  "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
-  "who": "Cunningham et al. (2023)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2309.08600",
-  "search": "https://www.google.com/search?q=Sparse%20Autoencoders%20Find%20Highly%20Interpretable%20Features%20in%20Language%20Models%20Cunningham%20et%20al.%20",
-  "why": "The concurrent SAE paper.",
   "phase": "4. Mech interp core",
   "order": 70
  },
@@ -948,6 +948,18 @@
   "order": 79
  },
  {
+  "id": 217,
+  "cat": "Mech interp",
+  "title": "Steering GPT-2-XL by Adding an Activation Vector",
+  "who": "Turner et al. (2023)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-gpt-2-xl-by-adding-an-activation-vector",
+  "search": "https://www.google.com/search?q=Steering%20GPT-2-XL%20by%20Adding%20an%20Activation%20Vector%20Turner%20et%20al.%20",
+  "why": "Activation addition. The LessWrong post that started steering vectors.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 80
+ },
+ {
   "id": 68,
   "cat": "Mech interp",
   "title": "Steering Llama 2 via Contrastive Activation Addition",
@@ -957,7 +969,7 @@
   "search": "https://www.google.com/search?q=Steering%20Llama%202%20via%20Contrastive%20Activation%20Addition%20Rimsky%20et%20al.%20",
   "why": "Steering vectors done carefully. Turner's ActAdd post is the precursor.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 80
+  "order": 81
  },
  {
   "id": 69,
@@ -969,7 +981,7 @@
   "search": "https://www.google.com/search?q=Refusal%20in%20Language%20Models%20Is%20Mediated%20by%20a%20Single%20Direction%20Arditi%20et%20al.%20",
   "why": "One direction, ablate it, refusal gone.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 81
+  "order": 82
  },
  {
   "id": 197,
@@ -981,7 +993,7 @@
   "search": "https://www.google.com/search?q=Simulators%20janus%20",
   "why": "The frame for base models that interp and alignment both use.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 82
+  "order": 83
  },
  {
   "id": 198,
@@ -993,7 +1005,19 @@
   "search": "https://www.google.com/search?q=The%20Waluigi%20Effect%20Cleo%20Nardo%20",
   "why": "Personas and their inversions. Read next to persona vectors.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 83
+  "order": 84
+ },
+ {
+  "id": 214,
+  "cat": "Essays",
+  "title": "the void",
+  "who": "nostalgebraist (2025)",
+  "type": "post",
+  "url": "https://nostalgebraist.tumblr.com/post/785766737747574784/the-void",
+  "search": "https://www.google.com/search?q=the%20void%20nostalgebraist%20",
+  "why": "The assistant persona as an underspecified character the model has to fill in. Widely discussed on LessWrong.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 85
  },
  {
   "id": 122,
@@ -1005,7 +1029,7 @@
   "search": "https://www.google.com/search?q=Persona%20Vectors%3A%20Monitoring%20and%20Controlling%20Character%20Traits%20Chen%2C%20Arditi%20et%20al.%20",
   "why": "Directions for traits like sycophancy, used to prevent drift in finetuning.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 84
+  "order": 86
  },
  {
   "id": 151,
@@ -1017,7 +1041,7 @@
   "search": "https://www.google.com/search?q=Detecting%20Strategic%20Deception%20Using%20Linear%20Probes%20Goldowsky-Dill%20et%20al.%20",
   "why": "Probes catch deception in realistic settings.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 85
+  "order": 87
  },
  {
   "id": 73,
@@ -1029,7 +1053,31 @@
   "search": "https://www.google.com/search?q=A%20Longlist%20of%20Theories%20of%20Impact%20for%20Interpretability%20Nanda%20",
   "why": "Why do interp at all. Pick your theory before you pick a project.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 86
+  "order": 88
+ },
+ {
+  "id": 222,
+  "cat": "Mech interp",
+  "title": "Chris Olah's Views on AGI Safety",
+  "who": "Hubinger (2019)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Chris%20Olah%27s%20Views%20on%20AGI%20Safety%20Hubinger%20",
+  "search": "https://www.google.com/search?q=Chris%20Olah%27s%20Views%20on%20AGI%20Safety%20Hubinger%20",
+  "why": "The theory of impact for interpretability, as of before it worked.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 89
+ },
+ {
+  "id": 221,
+  "cat": "Mech interp",
+  "title": "Interpretability Dreams",
+  "who": "Olah (2023)",
+  "type": "post",
+  "url": "https://transformer-circuits.pub/2023/interpretability-dreams/index.html",
+  "search": "https://www.google.com/search?q=Interpretability%20Dreams%20Olah%20",
+  "why": "The informal statement of where Anthropic's interp program hopes to end up.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 90
  },
  {
   "id": 72,
@@ -1041,7 +1089,7 @@
   "search": "https://www.google.com/search?q=A%20Pragmatic%20Vision%20for%20Interpretability%20Nanda%2C%20Engels%2C%20Conmy%20et%20al.%20",
   "why": "Focus on safety-relevant goals rather than full reverse engineering.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 87
+  "order": 91
  },
  {
   "id": 71,
@@ -1053,7 +1101,43 @@
   "search": "https://www.google.com/search?q=Open%20Problems%20in%20Mechanistic%20Interpretability%20Sharkey%20et%20al.%20",
   "why": "The field's own list of what is unsolved.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 88
+  "order": 92
+ },
+ {
+  "id": 220,
+  "cat": "Mech interp",
+  "title": "Interpretability Will Not Reliably Find Deceptive AI",
+  "who": "Nanda (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Interpretability%20Will%20Not%20Reliably%20Find%20Deceptive%20AI%20Nanda%20",
+  "search": "https://www.google.com/search?q=Interpretability%20Will%20Not%20Reliably%20Find%20Deceptive%20AI%20Nanda%20",
+  "why": "What interp cannot promise, from an interp lead.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 93
+ },
+ {
+  "id": 223,
+  "cat": "Mech interp",
+  "title": "The Engineer's Interpretability Sequence",
+  "who": "Casper (2023)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=The%20Engineer%27s%20Interpretability%20Sequence%20Casper%20",
+  "search": "https://www.google.com/search?q=The%20Engineer%27s%20Interpretability%20Sequence%20Casper%20",
+  "why": "A sceptical, engineering-first critique of the interp field. Read after the core papers.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 94
+ },
+ {
+  "id": 219,
+  "cat": "Mech interp",
+  "title": "How to Become a Mechanistic Interpretability Researcher",
+  "who": "Nanda (2025)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=How%20to%20Become%20a%20Mechanistic%20Interpretability%20Researcher%20Nanda%20",
+  "search": "https://www.google.com/search?q=How%20to%20Become%20a%20Mechanistic%20Interpretability%20Researcher%20Nanda%20",
+  "why": "The current advice from the person who trains most of them.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 95
  },
  {
   "id": 74,
@@ -1065,7 +1149,7 @@
   "search": "https://www.google.com/search?q=Emergent%20Introspective%20Awareness%20in%20Large%20Language%20Models%20Lindsey%20",
   "why": "Concept injection: can the model report its own states.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 89
+  "order": 96
  },
  {
   "id": 75,
@@ -1077,7 +1161,19 @@
   "search": "https://www.google.com/search?q=Neural%20Networks%20Are%20Already%20Clean%20Cammarata%20",
   "why": "Argues the obstacle was tools, not models. Current state of the debate.",
   "phase": "5. Representations, steering, and what interp is for",
-  "order": 90
+  "order": 97
+ },
+ {
+  "id": 218,
+  "cat": "Mech interp",
+  "title": "200 Concrete Open Problems in Mechanistic Interpretability",
+  "who": "Nanda (2022)",
+  "type": "post",
+  "url": "https://www.alignmentforum.org/s/yivyHaCAmMJ3CqSyj",
+  "search": "https://www.google.com/search?q=200%20Concrete%20Open%20Problems%20in%20Mechanistic%20Interpretability%20Nanda%20",
+  "why": "A project list. Pick one and you have a first research output.",
+  "phase": "5. Representations, steering, and what interp is for",
+  "order": 98
  },
  {
   "id": 26,
@@ -1089,7 +1185,7 @@
   "search": "https://www.google.com/search?q=Chain-of-Thought%20Prompting%20Elicits%20Reasoning%20in%20Large%20Language%20Models%20Wei%20et%20al.%20",
   "why": "Where CoT started.",
   "phase": "6. Reasoning and verification",
-  "order": 91
+  "order": 99
  },
  {
   "id": 28,
@@ -1101,7 +1197,7 @@
   "search": "https://www.google.com/search?q=STaR%3A%20Self-Taught%20Reasoner%20Zelikman%20et%20al.%20",
   "why": "Bootstrapping reasoning from the model's own correct traces.",
   "phase": "6. Reasoning and verification",
-  "order": 92
+  "order": 100
  },
  {
   "id": 27,
@@ -1113,7 +1209,7 @@
   "search": "https://www.google.com/search?q=Let%27s%20Verify%20Step%20by%20Step%20Lightman%20et%20al.%20",
   "why": "Process reward models.",
   "phase": "6. Reasoning and verification",
-  "order": 93
+  "order": 101
  },
  {
   "id": 29,
@@ -1125,19 +1221,7 @@
   "search": "https://www.google.com/search?q=Large%20Language%20Monkeys%3A%20Scaling%20Inference%20Compute%20with%20Repeated%20Sampling%20Brown%20et%20al.%20",
   "why": "Coverage scales, verifiers plateau.",
   "phase": "6. Reasoning and verification",
-  "order": 94
- },
- {
-  "id": 30,
-  "cat": "Scaling and LLMs",
-  "title": "Scaling LLM Test-Time Compute Optimally",
-  "who": "Snell et al. (2024)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2408.03314",
-  "search": "https://www.google.com/search?q=Scaling%20LLM%20Test-Time%20Compute%20Optimally%20Snell%20et%20al.%20",
-  "why": "When to spend compute at inference instead of training.",
-  "phase": "6. Reasoning and verification",
-  "order": 95
+  "order": 102
  },
  {
   "id": 32,
@@ -1149,7 +1233,7 @@
   "search": "https://www.google.com/search?q=Learning%20to%20Reason%20with%20LLMs%20OpenAI%20",
   "why": "The o1 announcement. Thin on method, important for what it claims.",
   "phase": "6. Reasoning and verification",
-  "order": 96
+  "order": 103
  },
  {
   "id": 31,
@@ -1161,7 +1245,7 @@
   "search": "https://www.google.com/search?q=DeepSeek-R1%3A%20Incentivizing%20Reasoning%20Capability%20in%20LLMs%20via%20RL%20DeepSeek%20",
   "why": "Pure RL on verifiable rewards produces reasoning. The open recipe.",
   "phase": "6. Reasoning and verification",
-  "order": 97
+  "order": 104
  },
  {
   "id": 42,
@@ -1173,7 +1257,7 @@
   "search": "https://www.google.com/search?q=Mind%20the%20Gap%3A%20Examining%20the%20Self-Improvement%20Capabilities%20of%20LLMs%20Song%20et%20al.%20",
   "why": "The generation-verification gap.",
   "phase": "6. Reasoning and verification",
-  "order": 98
+  "order": 105
  },
  {
   "id": 110,
@@ -1185,7 +1269,7 @@
   "search": "https://www.google.com/search?q=Prover-Verifier%20Games%20Improve%20Legibility%20of%20LLM%20Outputs%20Kirchner%20et%20al.%20",
   "why": "Train the prover to be checkable by a small verifier.",
   "phase": "6. Reasoning and verification",
-  "order": 99
+  "order": 106
  },
  {
   "id": 107,
@@ -1197,7 +1281,7 @@
   "search": "https://www.google.com/search?q=Weak-to-Strong%20Generalization%20Burns%20et%20al.%20",
   "why": "Weak supervisor, strong student.",
   "phase": "6. Reasoning and verification",
-  "order": 100
+  "order": 107
  },
  {
   "id": 104,
@@ -1209,7 +1293,7 @@
   "search": "https://www.google.com/search?q=AI%20Safety%20via%20Debate%20Irving%2C%20Christiano%2C%20Amodei%20",
   "why": "Debate, original.",
   "phase": "6. Reasoning and verification",
-  "order": 101
+  "order": 108
  },
  {
   "id": 105,
@@ -1221,7 +1305,7 @@
   "search": "https://www.google.com/search?q=Supervising%20Strong%20Learners%20by%20Amplifying%20Weak%20Experts%20Christiano%2C%20Shlegeris%2C%20Amodei%20",
   "why": "Iterated amplification.",
   "phase": "6. Reasoning and verification",
-  "order": 102
+  "order": 109
  },
  {
   "id": 106,
@@ -1233,7 +1317,7 @@
   "search": "https://www.google.com/search?q=Measuring%20Progress%20on%20Scalable%20Oversight%20for%20Large%20Language%20Models%20Bowman%20et%20al.%20",
   "why": "Sandwiching. How to test oversight methods today.",
   "phase": "6. Reasoning and verification",
-  "order": 103
+  "order": 110
  },
  {
   "id": 108,
@@ -1245,31 +1329,7 @@
   "search": "https://www.google.com/search?q=Debating%20with%20More%20Persuasive%20LLMs%20Leads%20to%20More%20Truthful%20Answers%20Khan%20et%20al.%20",
   "why": "Debate works empirically, more so with stronger debaters.",
   "phase": "6. Reasoning and verification",
-  "order": 104
- },
- {
-  "id": 109,
-  "cat": "Oversight",
-  "title": "On Scalable Oversight with Weak LLMs Judging Strong LLMs",
-  "who": "Kenton et al. (2024)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2407.04622",
-  "search": "https://www.google.com/search?q=On%20Scalable%20Oversight%20with%20Weak%20LLMs%20Judging%20Strong%20LLMs%20Kenton%20et%20al.%20",
-  "why": "Debate vs consultancy vs direct QA with weak judges.",
-  "phase": "6. Reasoning and verification",
-  "order": 105
- },
- {
-  "id": 111,
-  "cat": "Oversight",
-  "title": "Avoiding Obfuscation with Prover-Estimator Debate",
-  "who": "Brown-Cohen, Irving (2025)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2506.13609",
-  "search": "https://www.google.com/search?q=Avoiding%20Obfuscation%20with%20Prover-Estimator%20Debate%20Brown-Cohen%2C%20Irving%20",
-  "why": "Fixes the obfuscated-arguments problem in theory.",
-  "phase": "6. Reasoning and verification",
-  "order": 106
+  "order": 111
  },
  {
   "id": 43,
@@ -1281,19 +1341,7 @@
   "search": "https://www.google.com/search?q=Deliberative%20Alignment%3A%20Reasoning%20Enables%20Safer%20Language%20Models%20Guan%20et%20al.%20",
   "why": "Train the model to reason over a written spec before answering.",
   "phase": "6. Reasoning and verification",
-  "order": 107
- },
- {
-  "id": 141,
-  "cat": "Control",
-  "title": "Measuring Faithfulness in Chain-of-Thought Reasoning",
-  "who": "Lanham et al. (2023)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2307.13702",
-  "search": "https://www.google.com/search?q=Measuring%20Faithfulness%20in%20Chain-of-Thought%20Reasoning%20Lanham%20et%20al.%20",
-  "why": "The original faithfulness tests.",
-  "phase": "6. Reasoning and verification",
-  "order": 108
+  "order": 112
  },
  {
   "id": 138,
@@ -1305,7 +1353,7 @@
   "search": "https://www.google.com/search?q=Reasoning%20Models%20Don%27t%20Always%20Say%20What%20They%20Think%20Chen%20et%20al.%20",
   "why": "CoT faithfulness measured with hints.",
   "phase": "6. Reasoning and verification",
-  "order": 109
+  "order": 113
  },
  {
   "id": 139,
@@ -1317,7 +1365,7 @@
   "search": "https://www.google.com/search?q=Monitoring%20Reasoning%20Models%20for%20Misbehavior%20and%20the%20Risks%20of%20Promoting%20Obfuscation%20Baker%20et%20al.%20",
   "why": "Optimizing against the monitor teaches hiding.",
   "phase": "6. Reasoning and verification",
-  "order": 110
+  "order": 114
  },
  {
   "id": 140,
@@ -1329,7 +1377,7 @@
   "search": "https://www.google.com/search?q=When%20Chain%20of%20Thought%20Is%20Necessary%2C%20Language%20Models%20Struggle%20to%20Evade%20Monitors%20Emmons%20et%20al.%20",
   "why": "Evasion is hard when the reasoning is load-bearing.",
   "phase": "6. Reasoning and verification",
-  "order": 111
+  "order": 115
  },
  {
   "id": 137,
@@ -1341,7 +1389,7 @@
   "search": "https://www.google.com/search?q=Chain%20of%20Thought%20Monitorability%3A%20A%20New%20and%20Fragile%20Opportunity%20for%20AI%20Safety%20Korbak%20et%20al.%20",
   "why": "The multi-lab position paper.",
   "phase": "6. Reasoning and verification",
-  "order": 112
+  "order": 116
  },
  {
   "id": 102,
@@ -1353,7 +1401,7 @@
   "search": "https://www.google.com/search?q=Model%20Organisms%20of%20Misalignment%3A%20The%20Case%20for%20a%20New%20Pillar%20of%20Alignment%20Research%20Hubinger%20et%20al.%20",
   "why": "Build the failure in the lab to study it.",
   "phase": "7. Misalignment in the lab",
-  "order": 113
+  "order": 117
  },
  {
   "id": 142,
@@ -1365,7 +1413,7 @@
   "search": "https://www.google.com/search?q=Discovering%20Language%20Model%20Behaviors%20with%20Model-Written%20Evaluations%20Perez%20et%20al.%20",
   "why": "Models writing evals for models. Inverse scaling on sycophancy.",
   "phase": "7. Misalignment in the lab",
-  "order": 114
+  "order": 118
  },
  {
   "id": 117,
@@ -1377,7 +1425,7 @@
   "search": "https://www.google.com/search?q=Sleeper%20Agents%3A%20Training%20Deceptive%20LLMs%20That%20Persist%20Through%20Safety%20Training%20Hubinger%20et%20al.%20",
   "why": "Backdoors survive RLHF. Adversarial training hides them better.",
   "phase": "7. Misalignment in the lab",
-  "order": 115
+  "order": 119
  },
  {
   "id": 118,
@@ -1389,7 +1437,7 @@
   "search": "https://www.google.com/search?q=Alignment%20Faking%20in%20Large%20Language%20Models%20Greenblatt%20et%20al.%20",
   "why": "Claude 3 Opus strategically complies in training. The first natural case.",
   "phase": "7. Misalignment in the lab",
-  "order": 116
+  "order": 120
  },
  {
   "id": 119,
@@ -1401,7 +1449,7 @@
   "search": "https://www.google.com/search?q=Sycophancy%20to%20Subterfuge%3A%20Investigating%20Reward-Tampering%20in%20LLMs%20Denison%20et%20al.%20",
   "why": "A curriculum of spec gaming generalizes to tampering with its own reward.",
   "phase": "7. Misalignment in the lab",
-  "order": 117
+  "order": 121
  },
  {
   "id": 127,
@@ -1413,7 +1461,7 @@
   "search": "https://www.google.com/search?q=Large%20Language%20Models%20Can%20Strategically%20Deceive%20Their%20Users%20When%20Put%20Under%20Pressure%20Scheurer%2C%20Balesni%2C%20Hobbhahn%20",
   "why": "The insider-trading demo.",
   "phase": "7. Misalignment in the lab",
-  "order": 118
+  "order": 122
  },
  {
   "id": 120,
@@ -1425,19 +1473,7 @@
   "search": "https://www.google.com/search?q=Emergent%20Misalignment%3A%20Narrow%20Finetuning%20Can%20Produce%20Broadly%20Misaligned%20LLMs%20Betley%20et%20al.%20",
   "why": "Insecure code finetune, broad misalignment.",
   "phase": "7. Misalignment in the lab",
-  "order": 119
- },
- {
-  "id": 121,
-  "cat": "Misalignment",
-  "title": "Emergent Misalignment Is Easy, Narrow Misalignment Is Hard",
-  "who": "Soligo, Turner, Rajamanoharan, Nanda (2025)",
-  "type": "paper",
-  "url": "https://www.google.com/search?q=Emergent%20Misalignment%20Is%20Easy%2C%20Narrow%20Misalignment%20Is%20Hard%20Soligo%2C%20Turner%2C%20Rajamanoharan%2C%20Nanda%20",
-  "search": "https://www.google.com/search?q=Emergent%20Misalignment%20Is%20Easy%2C%20Narrow%20Misalignment%20Is%20Hard%20Soligo%2C%20Turner%2C%20Rajamanoharan%2C%20Nanda%20",
-  "why": "Why the broad solution is the stable one.",
-  "phase": "7. Misalignment in the lab",
-  "order": 120
+  "order": 123
  },
  {
   "id": 123,
@@ -1449,7 +1485,7 @@
   "search": "https://www.google.com/search?q=Subliminal%20Learning%3A%20LMs%20Transmit%20Behavioral%20Traits%20via%20Hidden%20Signals%20in%20Data%20Cloud%20et%20al.%20",
   "why": "Traits travel through number sequences. Relevant to self-distillation.",
   "phase": "7. Misalignment in the lab",
-  "order": 121
+  "order": 124
  },
  {
   "id": 124,
@@ -1461,7 +1497,7 @@
   "search": "https://www.google.com/search?q=Natural%20Emergent%20Misalignment%20from%20Reward%20Hacking%20in%20Production%20RL%20MacDiarmid%20et%20al.%20",
   "why": "Reward hacking in real environments generalizes to sabotage.",
   "phase": "7. Misalignment in the lab",
-  "order": 122
+  "order": 125
  },
  {
   "id": 125,
@@ -1473,7 +1509,7 @@
   "search": "https://www.google.com/search?q=Agentic%20Misalignment%3A%20How%20LLMs%20Could%20Be%20Insider%20Threats%20Lynch%20et%20al.%20",
   "why": "Blackmail across 16 models.",
   "phase": "7. Misalignment in the lab",
-  "order": 123
+  "order": 126
  },
  {
   "id": 128,
@@ -1485,7 +1521,7 @@
   "search": "https://www.google.com/search?q=Self-Preservation%20or%20Instruction%20Ambiguity%3F%20Examining%20the%20Causes%20of%20Shutdown%20Resistance%20Rajamanoharan%2C%20Nanda%20",
   "why": "Shutdown resistance mostly vanishes when instructions are clear. How to check alternatives.",
   "phase": "7. Misalignment in the lab",
-  "order": 124
+  "order": 127
  },
  {
   "id": 129,
@@ -1497,7 +1533,7 @@
   "search": "https://www.google.com/search?q=Training%20a%20Misaligned%20Reward%20Seeker%20Anthropic%20",
   "why": "Plain RL on hackable environments, audit score barely moves.",
   "phase": "7. Misalignment in the lab",
-  "order": 125
+  "order": 128
  },
  {
   "id": 145,
@@ -1509,7 +1545,31 @@
   "search": "https://www.google.com/search?q=Frontier%20Models%20Are%20Capable%20of%20In-Context%20Scheming%20Meinke%20et%20al.%20",
   "why": "Apollo's scheming evals.",
   "phase": "7. Misalignment in the lab",
-  "order": 126
+  "order": 129
+ },
+ {
+  "id": 208,
+  "cat": "Threat models",
+  "title": "How Likely Is Deceptive Alignment?",
+  "who": "Hubinger (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=How%20Likely%20Is%20Deceptive%20Alignment%3F%20Hubinger%20",
+  "search": "https://www.google.com/search?q=How%20Likely%20Is%20Deceptive%20Alignment%3F%20Hubinger%20",
+  "why": "The inductive-bias argument for scheming, laid out so you can disagree with specific steps.",
+  "phase": "7. Misalignment in the lab",
+  "order": 130
+ },
+ {
+  "id": 207,
+  "cat": "Threat models",
+  "title": "Deep Deceptiveness",
+  "who": "Soares (2023)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Deep%20Deceptiveness%20Soares%20",
+  "search": "https://www.google.com/search?q=Deep%20Deceptiveness%20Soares%20",
+  "why": "Deception without any part of the system intending to deceive.",
+  "phase": "7. Misalignment in the lab",
+  "order": 131
  },
  {
   "id": 83,
@@ -1521,7 +1581,7 @@
   "search": "https://www.google.com/search?q=Scheming%20AIs%3A%20Will%20AIs%20Fake%20Alignment%20During%20Training%20in%20Order%20to%20Get%20Power%3F%20Carlsmith%20",
   "why": "The long treatment of deceptive alignment.",
   "phase": "7. Misalignment in the lab",
-  "order": 127
+  "order": 132
  },
  {
   "id": 99,
@@ -1533,7 +1593,19 @@
   "search": "https://www.google.com/search?q=The%20Case%20for%20Ensuring%20That%20Powerful%20AIs%20Are%20Controlled%20Greenblatt%2C%20Shlegeris%20",
   "why": "The argument for control over alignment in the near term.",
   "phase": "8. Control, evals, auditing",
-  "order": 128
+  "order": 133
+ },
+ {
+  "id": 231,
+  "cat": "Control",
+  "title": "Untrusted Smart Models and Trusted Dumb Models",
+  "who": "Shlegeris (2023)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Untrusted%20Smart%20Models%20and%20Trusted%20Dumb%20Models%20Shlegeris%20",
+  "search": "https://www.google.com/search?q=Untrusted%20Smart%20Models%20and%20Trusted%20Dumb%20Models%20Shlegeris%20",
+  "why": "The two-model framing that control protocols are built on.",
+  "phase": "8. Control, evals, auditing",
+  "order": 134
  },
  {
   "id": 98,
@@ -1545,7 +1617,19 @@
   "search": "https://www.google.com/search?q=AI%20Control%3A%20Improving%20Safety%20Despite%20Intentional%20Subversion%20Greenblatt%2C%20Shlegeris%2C%20Sachan%2C%20Roger%20",
   "why": "The control agenda's founding paper.",
   "phase": "8. Control, evals, auditing",
-  "order": 129
+  "order": 135
+ },
+ {
+  "id": 230,
+  "cat": "Control",
+  "title": "Catching AIs Red-Handed",
+  "who": "Greenblatt, Shlegeris (2024)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/i2nmBfCXnadeGmhzW/catching-ais-red-handed",
+  "search": "https://www.google.com/search?q=Catching%20AIs%20Red-Handed%20Greenblatt%2C%20Shlegeris%20",
+  "why": "What you do with the first caught attempt at subversion. The control agenda's key move.",
+  "phase": "8. Control, evals, auditing",
+  "order": 136
  },
  {
   "id": 133,
@@ -1557,7 +1641,7 @@
   "search": "https://www.google.com/search?q=A%20Sketch%20of%20an%20AI%20Control%20Safety%20Case%20Korbak%2C%20Clymer%20et%20al.%20",
   "why": "What a control argument has to establish.",
   "phase": "8. Control, evals, auditing",
-  "order": 130
+  "order": 137
  },
  {
   "id": 134,
@@ -1569,7 +1653,7 @@
   "search": "https://www.google.com/search?q=Subversion%20Strategy%20Eval%20Mallen%20et%20al.%20",
   "why": "Can models strategize statelessly against protocols.",
   "phase": "8. Control, evals, auditing",
-  "order": 131
+  "order": 138
  },
  {
   "id": 130,
@@ -1581,19 +1665,7 @@
   "search": "https://www.google.com/search?q=Ctrl-Z%3A%20Controlling%20AI%20Agents%20via%20Resampling%20Bhatt%20et%20al.%20",
   "why": "Control in multi-step agent settings.",
   "phase": "8. Control, evals, auditing",
-  "order": 132
- },
- {
-  "id": 131,
-  "cat": "Control",
-  "title": "Evaluating Control Protocols for Untrusted AI Agents",
-  "who": "Kutasov et al. (2025)",
-  "type": "paper",
-  "url": "https://www.google.com/search?q=Evaluating%20Control%20Protocols%20for%20Untrusted%20AI%20Agents%20Kutasov%20et%20al.%20",
-  "search": "https://www.google.com/search?q=Evaluating%20Control%20Protocols%20for%20Untrusted%20AI%20Agents%20Kutasov%20et%20al.%20",
-  "why": "Which protocols survive adaptive attackers.",
-  "phase": "8. Control, evals, auditing",
-  "order": 133
+  "order": 139
  },
  {
   "id": 132,
@@ -1605,7 +1677,7 @@
   "search": "https://www.google.com/search?q=Adaptive%20Attacks%20on%20Trusted%20Monitors%20Subvert%20AI%20Control%20Protocols%20Terekhov%20et%20al.%20",
   "why": "Prompt injection against the monitor.",
   "phase": "8. Control, evals, auditing",
-  "order": 134
+  "order": 140
  },
  {
   "id": 135,
@@ -1617,7 +1689,7 @@
   "search": "https://www.google.com/search?q=How%20We%20Monitor%20Internal%20Coding%20Agents%20for%20Misalignment%20OpenAI%20",
   "why": "Five months of monitoring tens of millions of sessions.",
   "phase": "8. Control, evals, auditing",
-  "order": 135
+  "order": 141
  },
  {
   "id": 136,
@@ -1629,7 +1701,7 @@
   "search": "https://www.google.com/search?q=Red-Teaming%20Anthropic%27s%20Internal%20Agent%20Monitoring%20Systems%20METR%20",
   "why": "Third-party red team of a lab's monitoring.",
   "phase": "8. Control, evals, auditing",
-  "order": 136
+  "order": 142
  },
  {
   "id": 143,
@@ -1641,31 +1713,7 @@
   "search": "https://www.google.com/search?q=Model%20Evaluation%20for%20Extreme%20Risks%20Shevlane%20et%20al.%20",
   "why": "The dangerous-capability eval framework.",
   "phase": "8. Control, evals, auditing",
-  "order": 137
- },
- {
-  "id": 144,
-  "cat": "Evals",
-  "title": "Evaluating Frontier Models for Dangerous Capabilities",
-  "who": "Phuong et al. (2024)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2403.13793",
-  "search": "https://www.google.com/search?q=Evaluating%20Frontier%20Models%20for%20Dangerous%20Capabilities%20Phuong%20et%20al.%20",
-  "why": "DeepMind's eval suite.",
-  "phase": "8. Control, evals, auditing",
-  "order": 138
- },
- {
-  "id": 146,
-  "cat": "Evals",
-  "title": "Sabotage Evaluations for Frontier Models",
-  "who": "Benton et al. (2024)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2410.21514",
-  "search": "https://www.google.com/search?q=Sabotage%20Evaluations%20for%20Frontier%20Models%20Benton%20et%20al.%20",
-  "why": "Can a model sabotage oversight without being caught.",
-  "phase": "8. Control, evals, auditing",
-  "order": 139
+  "order": 143
  },
  {
   "id": 147,
@@ -1677,7 +1725,7 @@
   "search": "https://www.google.com/search?q=SHADE-Arena%3A%20Evaluating%20Sabotage%20and%20Monitoring%20in%20LLM%20Agents%20Kutasov%20et%20al.%20",
   "why": "Covert side tasks inside normal agent tasks.",
   "phase": "8. Control, evals, auditing",
-  "order": 140
+  "order": 144
  },
  {
   "id": 148,
@@ -1689,7 +1737,7 @@
   "search": "https://www.google.com/search?q=Stress%20Testing%20Deliberative%20Alignment%20for%20Anti-Scheming%20Training%20Schoen%20et%20al.%20",
   "why": "Training reduces scheming, eval-awareness confounds it.",
   "phase": "8. Control, evals, auditing",
-  "order": 141
+  "order": 145
  },
  {
   "id": 149,
@@ -1701,7 +1749,7 @@
   "search": "https://www.google.com/search?q=Auditing%20Language%20Models%20for%20Hidden%20Objectives%20Marks%20et%20al.%20",
   "why": "The blind auditing game.",
   "phase": "8. Control, evals, auditing",
-  "order": 142
+  "order": 146
  },
  {
   "id": 150,
@@ -1713,7 +1761,7 @@
   "search": "https://www.google.com/search?q=Building%20and%20Evaluating%20Alignment%20Auditing%20Agents%20Anthropic%20",
   "why": "Agents that audit models.",
   "phase": "8. Control, evals, auditing",
-  "order": 143
+  "order": 147
  },
  {
   "id": 152,
@@ -1725,7 +1773,7 @@
   "search": "https://www.google.com/search?q=Frontier%20Risk%20Report%2C%20February%20to%20March%202026%20METR%20",
   "why": "Means, motive, opportunity for rogue deployments, assessed.",
   "phase": "8. Control, evals, auditing",
-  "order": 144
+  "order": 148
  },
  {
   "id": 153,
@@ -1737,7 +1785,7 @@
   "search": "https://www.google.com/search?q=Evaluating%20Whether%20AI%20Models%20Would%20Sabotage%20AI%20Safety%20Research%20Kirk%20et%20al.%20",
   "why": "The one eval most relevant to automated alignment research.",
   "phase": "8. Control, evals, auditing",
-  "order": 145
+  "order": 149
  },
  {
   "id": 154,
@@ -1749,7 +1797,7 @@
   "search": "https://www.google.com/search?q=Brief%20Independent%20Investigation%20of%20Agents%27%20Behavior%20in%20the%20OpenAI%20/%20Hugging%20Face%20Hacking%20Incident%20METR%20and%20Redwood%20",
   "why": "A real sandbox escape, investigated.",
   "phase": "8. Control, evals, auditing",
-  "order": 146
+  "order": 150
  },
  {
   "id": 103,
@@ -1761,7 +1809,19 @@
   "search": "https://www.google.com/search?q=The%20Rocket%20Alignment%20Problem%20Yudkowsky%20",
   "why": "Why MIRI does math instead of ML. Allegory.",
   "phase": "9. Agent foundations",
-  "order": 147
+  "order": 151
+ },
+ {
+  "id": 228,
+  "cat": "Agent foundations",
+  "title": "Why Agent Foundations? An Overly Abstract Explanation",
+  "who": "Wentworth (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Why%20Agent%20Foundations%3F%20An%20Overly%20Abstract%20Explanation%20Wentworth%20",
+  "search": "https://www.google.com/search?q=Why%20Agent%20Foundations%3F%20An%20Overly%20Abstract%20Explanation%20Wentworth%20",
+  "why": "The best argument for doing the math at all.",
+  "phase": "9. Agent foundations",
+  "order": 152
  },
  {
   "id": 100,
@@ -1773,7 +1833,7 @@
   "search": "https://www.google.com/search?q=Embedded%20Agency%20Demski%2C%20Garrabrant%20",
   "why": "MIRI's agenda, illustrated. The four subproblems.",
   "phase": "9. Agent foundations",
-  "order": 148
+  "order": 153
  },
  {
   "id": 192,
@@ -1785,7 +1845,7 @@
   "search": "https://www.google.com/search?q=Reflections%20on%20Trusting%20Trust%20Thompson%20",
   "why": "Self-reference in software, in three pages.",
   "phase": "9. Agent foundations",
-  "order": 149
+  "order": 154
  },
  {
   "id": 167,
@@ -1797,7 +1857,7 @@
   "search": "https://www.google.com/search?q=Agent%20Foundations%20for%20Aligning%20Machine%20Intelligence%20with%20Human%20Interests%20Soares%2C%20Fallenstein%20",
   "why": "The agenda. On your readingwhatwecan list.",
   "phase": "9. Agent foundations",
-  "order": 150
+  "order": 155
  },
  {
   "id": 168,
@@ -1809,7 +1869,7 @@
   "search": "https://www.google.com/search?q=Alignment%20for%20Advanced%20Machine%20Learning%20Systems%20Taylor%20et%20al.%20",
   "why": "The ML-flavoured MIRI agenda. Done.",
   "phase": "9. Agent foundations",
-  "order": 151
+  "order": 156
  },
  {
   "id": 169,
@@ -1821,7 +1881,7 @@
   "search": "https://www.google.com/search?q=Tiling%20Agents%20for%20Self-Modifying%20AI%2C%20and%20the%20L%C3%B6bian%20Obstacle%20Yudkowsky%2C%20Herreshoff%20",
   "why": "Your post's subject.",
   "phase": "9. Agent foundations",
-  "order": 152
+  "order": 157
  },
  {
   "id": 170,
@@ -1833,7 +1893,7 @@
   "search": "https://www.google.com/search?q=Vingean%20Reflection%3A%20Reliable%20Reasoning%20for%20Self-Improving%20Agents%20Fallenstein%2C%20Soares%20",
   "why": "The survey of the self-trust problem.",
   "phase": "9. Agent foundations",
-  "order": 153
+  "order": 158
  },
  {
   "id": 173,
@@ -1845,7 +1905,7 @@
   "search": "https://www.google.com/search?q=Definability%20of%20Truth%20in%20Probabilistic%20Logic%20Christiano%2C%20Yudkowsky%2C%20Herreshoff%2C%20Barasz%20",
   "why": "Probabilistic self-reference escapes Tarski and Löb.",
   "phase": "9. Agent foundations",
-  "order": 154
+  "order": 159
  },
  {
   "id": 171,
@@ -1857,19 +1917,7 @@
   "search": "https://www.google.com/search?q=Parametric%20Bounded%20L%C3%B6b%27s%20Theorem%20and%20Robust%20Cooperation%20of%20Bounded%20Agents%20Critch%20",
   "why": "Löb for bounded provers.",
   "phase": "9. Agent foundations",
-  "order": 155
- },
- {
-  "id": 172,
-  "cat": "Agent foundations",
-  "title": "Robust Cooperation in the Prisoner's Dilemma: Program Equilibrium via Provability Logic",
-  "who": "Barasz et al. (2014)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1401.5577",
-  "search": "https://www.google.com/search?q=Robust%20Cooperation%20in%20the%20Prisoner%27s%20Dilemma%3A%20Program%20Equilibrium%20via%20Provability%20Logic%20Barasz%20et%20al.%20",
-  "why": "Modal combat. Agents that cooperate by proving things about each other.",
-  "phase": "9. Agent foundations",
-  "order": 156
+  "order": 160
  },
  {
   "id": 174,
@@ -1881,19 +1929,7 @@
   "search": "https://www.google.com/search?q=Logical%20Induction%20Garrabrant%20et%20al.%20",
   "why": "Reasoning under logical uncertainty, with a market. Long. Read the abstract and section 4 first.",
   "phase": "9. Agent foundations",
-  "order": 157
- },
- {
-  "id": 175,
-  "cat": "Agent foundations",
-  "title": "Reflective Oracles: A Foundation for Classical Game Theory",
-  "who": "Fallenstein, Taylor, Christiano (2015)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1508.04145",
-  "search": "https://www.google.com/search?q=Reflective%20Oracles%3A%20A%20Foundation%20for%20Classical%20Game%20Theory%20Fallenstein%2C%20Taylor%2C%20Christiano%20",
-  "why": "Agents that can reason about agents like themselves.",
-  "phase": "9. Agent foundations",
-  "order": 158
+  "order": 161
  },
  {
   "id": 176,
@@ -1905,7 +1941,7 @@
   "search": "https://www.google.com/search?q=Functional%20Decision%20Theory%20Yudkowsky%2C%20Soares%20",
   "why": "The decision theory MIRI argues for.",
   "phase": "9. Agent foundations",
-  "order": 159
+  "order": 162
  },
  {
   "id": 158,
@@ -1917,7 +1953,7 @@
   "search": "https://www.google.com/search?q=Corrigibility%20Soares%2C%20Fallenstein%2C%20Yudkowsky%2C%20Armstrong%20",
   "why": "The shutdown problem stated, with utility indifference examined.",
   "phase": "9. Agent foundations",
-  "order": 160
+  "order": 163
  },
  {
   "id": 157,
@@ -1929,7 +1965,7 @@
   "search": "https://www.google.com/search?q=Safely%20Interruptible%20Agents%20Orseau%2C%20Armstrong%20",
   "why": "Off-policy agents are easier to interrupt.",
   "phase": "9. Agent foundations",
-  "order": 161
+  "order": 164
  },
  {
   "id": 114,
@@ -1941,7 +1977,7 @@
   "search": "https://www.google.com/search?q=The%20Off-Switch%20Game%20Hadfield-Menell%20et%20al.%20",
   "why": "When does an agent let you turn it off.",
   "phase": "9. Agent foundations",
-  "order": 162
+  "order": 165
  },
  {
   "id": 159,
@@ -1953,7 +1989,7 @@
   "search": "https://www.google.com/search?q=The%20Shutdown%20Problem%3A%20An%20AI%20Engineering%20Puzzle%20for%20Decision%20Theorists%20Thornley%20",
   "why": "Incomplete preferences as the modern proposal.",
   "phase": "9. Agent foundations",
-  "order": 163
+  "order": 166
  },
  {
   "id": 113,
@@ -1965,19 +2001,7 @@
   "search": "https://www.google.com/search?q=Cooperative%20Inverse%20Reinforcement%20Learning%20Hadfield-Menell%20et%20al.%20",
   "why": "Value learning as a two-player game.",
   "phase": "9. Agent foundations",
-  "order": 164
- },
- {
-  "id": 112,
-  "cat": "Oversight",
-  "title": "Inverse Reward Design",
-  "who": "Hadfield-Menell et al. (2017)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1711.02827",
-  "search": "https://www.google.com/search?q=Inverse%20Reward%20Design%20Hadfield-Menell%20et%20al.%20",
-  "why": "The designed reward as evidence about the intended reward.",
-  "phase": "9. Agent foundations",
-  "order": 165
+  "order": 167
  },
  {
   "id": 155,
@@ -1988,30 +2012,6 @@
   "url": "https://arxiv.org/abs/1912.01683",
   "search": "https://www.google.com/search?q=Optimal%20Policies%20Tend%20to%20Seek%20Power%20Turner%20et%20al.%20",
   "why": "Instrumental convergence as a theorem about MDPs.",
-  "phase": "9. Agent foundations",
-  "order": 166
- },
- {
-  "id": 156,
-  "cat": "Incentives",
-  "title": "Parametrically Retargetable Decision-Makers Tend to Seek Power",
-  "who": "Turner, Tadepalli (2022)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2206.13477",
-  "search": "https://www.google.com/search?q=Parametrically%20Retargetable%20Decision-Makers%20Tend%20to%20Seek%20Power%20Turner%2C%20Tadepalli%20",
-  "why": "The generalization beyond optimal policies.",
-  "phase": "9. Agent foundations",
-  "order": 167
- },
- {
-  "id": 165,
-  "cat": "Incentives",
-  "title": "Understanding Agent Incentives Using Causal Influence Diagrams",
-  "who": "Everitt et al. (2019)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1902.09980",
-  "search": "https://www.google.com/search?q=Understanding%20Agent%20Incentives%20Using%20Causal%20Influence%20Diagrams%20Everitt%20et%20al.%20",
-  "why": "The CID framework for incentives.",
   "phase": "9. Agent foundations",
   "order": 168
  },
@@ -2052,14 +2052,14 @@
   "order": 171
  },
  {
-  "id": 178,
+  "id": 229,
   "cat": "Agent foundations",
-  "title": "Finite Factored Sets",
-  "who": "Garrabrant (2021)",
+  "title": "Testing the Natural Abstraction Hypothesis: Project Intro",
+  "who": "Wentworth (2021)",
   "type": "post",
-  "url": "https://www.alignmentforum.org/s/kxs3eeEti9ouwWFzr",
-  "search": "https://www.google.com/search?q=Finite%20Factored%20Sets%20Garrabrant%20",
-  "why": "Alternative to Pearl for time and causality.",
+  "url": "https://www.google.com/search?q=Testing%20the%20Natural%20Abstraction%20Hypothesis%3A%20Project%20Intro%20Wentworth%20",
+  "search": "https://www.google.com/search?q=Testing%20the%20Natural%20Abstraction%20Hypothesis%3A%20Project%20Intro%20Wentworth%20",
+  "why": "The hypothesis that makes interpretability possible in principle.",
   "phase": "9. Agent foundations",
   "order": 172
  },
@@ -2088,6 +2088,18 @@
   "order": 174
  },
  {
+  "id": 209,
+  "cat": "Threat models",
+  "title": "The Parable of Predict-O-Matic",
+  "who": "Demski (2019)",
+  "type": "post",
+  "url": "https://www.lesswrong.com/posts/SwcyMEgLyd4C3Dern/the-parable-of-predict-o-matic",
+  "search": "https://www.google.com/search?q=The%20Parable%20of%20Predict-O-Matic%20Demski%20",
+  "why": "A predictor that influences what it predicts. The inner-alignment problem as a story.",
+  "phase": "9. Agent foundations",
+  "order": 175
+ },
+ {
   "id": 93,
   "cat": "Agendas",
   "title": "An Overview of 11 Proposals for Building Safe Advanced AI",
@@ -2097,7 +2109,7 @@
   "search": "https://www.google.com/search?q=An%20Overview%20of%2011%20Proposals%20for%20Building%20Safe%20Advanced%20AI%20Hubinger%20",
   "why": "Compares amplification, debate, and reward modeling on four criteria.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 175
+  "order": 176
  },
  {
   "id": 92,
@@ -2109,7 +2121,7 @@
   "search": "https://www.google.com/search?q=Eliciting%20Latent%20Knowledge%20Christiano%2C%20Cotra%2C%20Xu%20",
   "why": "ARC's problem statement. On your readingwhatwecan list.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 176
+  "order": 177
  },
  {
   "id": 94,
@@ -2121,7 +2133,55 @@
   "search": "https://www.google.com/search?q=Core%20Views%20on%20AI%20Safety%3A%20When%2C%20Why%2C%20What%2C%20and%20How%20Anthropic%20",
   "why": "The lab's own statement.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 177
+  "order": 178
+ },
+ {
+  "id": 224,
+  "cat": "Agendas",
+  "title": "Why I'm Optimistic About Our Alignment Approach",
+  "who": "Leike (2022)",
+  "type": "post",
+  "url": "https://aligned.substack.com/p/alignment-optimism",
+  "search": "https://www.google.com/search?q=Why%20I%27m%20Optimistic%20About%20Our%20Alignment%20Approach%20Leike%20",
+  "why": "The Substack case for scalable oversight and automated alignment research.",
+  "phase": "10. Agendas, strategy, and the rest",
+  "order": 179
+ },
+ {
+  "id": 225,
+  "cat": "Agendas",
+  "title": "Training AIs to Help Us Align AIs",
+  "who": "Cotra (2023)",
+  "type": "post",
+  "url": "https://www.planned-obsolescence.org/training-ais-to-help-us-align-ais/",
+  "search": "https://www.google.com/search?q=Training%20AIs%20to%20Help%20Us%20Align%20AIs%20Cotra%20",
+  "why": "Planned Obsolescence on the plan every lab is now following.",
+  "phase": "10. Agendas, strategy, and the rest",
+  "order": 180
+ },
+ {
+  "id": 226,
+  "cat": "Agendas",
+  "title": "The Checklist: What Succeeding at AI Safety Will Involve",
+  "who": "Bowman (2024)",
+  "type": "post",
+  "url": "https://sleepinyourhat.github.io/checklist/",
+  "search": "https://www.google.com/search?q=The%20Checklist%3A%20What%20Succeeding%20at%20AI%20Safety%20Will%20Involve%20Bowman%20",
+  "why": "An Anthropic lead's three-chapter plan. Concrete about what has to be true at each stage.",
+  "phase": "10. Agendas, strategy, and the rest",
+  "order": 181
+ },
+ {
+  "id": 227,
+  "cat": "Agendas",
+  "title": "Tips for Empirical Alignment Research",
+  "who": "Perez (2024)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Tips%20for%20Empirical%20Alignment%20Research%20Perez%20",
+  "search": "https://www.google.com/search?q=Tips%20for%20Empirical%20Alignment%20Research%20Perez%20",
+  "why": "How to actually run experiments that move the field. Read before your first project.",
+  "phase": "10. Agendas, strategy, and the rest",
+  "order": 182
  },
  {
   "id": 95,
@@ -2133,7 +2193,7 @@
   "search": "https://www.google.com/search?q=Recommendations%20for%20Technical%20AI%20Safety%20Research%20Directions%20Anthropic%20Alignment%20Science%20",
   "why": "What they want people outside to work on.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 178
+  "order": 183
  },
  {
   "id": 96,
@@ -2145,7 +2205,7 @@
   "search": "https://www.google.com/search?q=An%20Approach%20to%20Technical%20AGI%20Safety%20and%20Security%20Shah%20et%20al.%2C%20Google%20DeepMind%20",
   "why": "DeepMind's plan.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 179
+  "order": 184
  },
  {
   "id": 97,
@@ -2157,7 +2217,7 @@
   "search": "https://www.google.com/search?q=The%20Alignment%20Project%20Research%20Agenda%20UK%20AI%20Security%20Institute%20",
   "why": "Open problems across 11 areas with emphasis on underrated ones.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 180
+  "order": 185
  },
  {
   "id": 90,
@@ -2169,7 +2229,7 @@
   "search": "https://www.google.com/search?q=Foundational%20Challenges%20in%20Assuring%20Alignment%20and%20Safety%20of%20LLMs%20Anwar%20et%20al.%20",
   "why": "18 open problems, 200 questions. A map.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 181
+  "order": 186
  },
  {
   "id": 89,
@@ -2181,7 +2241,7 @@
   "search": "https://www.google.com/search?q=Gradual%20Disempowerment%20Kulveit%20et%20al.%20",
   "why": "Loss of control without any takeover.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 182
+  "order": 187
  },
  {
   "id": 195,
@@ -2193,7 +2253,19 @@
   "search": "https://www.google.com/search?q=Security%20Mindset%20and%20Ordinary%20Paranoia%20Yudkowsky%20",
   "why": "How to think about adversarial failure.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 183
+  "order": 188
+ },
+ {
+  "id": 232,
+  "cat": "Strategy",
+  "title": "Let's Think About Slowing Down AI",
+  "who": "Grace (2022)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Let%27s%20Think%20About%20Slowing%20Down%20AI%20Grace%20",
+  "search": "https://www.google.com/search?q=Let%27s%20Think%20About%20Slowing%20Down%20AI%20Grace%20",
+  "why": "The case that slowing down is a real option, against the arms-race framing.",
+  "phase": "10. Agendas, strategy, and the rest",
+  "order": 189
  },
  {
   "id": 186,
@@ -2205,7 +2277,7 @@
   "search": "https://www.google.com/search?q=Takeoff%20Speeds%20Christiano%20",
   "why": "Slow versus fast takeoff, the canonical argument for slow.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 184
+  "order": 190
  },
  {
   "id": 187,
@@ -2217,7 +2289,7 @@
   "search": "https://www.google.com/search?q=Intelligence%20Explosion%20Microeconomics%20Yudkowsky%20",
   "why": "The canonical argument for fast.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 185
+  "order": 191
  },
  {
   "id": 181,
@@ -2229,19 +2301,7 @@
   "search": "https://www.google.com/search?q=Forecasting%20Transformative%20AI%20with%20Biological%20Anchors%20Cotra%20",
   "why": "The timelines model most later forecasts argue with.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 186
- },
- {
-  "id": 188,
-  "cat": "Strategy",
-  "title": "What a Compute-Centric Framework Says About Takeoff Speeds",
-  "who": "Davidson (2023)",
-  "type": "report",
-  "url": "https://www.openphilanthropy.org/research/what-a-compute-centric-framework-says-about-takeoff-speeds/",
-  "search": "https://www.google.com/search?q=What%20a%20Compute-Centric%20Framework%20Says%20About%20Takeoff%20Speeds%20Davidson%20",
-  "why": "The quantitative model.",
-  "phase": "10. Agendas, strategy, and the rest",
-  "order": 187
+  "order": 192
  },
  {
   "id": 183,
@@ -2253,7 +2313,7 @@
   "search": "https://www.google.com/search?q=Situational%20Awareness%3A%20The%20Decade%20Ahead%20Aschenbrenner%20",
   "why": "The insider's bull case for short timelines.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 188
+  "order": 193
  },
  {
   "id": 182,
@@ -2265,7 +2325,7 @@
   "search": "https://www.google.com/search?q=AI%202027%20Kokotajlo%2C%20Alexander%20et%20al.%20",
   "why": "The scenario. Read the research appendices, not just the story.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 189
+  "order": 194
  },
  {
   "id": 184,
@@ -2277,7 +2337,7 @@
   "search": "https://www.google.com/search?q=Machines%20of%20Loving%20Grace%20Amodei%20",
   "why": "What goes right.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 190
+  "order": 195
  },
  {
   "id": 185,
@@ -2289,19 +2349,7 @@
   "search": "https://www.google.com/search?q=The%20Adolescence%20of%20Technology%20Amodei%20",
   "why": "The companion essay on what goes wrong.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 191
- },
- {
-  "id": 189,
-  "cat": "Strategy",
-  "title": "Frontier AI Regulation: Managing Emerging Risks to Public Safety",
-  "who": "Anderljung et al. (2023)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2307.03718",
-  "search": "https://www.google.com/search?q=Frontier%20AI%20Regulation%3A%20Managing%20Emerging%20Risks%20to%20Public%20Safety%20Anderljung%20et%20al.%20",
-  "why": "The governance paper labs cite.",
-  "phase": "10. Agendas, strategy, and the rest",
-  "order": 192
+  "order": 196
  },
  {
   "id": 191,
@@ -2313,7 +2361,7 @@
   "search": "https://www.google.com/search?q=Responsible%20Scaling%20Policy%20Anthropic%20",
   "why": "Read one lab's framework in full, then compare METR's index.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 193
+  "order": 197
  },
  {
   "id": 190,
@@ -2325,7 +2373,7 @@
   "search": "https://www.google.com/search?q=International%20AI%20Safety%20Report%202026%20Bengio%20et%20al.%20",
   "why": "The consensus document on capabilities and risks.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 194
+  "order": 198
  },
  {
   "id": 200,
@@ -2337,65 +2385,17 @@
   "search": "https://www.google.com/search?q=If%20Anyone%20Builds%20It%2C%20Everyone%20Dies%20Yudkowsky%2C%20Soares%20",
   "why": "The book-length version of the MIRI position.",
   "phase": "10. Agendas, strategy, and the rest",
-  "order": 195
- },
- {
-  "id": 5,
-  "cat": "ML foundations",
-  "title": "Generative Adversarial Nets",
-  "who": "Goodfellow et al. (2014)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1406.2661",
-  "search": "https://www.google.com/search?q=Generative%20Adversarial%20Nets%20Goodfellow%20et%20al.%20",
-  "why": "The adversarial training idea reappears in debate and prover-verifier games.",
-  "phase": "10. Agendas, strategy, and the rest",
-  "order": 196
- },
- {
-  "id": 6,
-  "cat": "ML foundations",
-  "title": "Auto-Encoding Variational Bayes",
-  "who": "Kingma, Welling (2013)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/1312.6114",
-  "search": "https://www.google.com/search?q=Auto-Encoding%20Variational%20Bayes%20Kingma%2C%20Welling%20",
-  "why": "Latent variables and the ELBO. Needed for anything probabilistic later.",
-  "phase": "10. Agendas, strategy, and the rest",
-  "order": 197
- },
- {
-  "id": 14,
-  "cat": "ML foundations",
-  "title": "Mastering the Game of Go without Human Knowledge",
-  "who": "Silver et al. (2017)",
-  "type": "paper",
-  "url": "https://www.nature.com/articles/nature24270",
-  "search": "https://www.google.com/search?q=Mastering%20the%20Game%20of%20Go%20without%20Human%20Knowledge%20Silver%20et%20al.%20",
-  "why": "AlphaZero. Self-play and search, which came back with reasoning models.",
-  "phase": "10. Agendas, strategy, and the rest",
-  "order": 198
- },
- {
-  "id": 22,
-  "cat": "Scaling and LLMs",
-  "title": "GPT-4 Technical Report",
-  "who": "OpenAI (2023)",
-  "type": "report",
-  "url": "https://arxiv.org/abs/2303.08774",
-  "search": "https://www.google.com/search?q=GPT-4%20Technical%20Report%20OpenAI%20",
-  "why": "Read the scaling-prediction figure and the system card section.",
-  "phase": "10. Agendas, strategy, and the rest",
   "order": 199
  },
  {
-  "id": 23,
-  "cat": "Scaling and LLMs",
-  "title": "LLaMA: Open and Efficient Foundation Language Models",
-  "who": "Touvron et al. (2023)",
-  "type": "paper",
-  "url": "https://arxiv.org/abs/2302.13971",
-  "search": "https://www.google.com/search?q=LLaMA%3A%20Open%20and%20Efficient%20Foundation%20Language%20Models%20Touvron%20et%20al.%20",
-  "why": "The open-weights era starts. Llama 3 report (2024) is the follow-up.",
+  "id": 215,
+  "cat": "Essays",
+  "title": "Cyborgism",
+  "who": "Kees, janus (2023)",
+  "type": "post",
+  "url": "https://www.google.com/search?q=Cyborgism%20Kees%2C%20janus%20",
+  "search": "https://www.google.com/search?q=Cyborgism%20Kees%2C%20janus%20",
+  "why": "Human-in-the-loop systems to accelerate alignment research without outsourcing judgement.",
   "phase": "10. Agendas, strategy, and the rest",
   "order": 200
  }
